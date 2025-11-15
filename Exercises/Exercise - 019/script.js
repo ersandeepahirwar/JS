@@ -47,7 +47,9 @@ const createCard = (thumbnail, duration, title, channel, views, uploadDate) => {
             <p>
               <span class="channel">${channel}</span>
               <span class="middot" >&nbsp;&middot;&nbsp;</span>
-              <span class="views">${formatViews(views)} view${views > 1 ? "s" : ""}</span>
+              <span class="views">${formatViews(views)} view${
+    views > 1 ? "s" : ""
+  }</span>
               <span class="middot" >&nbsp;&middot;&nbsp;</span>
               <span class="uploadDate">${timeAgo(uploadDate)}</span>
             </p>
@@ -70,33 +72,41 @@ const tutorials = [
     uploadDate: "2023-09-26",
   },
   {
-    thumbnail: "https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBYghRBiZcZs-xVJKq92lAM8h3BOg",
+    thumbnail:
+      "https://i.ytimg.com/vi/kJEsTjH5mVg/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBYghRBiZcZs-xVJKq92lAM8h3BOg",
     duration: "28:30",
-    title: "Your First HTML Website | Sigma Web Development Course - Tutorial #2",
+    title:
+      "Your First HTML Website | Sigma Web Development Course - Tutorial #2",
     channel: "CodeWithHarry",
     views: "2277811",
     uploadDate: "2023-09-27",
   },
   {
-    thumbnail: "https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDpdOoVMCl1Z3qDixA988oU8Cot0w",
+    thumbnail:
+      "https://i.ytimg.com/vi/BGeDBfCIqas/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLDpdOoVMCl1Z3qDixA988oU8Cot0w",
     duration: "11:12",
-    title: "Basic Structure of an HTML Website | Sigma Web Development Course - Tutorial #3",
+    title:
+      "Basic Structure of an HTML Website | Sigma Web Development Course - Tutorial #3",
     channel: "CodeWithHarry",
     views: "1440507",
     uploadDate: "2023-09-28",
   },
   {
-    thumbnail: "https://i.ytimg.com/vi/nXba2-mgn1k/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAPrVzyLHFYcUIk5bv_LXaJrgOztA",
+    thumbnail:
+      "https://i.ytimg.com/vi/nXba2-mgn1k/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLAPrVzyLHFYcUIk5bv_LXaJrgOztA",
     duration: "19:34",
-    title: "Heading, Paragraphs and Links | Sigma Web Development Course - Tutorial #4",
+    title:
+      "Heading, Paragraphs and Links | Sigma Web Development Course - Tutorial #4",
     channel: "CodeWithHarry",
     views: "1320279",
     uploadDate: "2023-09-29",
   },
   {
-    thumbnail: "https://i.ytimg.com/vi/1BsVhumGlNc/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBzUcEscAQXVAJpBm0Ta4GoTrML6Q",
+    thumbnail:
+      "https://i.ytimg.com/vi/1BsVhumGlNc/hqdefault.jpg?sqp=-oaymwEmCKgBEF5IWvKriqkDGQgBFQAAiEIYAdgBAeIBCggYEAIYBjgBQAE=&rs=AOn4CLBzUcEscAQXVAJpBm0Ta4GoTrML6Q",
     duration: "18:20",
-    title: "Image, Lists, and Tables in HTML | Sigma Web Development Course - Tutorial #5",
+    title:
+      "Image, Lists, and Tables in HTML | Sigma Web Development Course - Tutorial #5",
     channel: "CodeWithHarry",
     views: "1313471",
     uploadDate: "2023-09-30",
