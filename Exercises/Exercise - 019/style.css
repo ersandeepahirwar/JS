@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container-fluid {
+  background-color: black;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 70rem;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+
+.card {
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card .thumbnail,
+.content {
+  height: 90%;
+  position: relative;
+}
+
+.card .thumbnail img {
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.card .thumbnail .duration {
+  color: white;
+  background-color: rgba(47, 47, 47, 0.632);
+  font-size: 1.2rem;
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+  position: absolute;
+  z-index: 10;
+  bottom: 0.3rem;
+  right: 0.5rem;
+}
+
+.card .content {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.card .content .title {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.card .content p {
+  color: #b2b0b0;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.card .content p .middot {
+  font-size: 2rem;
+}
