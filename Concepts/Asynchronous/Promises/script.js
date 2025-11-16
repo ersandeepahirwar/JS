@@ -1,4 +1,4 @@
-const addNumbers = (A, B) => {
+const sum = ({ A, B }) => {
   return new Promise((resolve, reject) => {
     console.log("Adding numbers...");
 
@@ -6,15 +6,15 @@ const addNumbers = (A, B) => {
       if (typeof A !== "number" || typeof B !== "number") {
         reject("Both values must be numbers!");
       } else {
-        resolve(A + B);
+        resolve({ A, B, addition: A + B });
       }
-    }, 1000);
+    }, 3000);
   });
 };
 
-addNumbers(10, 5)
-  .then((sum) => {
-    console.log(`The sum of 10 and 5 is ${sum}`);
+sum({ A: 10, B: 5 })
+  .then(({ A, B, addition }) => {
+    console.log(`The sum of ${A} and ${B} is ${addition}`);
   })
   .catch((error) => {
     console.log(error);
