@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: #000000;
+  user-select: none;
+}
+
+.simulator {
+  width: 90vw;
+  max-width: 70rem;
+  margin: 7rem auto;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 0.2rem rgba(0, 255, 102, 0.311);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.simulator-nav {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 0.8rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.simulator-nav .simulator-name {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  user-select: none;
+}
+
+.simulator-nav .simulator-controls {
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.simulator-nav .simulator-controls i {
+  cursor: pointer;
+}
+
+.simulator-nav .simulator-controls i:last-child:hover {
+  color: #ff4d4f;
+}
+
+.simulator-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+}
+
+.simulator-body .simulator-panel {
+  background-color: #000000;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 0.5rem 2rem;
+  border: 0.2rem solid rgba(0, 225, 0, 0.514);
+}
+
+.simulator-panel h1 {
+  color: #01e100;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.simulator-panel h1 span {
+  color: #04f398;
+}
+
+.simulator-panel .panel-controls {
+  display: flex;
+  gap: 2rem;
+}
+.simulator-panel .panel-controls p {
+  color: #01e100;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1em;
+}
+
+.simulator-panel .panel-controls p span {
+  color: #04f398;
+}
+
+.simulator-body .simulator-screen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.simulator-body .simulator-screen h1 {
+  color: #01e100;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.simulator-body .simulator-screen h1 span {
+  color: #04f398;
+}
+
+.simulator-body .simulator-screen .screen-text {
+  height: 3rem;
+  color: #01e100;
+  font-size: 1.2rem;
+}
+
+.simulator-screen .screen-controls {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.simulator-screen .screen-controls .control {
+  width: 48%;
+  margin: 1%;
+  padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 0.1rem solid rgba(0, 225, 0, 0.435);
+}
+
+.screen-controls .control h2 {
+  color: #04f398;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.screen-controls .control p {
+  color: #01e100;
+  font-size: 1.2rem;
+}
+
+.simulator-body .simulator-terminal {
+  background-color: #0d0d0d;
+  width: 95%;
+  height: 12rem;
+  padding: 1rem;
+  border: 0.1rem solid #00e10075;
+}
+
+.simulator-body .simulator-terminal p {
+  color: #01e100;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
