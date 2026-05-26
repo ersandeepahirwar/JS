@@ -80,3 +80,47 @@ With the help of this library, developers can train AI models in a client-side a
 
 > [!Note]
 > JavaScript is not generally used in system software development, such as device driver development and operating system development.
+
+## ECMAScript
+- ECMAScript is a standardized scripting language specification developed by Ecma International.  
+- ECMAScript defines the rules, syntax, and features of JavaScript and other similar languages such as JScript and ActionScript.  
+- It ensures that JavaScript and related languages behave consistently across different browsers and runtime environments.  
+- JavaScript is an implementation of ECMAScript, and new features in JavaScript are introduced through the ECMAScript specification.
+
+> ECMA stands for European Computer Manufacturers Association.
+
+## JavaScript Engine
+A JavaScript engine is a program that executes JavaScript code by converting it into machine code so that it can run on a computer or browser.  
+It reads, interprets, compiles, and optimizes JavaScript code to improve performance.
+
+### Popular JavaScript Engines
+
+#### 1. V8
+
+- Developed by Google
+- JIT-based engine
+- Used by Google Chrome, new version of Microsoft Edge, Node.js, Brave, etc.
+
+#### 2. Chakra
+
+- Developed by Microsoft
+- Interpreter-based JavaScript engine
+- Used by Microsoft Internet Explorer and legacy Microsoft Edge
+
+#### 3. JavaScriptCore
+
+- Developed by Apple
+- JIT-based JavaScript engine
+- Used by Safari browser
+
+#### 4. SpiderMonkey
+
+- Developed by Mozilla
+- First JavaScript engine ever created
+- Used by Firefox ( and earlier versions of Netscape Navigator )
+
+#### 5. Hermes
+
+- Developed by Meta ( Facebook )
+- Used primarily in React Native environment
+- Designed to improve startup time and reduce memory usage on mobile applications
