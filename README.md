@@ -124,3 +124,85 @@ It reads, interprets, compiles, and optimizes JavaScript code to improve perform
 - Developed by Meta ( Facebook )
 - Used primarily in React Native environment
 - Designed to improve startup time and reduce memory usage on mobile applications
+
+## JavaScript Keywords
+JavaScript keywords are reserved words that have special meaning in the language and cannot be used as identifiers.
+
+`await*`, `break`, `case`, `catch`, `class*`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `export*`, `extends*`, `false`, `finally`, `for`, `function`, `if`, `import*`, `in`, `instanceof`, `new`, `null`, `return`, `super*`, `switch`, `this`, `throw`, `true`, `try`, `typeof`, `var`, `void`, `while`, `with`, `yield`, `let*`, `static`, `enum*`, `implements`, `interface`, `package`, `private`, `protected`, `public`
+
+## JavaScript Identifier
+An identifier in JavaScript is the name used to identify programming entities such as variables, functions, objects, and classes.
+
+### Rules for Identifiers
+- We cannot use JavaScript keywords as identifiers.
+- We cannot use a digit as the first character of an identifier.
+- Digits can be used after the first character ( postfix ).
+- Special characters are not allowed, except the underscore ( _ ).
+- We cannot use the same identifier name more than once within the same statement block.
+
+## JavaScript Data Types
+
+#### 1. Number: 
+Any whole or fractional number, such as `10`, `25.36`, `-25.35`, `-50`, `+25.36`.
+
+#### 2. String
+A collection of characters, such as `'a'`, `"apple"`, `` `a for apple` ``.
+
+#### 3. Boolean
+Represents logical values `true` or `false`.
+
+#### 4. Undefined
+Represents a variable that has been declared but not assigned a value.
+
+#### 5. Null
+Represents the intentional absence of a value.
+
+#### 6. BigInt
+Used to represent very large integers.
+
+#### 7. Symbol
+Represents unique and immutable values
+
+#### 8. Object
+A collection of key–value pairs.
+
+#### 9. Array
+An ordered collection of values.
+
+#### 10. Function
+A reusable block of code
+
+#### 11. Set
+A collection of unique values.
+
+#### 12. Map
+A collection of key–value pairs where keys can be of any type.
+
+## Data Representation
+
+### 1. Variable
+
+- A variable is used when data is not fixed.  
+- Variables are names of memory locations in RAM that contain information, or they can be described as placeholders for data in memory.  
+- In simple terms, variables are data containers.
+
+#### Syntax :
+
+```
+var variableName = value;    // function-level scope  
+let variableName = value;    // block-level scope  
+const variableName = value;  // block-level scope and read-only
+```
+
+### 2. Constant / Literals
+
+Constants ( literals ) are used when data is fixed and does not change.
+
+#### Boolean
+`true`, `false`
+
+#### Number
+`10`, `+20`, `-25`, `15.36`, `+25.25`, `-65.25`
+
+#### String
+`'a'`, `"apple"`, `` `a for apple` ``
