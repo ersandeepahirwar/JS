@@ -78,4 +78,5 @@ JavaScript can be used to control IoT devices using libraries such as Johnny-Fiv
 We can use JavaScript to train AI models using the TensorFlow.js library.  
 With the help of this library, developers can train AI models in a client-side architecture.
 
-Note : JavaScript is not generally used in system software development, such as device driver development and operating system development.
+> [!Note]
+> JavaScript is not generally used in system software development, such as device driver development and operating system development.
