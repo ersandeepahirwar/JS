@@ -206,3 +206,120 @@ Constants ( literals ) are used when data is fixed and does not change.
 
 #### String
 `'a'`, `"apple"`, `` `a for apple` ``
+
+## Tokens in JavaScript
+
+Tokens are the smallest entities of a JavaScript program, such as identifiers, constants ( literals ), keywords, operators, and punctuators like `,`, `:`, `;`, `()`, `{}`, `[]`, and space.
+
+```
+var A = 10;
+
+var => Keyword
+A   => Identifier ( Variable )
+=   => Operator
+10  => Constant ( Literal )
+;   => Punctuator
+```
+
+## Output Instructions in JavaScript
+
+`console.log()` is used as output instruction to display data in console.
+
+```
+var A = 10;
+var B = 20;
+var sum = A + B;
+
+console.log(A, "+", B, "=", sum);
+console.log(A + " + " + B + " = " + sum);
+console.log(`${A} + ${B} = ${sum}`); // String Template Literal Style
+```
+
+## Input Instructions in JavaScript
+
+### `prompt()`
+`prompt()` is used to take input from the user through the keyboard.  
+It returns the input value in string format.
+
+```
+const number = prompt("What is your favourite number?");
+console.log(number, typeof number);
+```
+
+### `Number()`
+`Number()` converts the input value ( argument ) into a number type.
+
+```
+const number = Number(prompt("What is your favourite number?"));
+console.log(number, typeof number);
+```
+
+### `parseInt()`
+`parseInt()` converts the input value ( argument ) into an integer number type.
+
+```
+const number = parseInt(prompt("What is your favourite number?"));
+console.log(number, typeof number);
+```
+
+### `parseFloat()`
+`parseFloat()` converts the input value ( argument ) into a floating-point number type.
+
+```
+const number = parseFloat(prompt("What is your favourite number?"));
+console.log(number, typeof number);
+```
+
+## Operators in JavaScript
+
+Operators are special symbols used to perform predefined operations on operands ( variables, constants, or values ).
+
+### Types of Operators ( Based on Operands )
+
+#### 1. Unary Operator
+Requires only one operand
+#### 2. Binary Operator
+Requires two operands
+#### 3. Ternary Operator
+Requires three operands
+
+## Types of Operators in JavaScript
+
+- Arithmetic Operators
+- Assignment Operators
+- Composite / Compound ( Shorthand ) Operators
+- Relational ( Comparison ) Operators
+- Logical Operators
+- Bitwise Operators
+- Conditional ( Ternary ) Operator
+- Increment Operators
+- Decrement Operators
+- Miscellaneous Operators
+
+### 1. Arithmetic Operators
+
+```
++  →  Addition
+-  →  Subtraction
+*  →  Multiplication
+/  →  Division ( Quotient )
+%  →  Modulus ( Remainder )
+** →  Exponentiation
+
+Category:   Binary
+Precedence: Left to Right
+
+Priority:   1. Brackets
+            2. **
+            3. * / %
+            4. + -
+```
+
+```
+console.log(10 + 5);
+console.log(10 - 5);
+console.log(10 * 5);
+console.log(10 / 5);
+console.log(10 % 5);
+console.log(10 ** 5);
+```
