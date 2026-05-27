@@ -453,3 +453,86 @@ console.log(!10);          // false
 console.log(!0);           // true
 ```
 > Falsy values in JavaScript are `0`, `false`, `undefined`, `null`, and `""` ( empty string ); all remaining values are treated as truthy values.
+
+### 6. Bitwise Operators
+
+| Operator             | Symbol | Category | Associativity |
+| -------------------- | ------ | -------- | ------------- |
+| Bitwise AND          | `&`    | Binary   | Left to Right |
+| Bitwise OR           | `\|`   | Binary   | Left to Right |
+| Bitwise XOR          | `^`    | Binary   | Left to Right |
+| Left Shift           | `<<`   | Binary   | Left to Right |
+| Right Shift          | `>>`   | Binary   | Left to Right |
+| Bitwise NOT          | `~`    | Unary    | Right to Left |
+
+```
+-------------------------------------------------------------
+|  A  |  B  |  A & B  |  A | B  |  A ^ B ( A | B - A & B )  |
+|-----------------------------------------------------------|
+|  0  |  0  |    0    |    0    |    0                      |
+|  0  |  1  |    0    |    1    |    1                      |
+|  1  |  0  |    0    |    1    |    1                      |
+|  1  |  1  |    1    |    1    |    0                      |
+-------------------------------------------------------------
+```
+
+```
+var A = 77;
+var B = 153;
+
+var C = A & B;
+var D = A | B;
+var E = A ^ B;
+
+A = 77      →     0     1     0     0     1     1     0     1
+B = 153     →     1     0     0     1     1     0     0     1
+-------------------------------------------------------------------
+C = A & B   →     0     0     0     0     1     0     0     1
+               x 128    64    32    16    8     4     2     1
+               ----------------------------------------------------
+                  0  +  0  +  0  +  0  +  8  +  0  +  0  +  1 = 9
+               ----------------------------------------------------
+D = A | B   →     1     1     0     1     1     1     0     1
+               x 128    64    32    16    8     4     2     1
+               ----------------------------------------------------
+                 128  + 64  + 0  +  16 +  8  +  4  +  0  +  1 = 221
+               ----------------------------------------------------
+E = A ^ B   →     1     1     0     1     0     1     0     0
+               x 128    64    32    16    8     4     2     1
+               ----------------------------------------------------
+                 128  + 64 +  0  +  16 +  0  +  4  +  0  +  0 = 212
+               ----------------------------------------------------
+```
+
+`m << n` → `m × 2ⁿ`
+
+`m >> n` → `m / 2ⁿ`
+
+`~n` → `-m-1`
+
+```
+var A = 77;
+var B = 153;
+
+var C = A & B;
+var D = A | B;
+var E = A ^ B;
+
+console.log(C, D, E);
+
+var F = 100;
+var G = 5;
+var H = F << G;
+console.log(H);
+
+var I = 100;
+var J = 5;
+var K = I >> J;
+console.log(K);
+
+var L = 100;
+var M = -100;
+var N = ~L;
+var O = ~M;
+console.log(N, O);
+```
