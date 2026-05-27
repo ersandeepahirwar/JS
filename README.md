@@ -423,3 +423,33 @@ console.log(10 !== 5);
 console.log(10 === 5);
 console.log(10 !== 5);
 ```
+
+### 5. Logical Operators
+
+Logical operators are used to make compound conditions.
+
+| Operator    | Symbol | Operation                                      | Category | Associativity |
+| ----------- | ------ | ---------------------------------------------- | -------- | ------------- |
+| Logical AND | `&&`   | Returns true if both conditions are true       | Binary   | Left to Right |
+| Logical OR  | `\|\|` | Returns true if at least one condition is true | Binary   | Left to Right |
+| Logical NOT | `!`    | Reverses the boolean value                     | Unary    | Right to Left |
+
+```
+console.log(10 && 100);    // 100
+console.log(0 && 10);      // 0
+console.log(10 && 0);      // 0
+console.log(0 && 0);       // 0
+console.log(false && 0);   // false
+console.log(0 && false);   // 0
+
+console.log(10 || 100);    // 10
+console.log(0 || 10);      // 10
+console.log(10 || 0);      // 10
+console.log(0 || 0);       // 0
+console.log(false || 0);   // 0
+console.log(0 || false);   // false
+
+console.log(!10);          // false
+console.log(!0);           // true
+```
+> Falsy values in JavaScript are `0`, `false`, `undefined`, `null`, and `""` ( empty string ); all remaining values are treated as truthy values.
