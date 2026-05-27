@@ -322,6 +322,9 @@ console.log(10 * 5);
 console.log(10 / 5);
 console.log(10 % 5);
 console.log(10 ** 5);
+```
+
+```
 console.log(
   ((((15 * 4) % 55) * 4) / 10) * 9 -
     (((34 / 10) * 5) % 20) +
