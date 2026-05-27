@@ -536,3 +536,64 @@ var N = ~L;
 var O = ~M;
 console.log(N, O);
 ```
+
+### 7. Conditional ( Ternary ) Operator
+
+The conditional ( ternary ) operator is used when we have to execute one statement out of two statements according to a condition.
+
+#### Syntax
+
+```
+condition ? statement1 : statement2;
+               True         False
+```
+
+```
+const number = 11;
+
+console.log(
+  number % 2 === 0
+    ? `${number} is an even number`
+    : `${number} is an odd number`,
+);
+```
+
+### 8. Increment Operator
+
+The increment operator (`++`) is used to increase the value of a variable by `1`.
+
+```
+Pre-Increment       Post-Increment
+( ++Operand )       ( Operand++ )
+
+First Increment     First Assignment
+then Assignment     then Increment
+```
+
+```
+var A = 10;
+var B = A++;
+var C = ++A;
+
+console.log(A, B, C);
+```
+
+### 9. Decrement Operator
+
+The decrement operator (`--`) is used to decrease the value of a variable by `1`.
+
+```
+Pre-Decrement       Post-Decrement
+( --Operand )       ( Operand-- )
+
+First Decrement     First Assignment
+then Assignment     then Decrement
+```
+
+```
+var A = 10;
+var B = A--;
+var C = --A;
+
+console.log(A, B, C);
+```
