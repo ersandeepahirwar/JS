@@ -286,12 +286,12 @@ Requires three operands
 ## Types of Operators in JavaScript
 
 - Arithmetic Operators
-- Assignment Operators
-- Composite / Compound ( Shorthand ) Operators
-- Relational ( Comparison ) Operators
+- Assignment Operator
+- Composite / Compound / Shorthand Operators
+- Relational / Comparison Operators
 - Logical Operators
 - Bitwise Operators
-- Conditional ( Ternary ) Operator
+- Conditional / Ternary Operator
 - Increment Operators
 - Decrement Operators
 - Miscellaneous Operators
@@ -330,4 +330,96 @@ console.log(
     (((34 / 10) * 5) % 20) +
     ((9 * 10) % 83) * ((((((10 * 5) % 37) * 2) % 20) * 2 ** 5) % 100),
 );
+```
+
+### 2. Assignment Operator
+
+Assignment operator is used to assign the value of the RHS ( Right-Hand Side ) operand to the LHS ( Left-Hand Side ) operand.
+
+```
+sum = A + B; // Valid
+A + B = sum; // Invalid
+A = B = C;   // Valid
+
+Category: Binary
+Associativity: Right to Left
+```
+
+```
+var A = 10;
+var B = 5;
+var sum = A + B;
+
+console.log(`${A} + ${B} = ${sum}`);
+```
+
+### 3. Composite / Compound / Shorthand Operators
+
+Composite / Compound / Shorthand operators are formed by combining assignment operator with other operators.
+
+```
+A = A + B    →   A += B
+A = A - B    →   A -= B
+A = A * B    →   A *= B
+A = A / B    →   A /= B
+A = A % B    →   A %= B
+A = A ** B   →   A **= B
+```
+
+```
+var A = 10;
+var B = 5;
+A += B;
+console.log(A);
+
+var C = 10;
+var D = 5;
+C -= D;
+console.log(C);
+
+var E = 10;
+var F = 5;
+E *= F;
+console.log(E);
+
+var G = 10;
+var H = 5;
+G /= H;
+console.log(G);
+
+var I = 10;
+var J = 5;
+I %= J;
+console.log(I);
+
+var K = 10;
+var L = 5;
+K **= L;
+console.log(K);
+```
+
+### 4. Relational Operators
+
+Relational operators are used to compare two operands.
+
+```
+<     →  Less than
+<=    →  Less than or equal to
+>     →  Greater than
+>=    →  Greater than or equal to
+==    →  Equal to ( checks value only )
+!=    →  Not equal to ( checks value only )
+===   →  Identical ( checks both value and data type )
+!==   →  Not identical ( checks both value and data type )
+```
+
+```
+console.log(10 < 5);
+console.log(10 <= 5);
+console.log(10 > 5);
+console.log(10 >= 5);
+console.log(10 == 5);
+console.log(10 !== 5);
+console.log(10 === 5);
+console.log(10 !== 5);
 ```
