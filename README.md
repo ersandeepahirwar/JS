@@ -739,3 +739,54 @@ if (A >= B && A >= C && A >= D && A >= E) {
   console.log(`${E} is greater then ${A}, ${B}, ${C} and ${D}`);
 }
 ```
+
+### `switch case` Statement
+
+The `switch case` statement is used to make menu-based programs.
+
+#### Syntax
+
+```
+switch(expression) {
+    case value1:
+        // statement block
+        break;
+
+    case value2:
+        // statement block
+        break;
+
+    default:
+        // statement block
+}
+```
+
+```
+const dayNumber = 6;
+
+switch (dayNumber) {
+  case 0:
+    console.log(`${dayNumber} is Sunday`);
+    break;
+  case 1:
+    console.log(`${dayNumber} is Monday`);
+    break;
+  case 2:
+    console.log(`${dayNumber} is Tuesday`);
+    break;
+  case 3:
+    console.log(`${dayNumber} is Wednesday`);
+    break;
+  case 4:
+    console.log(`${dayNumber} is Thursday`);
+    break;
+  case 5:
+    console.log(`${dayNumber} is Friday`);
+    break;
+  case 6:
+    console.log(`${dayNumber} is Saturday`);
+    break;
+  default:
+    console.log("Invalid Day Number");
+}
+```
