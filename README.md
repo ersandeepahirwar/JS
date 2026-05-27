@@ -597,3 +597,107 @@ var C = --A;
 
 console.log(A, B, C);
 ```
+
+## Flow Control Statements or Decision Making Statements
+
+### 1. Conditional Statements or Selection Statements
+
+- `if` Statement
+- `if else` Statement
+- Nested `if else` Statement
+- `if else if` Ladder Statement
+- `switch case` Statement
+
+### 2. Iteration Statements or Loops
+
+- `for` Loop
+- `for in` Loop
+- `for of` Loop
+- `while` Loop
+- `do while` Loop
+- Nested Loops
+
+### 3. Jump Statements
+
+- `break` Statement
+- `continue` Statement
+
+## Conditional Statements or Selection Statements
+
+### `if` Statement
+
+The `if` statement is used when the execution of a statement block depends on a condition.
+
+#### Syntax
+
+```
+if(condition){
+    // statement block
+}
+```
+
+```
+if (true) {
+  console.log("JavaScript is a High-Level Programming Language");
+}
+```
+> [!Note]
+> `{}` are optional if there is only one statement in the statement block.
+
+### `if else` Statement
+
+The `if else` statement is used when the execution of one statement block out of two blocks depends on a condition.
+
+#### Syntax
+
+```
+if (condition) {
+    // statement block
+} else {
+    // statement block
+}
+```
+
+```
+if (number % 2 === 0) {
+  console.log(`${number} is an even number`);
+} else {
+  console.log(`${number} is an odd number`);
+}
+```
+
+### Nested `if else` Statement
+
+A nested `if else` statement is an `if else` statement written inside another `if else` statement.
+
+#### Syntax
+
+```
+if (condition1) {
+    // statement block
+} else {
+    if (condition2) {
+        // statement block
+    } else {
+        // statement block
+    }
+}
+```
+
+```
+const number = 11;
+
+if (number % 2 === 0) {
+  if (number % 3 === 0) {
+    console.log(`${number} is divisible by both 2 and 3`);
+  } else {
+    console.log(`${number} is divisible by 2 but not 3`);
+  }
+} else {
+  if (number % 3 === 0) {
+    console.log(`${number} is divisible by 3 but not 2`);
+  } else {
+    console.log(`${number} is divisible by neither 2 nor 3`);
+  }
+}
+```
