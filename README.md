@@ -865,3 +865,27 @@ do {
 > [!Note]
 > - `for` and `while` loops are entry-controlled loops.
 > - `do while` loop is an exit-controlled loop.
+
+### Nested Loops
+
+Nested loops are loops written inside another loop.
+
+#### Syntax
+
+```
+for(initialization; condition; updation){
+    for(initialization; condition; updation){
+        // statements
+    }
+}
+```
+
+```
+for (let row = 1; row <= 5; row++) {
+  let pattern = "";
+  for (let column = 1; column <= row; column++) {
+    pattern += "*";
+  }
+  console.log(pattern);
+}
+```
