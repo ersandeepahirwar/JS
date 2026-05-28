@@ -790,3 +790,25 @@ switch (dayNumber) {
     console.log("Invalid Day Number");
 }
 ```
+
+## Iteration Statements or Loops
+
+Iteration statements or loops are used to iterate or repeat a statement block `n` times.
+
+### `for` Loop
+
+The `for` loop is used when we know the number of iterations.
+
+#### Syntax
+
+```
+for(initialization; condition; increment/decrement) {
+    // statement block
+}
+```
+
+```
+for (var number = 1; number <= 10; number++) {
+  console.log(number);
+}
+```
