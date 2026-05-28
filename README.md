@@ -1009,3 +1009,54 @@ function test() {
 
 test();
 ```
+
+### Default Parameters ( Optional Parameters )
+
+```
+function sum(A = 0, B = 0, C = 0) {
+  console.log(`Sum of ${A}, ${B} and ${C} is ${A + B + C}`);
+}
+
+sum(10, 20, 30);
+sum(10, 20);
+sum(10);
+sum();
+```
+
+### Function Returning an Array
+
+```
+function tableOfTwo() {
+  return [2, 4, 6, 8, 10, 12, 14, 16, 18, 20];
+}
+
+console.log(tableOfTwo());
+```
+
+### Regular Function
+
+```
+function sum(A, B) {
+  return A + B;
+}
+
+console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
+```
+
+### Anonymous Function
+
+```
+var sum = function (A, B) {
+  return A + B;
+};
+
+console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
+```
+
+### Fat Arrow Function
+
+```
+var sum = (A, B) => A + B;
+
+console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
+```
