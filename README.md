@@ -947,6 +947,65 @@ Memory required to store arguments and the return value of a function.
 ### Types of Functions ( Based on Parameters and Return Value )
 
 - `function` without `return` value and without parameters
+```
+  function addition() {
+  var A = 10;
+  var B = 20;
+  var sum = A + B;
+  console.log(`Sum of ${A} and ${B} is ${sum}`);
+}
+
+function test() {
+  addition();
+}
+
+test();
+```
+
 - `function` with `return` value and without parameters
+```
+function addition() {
+  var A = 10;
+  var B = 20;
+  var sum = A + B;
+  return sum;
+}
+
+function test() {
+  console.log(`Sum of 10 and 20 is ${addition()}`);
+}
+
+test();
+```
+
 - `function` without `return` value and with parameters
+```
+function addition(x, y) {                              // Parameters or Formal Parameters
+  var sum = x + y;
+  console.log(`Sum of ${x} and ${y} is ${sum}`);
+}
+
+function test() {
+  var A = 10;
+  var B = 20;
+  addition(A, B);                                      // Arguments or Actual Parameters
+}
+
+test();
+```
+
 - `function` with `return` value and with parameters
+```
+function addition(x, y) {
+  return x + y;
+}
+
+function test() {
+  var A = 10;
+  var B = 20;
+  var sum = addition(A, B);
+  console.log(`Sum of ${A} and ${B} is ${sum}`);
+}
+
+test();
+```
