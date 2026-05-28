@@ -812,3 +812,27 @@ for (var number = 1; number <= 10; number++) {
   console.log(number);
 }
 ```
+
+### `while` Loop
+
+The `while` loop is used when we do not have a fixed idea of the number of iterations.
+
+#### Syntax
+
+```
+initialization;
+
+while(condition){
+    // statements
+    updation;
+}
+```
+
+```
+var number = 1;
+
+while (number <= 10) {
+  console.log(number);
+  number++;
+}
+```
