@@ -836,3 +836,32 @@ while (number <= 10) {
   number++;
 }
 ```
+
+### `do while` Loop
+
+The `do while` loop is used when we have to execute a statement block at least one time whether the condition is false.
+
+#### Syntax
+
+```
+initialization;
+
+do{
+    // statements
+    updation;
+}while(condition);
+```
+
+```
+var number = 1;
+
+do {
+  console.log(number);
+  number++;
+} while (number <= 10);
+
+```
+
+> [!Note]
+> - `for` and `while` loops are entry-controlled loops.
+> - `do while` loop is an exit-controlled loop.
