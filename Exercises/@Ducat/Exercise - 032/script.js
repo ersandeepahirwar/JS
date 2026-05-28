@@ -1,28 +1,29 @@
-// Write a JavaScript program to print and count all prime numbers in a range.
+// Write a JavaScript program to print all Perfect Numbers within a given range.
 
 let startingRange = parseInt(prompt("What is your staring range?"));
 let endingRange = parseInt(prompt("What is your ending range?"));
 
-let primeNumbers = `Prime Numbers between ${startingRange} and ${endingRange} are`;
-let primeNumbersCount = 0;
+let perfectNumbersCount = 0;
+let perfectNumbers = "";
 
 for (let number = startingRange; number <= endingRange; number++) {
-  let isPrime = true;
-  for (let i = 2; i <= Math.sqrt(number); i++) {
-    if (number % i === 0) {
-      isPrime = false;
-      break;
+  let sumOfDivisors = 0;
+  for (let divisor = 1; divisor <= number / 2; divisor++) {
+    if (number % divisor === 0) {
+      sumOfDivisors += divisor;
     }
   }
 
-  if (number >= 2 && isPrime === true) {
-    primeNumbers += ` ${number}`;
-    primeNumbersCount++;
+  if (sumOfDivisors === number && number > 1) {
+    perfectNumbersCount++;
+    perfectNumbers += ` ${number}`;
   }
 }
 
-alert(primeNumbers);
-
-alert(
-  `Count of Prime Numbers between ${startingRange} and ${endingRange} is ${primeNumbersCount}`,
-);
+if (perfectNumbersCount > 0) {
+  alert(
+    `Perfect Number${perfectNumbersCount > 1 ? "s" : ""} between ${startingRange} and ${endingRange} ${perfectNumbersCount > 1 ? "are" : "is"}${perfectNumbers}`,
+  );
+} else {
+  alert(`No Perfect Number found between ${startingRange} and ${endingRange}`);
+}
