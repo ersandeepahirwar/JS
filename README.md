@@ -890,17 +890,19 @@ for (let row = 1; row <= 5; row++) {
 }
 ```
 
-## Functions
+ ## Functions in JavaScript
 
-A function is a building block of any program by which we can divide a large program into small parts.
+### `function`
 
-or
-
-A function is a group of statements.
+A `function` is a building block of any program by which we can divide a large program into small parts.
 
 or
 
-A function is a self-contained statement block.
+A `function` is a group of statements.
+
+or
+
+A `function` is a self-contained statement block.
 
 #### Syntax
 
@@ -939,12 +941,12 @@ Memory required to store arguments and the return value of a function.
 - Functions increase code readability and maintainability.
 
 > [!Note]
-> - A function cannot access variables defined inside another function directly. To do so, we use the concept of arguments and return values.
-> - A function can access variables defined in the global scope, but the global scope cannot directly access variables defined inside a function.
+> - A `function` cannot access variables defined inside another `function` directly. To do so, we use the concept of arguments and `return` values.
+> - A `function` can access variables defined in the global scope, but the global scope cannot directly access variables defined inside a `function`.
 
 ### Types of Functions ( Based on Parameters and Return Value )
 
-- Function without return value and without parameters
-- Function with return value and without parameters
-- Function without return value and with parameters
-- Function with return value and with parameters
+- `function` without `return` value and without parameters
+- `function` with `return` value and without parameters
+- `function` without `return` value and with parameters
+- `function` with `return` value and with parameters
