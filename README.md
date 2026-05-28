@@ -889,3 +889,62 @@ for (let row = 1; row <= 5; row++) {
   console.log(pattern);
 }
 ```
+
+## Functions
+
+A function is a building block of any program by which we can divide a large program into small parts.
+
+or
+
+A function is a group of statements.
+
+or
+
+A function is a self-contained statement block.
+
+#### Syntax
+
+```
+function functionName(parameters){
+    // statements
+}
+```
+
+```
+function test() {
+  console.log("Inside test function");
+}
+
+console.log("Inside main outer scope");
+test();
+console.log("Back to main outer scope");
+```
+
+### Space Complexity
+
+#### Data Space
+Memory required to store variables and constants.
+
+#### Instruction Space
+Memory required to store program instructions.
+
+#### Environment Space
+Memory required to store arguments and the return value of a function.
+
+### Advantages of Functions
+
+- Functions provide the feature of code reusability.
+- Functions decrease the instruction space of a program.
+- Functions decrease the data space of a program.
+- Functions increase code readability and maintainability.
+
+> [!Note]
+> - A function cannot access variables defined inside another function directly. To do so, we use the concept of arguments and return values.
+> - A function can access variables defined in the global scope, but the global scope cannot directly access variables defined inside a function.
+
+### Types of Functions ( Based on Parameters and Return Value )
+
+- Function without return value and without parameters
+- Function with return value and without parameters
+- Function without return value and with parameters
+- Function with return value and with parameters
