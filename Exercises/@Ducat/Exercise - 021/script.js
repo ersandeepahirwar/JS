@@ -13,7 +13,7 @@ for (let i = 1; i < number; i++) {
 }
 
 alert(
-  sumOfAllDivisors === number && number > 0
+  number > 1 && sumOfAllDivisors === number
     ? `${number} is a Perfect Number`
     : `${number} is not a Perfect Number`,
 );
