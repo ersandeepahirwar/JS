@@ -1,6 +1,6 @@
 // Write a JavaScript program to print all Perfect Numbers within a given range.
 
-let startingRange = parseInt(prompt("What is your staring range?"));
+let startingRange = parseInt(prompt("What is your starting range?"));
 let endingRange = parseInt(prompt("What is your ending range?"));
 
 let perfectNumbersCount = 0;
@@ -14,7 +14,7 @@ for (let number = startingRange; number <= endingRange; number++) {
     }
   }
 
-  if (sumOfDivisors === number && number > 1) {
+  if (sumOfDivisors === number && number > 0) {
     perfectNumbersCount++;
     perfectNumbers += ` ${number}`;
   }
