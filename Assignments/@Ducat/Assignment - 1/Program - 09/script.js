@@ -1,4 +1,4 @@
-// Write a JavaScript program to check whether a number is an Armstrong number or not.
+// Write a JavaScript program to check whether a number is a 3-Digit Armstrong number or not.
 
 let checkArmstrong = (number) => {
   let sumOfDigitsCubes = 0;
@@ -9,15 +9,15 @@ let checkArmstrong = (number) => {
     tempNumber = parseInt(tempNumber / 10);
   }
 
-  return sumOfDigitsCubes === number;
+  return number > 1 && sumOfDigitsCubes === number;
 };
 
 let number = parseInt(
-  prompt("What number do you want to check for Armstrong number?"),
+  prompt("What number do you want to check for 3-Digit Armstrong number?"),
 );
 
 alert(
   checkArmstrong(number)
-    ? `${number} is an Armstrong Number`
-    : `${number} is not an Armstrong Number`,
+    ? `${number} is a 3-Digit Armstrong Number`
+    : `${number} is not a 3-Digit Armstrong Number`,
 );
