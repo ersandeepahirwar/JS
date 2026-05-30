@@ -14,7 +14,7 @@ for (let number = startingRange; number <= endingRange; number++) {
     }
   }
 
-  if (sumOfDivisors === number && number > 0) {
+  if (number > 1 && sumOfDivisors === number) {
     perfectNumbersCount++;
     perfectNumbers += ` ${number}`;
   }
