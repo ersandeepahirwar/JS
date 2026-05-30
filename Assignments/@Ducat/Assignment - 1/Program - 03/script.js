@@ -8,7 +8,7 @@ let perfectNumber = (number) => {
     }
   }
 
-  return sumOfDivisors === number && number > 0;
+  return number > 1 && sumOfDivisors === number;
 };
 
 let number = parseInt(
