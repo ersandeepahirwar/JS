@@ -1123,3 +1123,38 @@ function main() {
 }
 main();
 ```
+
+### Recursion
+
+Recursion is a process in which a function calls itself.
+
+or
+
+A function is said to be recursive when it calls itself.
+
+#### Syntax
+
+```
+function functionName() {
+  // statements
+
+  functionName(); // recursive call
+}
+```
+
+```
+const factorial = (number) =>
+  number <= 1 ? 1 : number * factorial(number - 1);
+
+console.log(`5! = ${factorial(5)}`);
+```
+
+### Self-Invoked Function or Immediately Invoked Function Expression ( IIFE )
+
+```
+(() => {
+  var A = 10;
+  var B = 20;
+  console.log(`${A} + ${B} = ${A + B}`);
+})();
+```
