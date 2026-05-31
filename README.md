@@ -1060,3 +1060,66 @@ var sum = (A, B) => A + B;
 
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
+
+### Higher Order Functions and Callback Functions
+
+#### Higher Order Function ( HOF )
+
+A function is called a Higher Order Function if it takes another function as an argument.
+
+or
+
+A function is called a Higher Order Function if it accepts one or more functions as parameters.
+
+#### Callback Function
+
+A function is called a Callback Function if it is passed as an argument to a Higher Order Function.
+
+
+```
+function higherOrder(callback) {
+  console.log("In Higher Order Function");
+  callback();
+  console.log("Back to Higher Order Function");
+}
+
+function callback() {
+  console.log("In Callback Function");
+}
+
+console.log("In Main Outer Scope");
+higherOrder(callback);
+console.log("Back to Main Outer Scope");
+```
+
+### Storage Class
+
+| Keyword       | Type                    | Life                    | Scope           |
+| ------------- | ----------------------- | ----------------------- | --------------  |
+| No Keyword    | Global Variable         | All Over Program        | Global Scope    |
+| `var`         | Function Level Variable | Till Function           | Function Scope  |
+| `let`         | Block Level Variable    | Till Block              | Block Scope     |
+| `const`       | Block Level Variable    | Till Block              | Block Scope     |
+
+```
+function test() {
+  if (true) {
+    A = 10; // Global Scope
+    var B = 20; // Function Scope
+    let C = 30; // Block Scope
+    const D = 40; // Block Scope
+    console.log(
+      `In if Block of Test Function A = ${A}, B = ${B}, C = ${C} and D = ${D}`,
+    );
+  }
+  console.log(`Outside if Block of Test Function A = ${A} and B = ${B}`);
+}
+test();
+
+console.log(`In Main Outer Scope A = ${A}`);
+
+function main() {
+  console.log(`In Main Function A = ${A}`);
+}
+main();
+```
