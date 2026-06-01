@@ -1278,3 +1278,178 @@ items[9] = 9;
 console.log("Items : ", items);
 console.log("Total Items : ", items.length);
 ```
+
+### Accessing Array Elements using `for` Loop
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let index = 0; index < array.length; index++) {
+  console.log(array[index]);
+}
+```
+
+### Accessing Array Elements using `while` Loop
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let index = 0;
+while (index < array.length) {
+  console.log(array[index]);
+  index++;
+}
+```
+
+### Accessing Array Elements using `do while` Loop
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let index = 0;
+do {
+  console.log(array[index]);
+  index++;
+} while (index < array.length);
+```
+
+### Accessing Array Elements using `for in` Loop
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let index in array) {
+  console.log(array[index]);
+}
+```
+
+### Accessing Array Elements using `for of` Loop
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let element of array) {
+  console.log(element);
+}
+```
+
+### `toString()`
+
+Converts an array into a string and uses `,` as a separator.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(array.toString());
+```
+
+### `join()`
+
+Converts an array into a string, and you can specify a separator. By default, the `join()` method uses `,` as a separator.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(array.join(" "));
+```
+
+### `push()`
+
+Inserts one or more elements at the end of an array and returns the updated length of the array.
+
+```
+const array = [0, 1, 2, 3, 4, 5];
+console.log("Array before inserting new elements : ", array);
+
+array.push(6);
+array.push(7);
+array.push(8);
+array.push(9);
+
+console.log("Array after inserting new elements : ", array);
+```
+
+### `pop()`
+
+Deletes an element from the end of an array and returns the deleted element.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Array before deleting existing elements : ", array);
+
+array.pop();
+array.pop();
+array.pop();
+array.pop();
+
+console.log("Array after deleting existing elements : ", array);
+```
+
+### `unshift()`
+
+Inserts one or more elements at the beginning of an array and returns the updated length of the array.
+
+```
+const array = [4, 5, 6, 7, 8, 9];
+console.log("Array before inserting new elements : ", array);
+
+array.unshift(3);
+array.unshift(2);
+array.unshift(1);
+array.unshift(0);
+
+console.log("Array after inserting new elements : ", array);
+```
+
+### `shift()`
+
+Deletes an element from the beginning of an array and returns the deleted element.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Array before deleting existing elements : ", array);
+
+array.shift();
+array.shift();
+array.shift();
+array.shift();
+
+console.log("Array after deleting existing elements : ", array);
+```
+
+### `splice()`
+
+Used to insert or delete elements at any specific position in an array and returns an array of deleted elements.
+
+#### Syntax
+
+```
+array.splice(position, numberOfItemsToDelete, ...itemsToInsert);
+```
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Array before deleting existing elements : ", array);
+
+array.splice(6, 4);
+console.log("Array after deleting existing elements : ", array);
+
+array.splice(6, 0, 6, 7, 8, 9);
+console.log("Array after inserting new elements : ", array);
+```
+
+### `delete`
+
+Deletes an element from an array and leaves an empty slot at that position.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Array before deleting existing elements : ", array);
+
+delete array[6];
+delete array[7];
+delete array[8];
+delete array[9];
+
+console.log("Array after deleting existing elements : ", array);
+```
