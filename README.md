@@ -1158,3 +1158,123 @@ console.log(`5! = ${factorial(5)}`);
   console.log(`${A} + ${B} = ${A + B}`);
 })();
 ```
+
+## Arrays in JavaScript
+
+An Array is a collection of heterogeneous ( different types of ) items arranged in contiguous order.
+
+### Features of Arrays
+
+- An array can contain duplicate items.
+- An array can contain values of different data types.
+- Arrays are mutable data types, i.e., they support updation such as insertion, deletion, and modification of elements.
+
+> [!Note]
+>
+> - Array indexing always starts from `0`.
+> - The index represents the offset ( distance ) of an element from the base element.
+> - The first element is stored at index `0`, the second at index `1`, and so on.
+
+#### Syntax
+
+```
+var array = [item1, item2, ..., itemN];
+```
+
+```
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(numbers);
+```
+
+
+### Create an Array using Array Literal Style
+
+```
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Numbers : ", numbers);
+console.log("Number at Index 0 : ", numbers[0]);
+console.log("Number at Index 1 : ", numbers[1]);
+console.log("Number at Index 10 : ", numbers[10]);
+```
+
+### Create an Array using Empty Array Literal Style
+
+```
+const digits = [];
+digits[0] = 0;
+digits[1] = 1;
+digits[9] = 9;
+console.log("Digits : ", digits);
+console.log("Digit at Index 0 : ", digits[0]);
+console.log("Digit at Index 1 : ", digits[1]);
+console.log("Digit at Index 10 : ", digits[10]);
+```
+
+### Create an Array using Array Constructor by Passing Array Elements as Arguments
+
+```
+const elements = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9); // Array Elements
+console.log("Elements : ", elements);
+console.log("Element at Index 0 : ", elements[0]);
+console.log("Element at Index 1 : ", elements[1]);
+console.log("Element at Index 10 : ", elements[10]);
+```
+
+### Create an Array using Empty Array Constructor
+
+```
+const values = Array();
+values[0] = 0;
+values[1] = 1;
+values[9] = 9;
+console.log("Values : ", values);
+console.log("Value at Index 0 : ", values[0]);
+console.log("Value at Index 1 : ", values[1]);
+console.log("Value at Index 10 : ", values[10]);
+```
+
+### Create an Array using Array Constructor by Passing Array Length as Argument
+
+```
+const items = Array(10); // Array Length
+items[0] = 0;
+items[1] = 1;
+items[9] = 9;
+console.log("Items : ", items);
+console.log("Item at Index 0 : ", items[0]);
+console.log("Item at Index 1 : ", items[1]);
+console.log("Item at Index 10 : ", items[10]);
+```
+
+### `length` of an Array
+
+```
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Numbers : ", numbers);
+console.log("Total Numbers : ", numbers.length);
+
+const digits = [];
+digits[0] = 0;
+digits[1] = 1;
+digits[9] = 9;
+console.log("Digits : ", digits);
+console.log("Total Digits : ", digits.length);
+
+const elements = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
+console.log("Elements : ", elements);
+console.log("Total Elements : ", elements.length);
+
+const values = Array();
+values[0] = 0;
+values[1] = 1;
+values[9] = 9;
+console.log("Values : ", values);
+console.log("Total Values : ", values.length);
+
+const items = Array(10);
+items[0] = 0;
+items[1] = 1;
+items[9] = 9;
+console.log("Items : ", items);
+console.log("Total Items : ", items.length);
+```
