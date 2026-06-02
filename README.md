@@ -1453,3 +1453,142 @@ delete array[9];
 
 console.log("Array after deleting existing elements : ", array);
 ```
+
+### `slice()`
+
+Returns a copy of a portion of an array. For both `start` and `end`, a negative index can be used to indicate an offset from the end of the array. For example, `-2` refers to the second-to-last element of the array.
+
+#### Syntax
+
+```
+array.slice(start, end);
+```
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log("Array : ", array);
+console.log("Sliced Array from Index 0 to Index 6", array.slice(0, 6));
+console.log("Sliced Array from Index 6 to Last Index : ", array.slice(6));
+console.log("Sliced Array for Last 10 Array Elements : ", array.slice(-10));
+```
+
+### `concat()`
+
+Combines two or more arrays. This method returns a new array without modifying any existing arrays.
+
+```
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+const vowels = ["A", "E", "I", "O", "U"];
+const numerals = ["I", "II", "III", "IV", "V"];
+
+const symbols = numbers.concat(vowels, numerals);
+console.log("Symbols : ", symbols);
+```
+
+### `entries()`
+
+Generates an iterator that contains the key ( index ) and value of each array element.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+for (let element of array.entries()) {
+  console.log(element);
+}
+
+// Accessing Index and Value separately
+for (let [index, value] of array.entries()) {
+  console.log("Index = ", index, "Value = ", value);
+}
+```
+
+### `includes()`
+
+Returns `true` if the array contains the specified element; otherwise, it returns `false`.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log("Is 5 an element of array? :", array.includes(5));
+```
+
+### `indexOf()`
+
+Returns the lowest index of the specified element in the array. If the element is not found, it returns `-1`.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
+
+console.log("Index of 5 :", array.indexOf(5));
+```
+
+### `lastIndexOf()`
+
+Returns the last index of the specified element in the array. If the element is not found, it returns `-1`.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
+
+console.log("Index of Last 5 : ", array.lastIndexOf(5));
+```
+
+### `reverse()`
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log("Reverse of Array :", array.reverse());
+```
+
+### `find()`
+
+Returns the first element in the array that passes the specified test. If no element passes the test, it returns `undefined`.
+
+```
+const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+console.log(
+  "First Array Element divisible by 5 :",
+  array.find((element) => element % 5 === 0),
+);
+```
+
+### `findLast()`
+
+Returns the last element in the array that passes the specified test. If no element passes the test, it returns `undefined`.
+
+```
+const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+console.log(
+  "Last Array Element divisible by 5 :",
+  array.findLast((element) => element % 5 === 0),
+);
+```
+
+### `findIndex()`
+
+Returns the index of the first element in the array that passes the specified test. If no element passes the test, it returns `-1`.
+
+```
+const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+console.log(
+  "Index of First Array Element divisible by 5 :",
+  array.findIndex((element) => element % 5 === 0),
+);
+```
+
+### `findLastIndex()`
+
+Returns the index of the last element in the array that passes the specified test. If no element passes the test, it returns `-1`.
+
+```
+const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
+
+console.log(
+  "Index of Last Array Element divisible by 5 :",
+  array.findLastIndex((element) => element % 5 === 0),
+);
+```
