@@ -1592,3 +1592,81 @@ console.log(
   array.findLastIndex((element) => element % 5 === 0),
 );
 ```
+
+### `map()`
+
+Returns a new array containing the results of applying a function to all elements of the array.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(array.map((element, index, array) => element % 2 === 0));
+```
+
+### `filter()`
+
+Returns a new array containing the elements that pass the specified test.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(array.filter((element, index, array) => element % 2 === 0));
+```
+
+### `forEach()`
+
+Calls a callback function for each element of the array and does not return anything.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+array.forEach((element, index, array) => {
+  console.log(element);
+});
+```
+
+### `reduce()`
+
+Calls the specified callback function for all elements of an array. The return value of the callback function is accumulated as a single result and is passed as an argument to the next call of the callback function.
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+console.log(
+  "Sum of Digits from 0 to 9 is",
+  array.reduce(
+    (accumulator, currentValue, index, array) => accumulator + currentValue,
+  ),
+);
+```
+
+### `sort()`
+
+```
+const vowels = ["A", "I", "U", "E", "O"];
+
+console.log("Vowels Array before Sorting :", vowels);
+vowels.sort();
+console.log("Vowels Array after Sorting :", vowels);
+
+const numbers = [0, 2, 4, 6, 8, 1, 3, 5, 7, 9];
+console.log("Numbers Array before Sorting in Ascending Order :", numbers);
+numbers.sort((x, y) => x - y);
+console.log("Numbers Array after Sorting in Ascending Order :", numbers);
+numbers.sort((x, y) => y - x);
+console.log("Numbers Array after Sorting in Descending Order :", numbers);
+```
+
+### Array Destructuring
+
+Array destructuring is the process of unpacking array elements into individual variables.
+
+```
+const student = [1714510036, "Sandeep Ahirwar", "B.Tech", 6.9];
+
+const [ID, name, course, CGPA] = student;
+console.log("ID :", ID);
+console.log("Name :", name);
+console.log("Course :", course);
+console.log("CGPA :", CGPA);
+```
