@@ -1747,3 +1747,90 @@ for (let character of string) {
   console.log(character);
 }
 ```
+
+### `charAt()`
+
+Returns the character at a specified index in a string.
+
+```
+const string = "JS";
+
+console.log("Character at Index 0 :", string[0]);
+console.log("Character at Index 1 :", string.charAt(1));
+
+console.log("Character at 2nd Last Index :", string[-2]); // undefined
+console.log("Character at Last Index :", string.charAt(-1)); // blank
+```
+
+### `at()`
+
+Returns the character at a specified index in a string. It also supports negative indexing, where `-1` refers to the last character of the string.
+
+```
+const string = "JS";
+
+console.log("Character at Index 0 :", string.at(0));
+console.log("Character at 2nd Last Index :", string.at(-2));
+```
+
+### `charCodeAt()`
+
+Returns the Unicode value of the character at a specified index. If no index is provided, it returns the Unicode value of the first character in the string.
+
+```
+const string = "JS";
+
+for (let index in string) {
+  console.log(`${string[index]} = ${string.charCodeAt(index)}`);
+}
+```
+
+### `fromCharCode()`
+
+Converts one or more Unicode values into their corresponding characters.
+
+```
+for (let index = 65; index <= 90; index++) {
+  document.write(`${index} = ${String.fromCharCode(index)}<br>`);
+}
+```
+
+### `indexOf()`
+
+Returns the index of the first occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log(`First Index of T :`, string.indexOf("T"));
+```
+
+### `lastIndexOf()`
+
+Returns the index of the last occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log(`Last Index of T :`, string.lastIndexOf("T"));
+```
+
+### `search()`
+
+Returns the index of the first occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log(`First Index of T :`, string.search("T"));
+```
+
+### `includes()`
+
+Checks whether a specified substring exists in a string. It returns `true` if the substring is found; otherwise, it returns `false`.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log(`String includes T? :`, string.includes("T"));
+```
