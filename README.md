@@ -1670,3 +1670,80 @@ console.log("Name :", name);
 console.log("Course :", course);
 console.log("CGPA :", CGPA);
 ```
+
+## Strings in JavaScript
+
+### String
+
+A String is a collection of characters, a sequence of characters, or an array of characters.
+
+- Strings are immutable data types.
+- String indexing starts from `0`.
+
+### String Constant
+
+A String Constant is a sequence of characters enclosed within single quotes (`' '`), double quotes (`" "`), or backticks (`` ` ` ``).
+
+```
+const A = 'Apple';
+const B = "Banana";
+const C = `Coconut`;
+
+console.log("A for", A);
+console.log("B for", B);
+console.log("C for", C);
+```
+
+### Accessing String Characters Using `for` Loop
+
+```
+const string = "JS";
+
+for (let index = 0; index < string.length; index++) {
+  console.log(string[index]);
+}
+```
+
+### Accessing String Characters Using `while` Loop
+
+```
+const string = "JS";
+
+let index = 0;
+while (index < string.length) {
+  console.log(string[index]);
+  index++;
+}
+```
+
+### Accessing String Characters Using `do while` Loop
+
+```
+const string = "JS";
+
+let index = 0;
+do {
+  console.log(string[index]);
+  index++;
+} while (index < string.length);
+```
+
+### Accessing String Characters Using `for in` Loop
+
+```
+const string = "JS";
+
+for (let index in string) {
+  console.log(string[index]);
+}
+```
+
+### Accessing String Characters Using `for of` Loop
+
+```
+const string = "JS";
+
+for (let character of string) {
+  console.log(character);
+}
+```
