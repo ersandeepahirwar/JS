@@ -1,4 +1,3 @@
-
 ## Introduction to JavaScript
 - JavaScript is a high-level programming language developed by Brendan Eich at Netscape Communications Corporation.
 - JavaScript was introduced in 1995 as a frontend programming language to make web pages interactive.
@@ -1833,4 +1832,239 @@ Checks whether a specified substring exists in a string. It returns `true` if th
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
 
 console.log(`String includes T? :`, string.includes("T"));
+```
+
+### Copy a String into Another String
+
+```
+const string = "JS";
+
+console.log("Original String :", string);
+const language = string;
+console.log("Copied String :", language);
+```
+
+### `concat()`
+
+Concatenates one or more strings into a single string.
+
+```
+const C = "C";
+const A = "A";
+const T = "T";
+
+const string = C + A + T;
+console.log("String after Concatenation :", string);
+
+const D = "D";
+const O = "O";
+const G = "G";
+
+const pet = D.concat(O, G);
+console.log("String after Concatenation :", pet);
+```
+
+### `startsWith()`
+
+Checks whether a string starts with a specified substring. It returns `true` if the string starts with the substring; otherwise, it returns `false`.
+
+```
+const string = "www.google.com";
+const subString = "www";
+
+console.log(
+  `Is www.google.com starts with www? :`,
+  string.startsWith(subString),
+);
+```
+
+### `endsWith()`
+
+Checks whether a string ends with a specified substring. It returns `true` if the string ends with the substring; otherwise, it returns `false`.
+
+```
+const string = "codeysandeep@gmail.com";
+const subString = "gmail.com";
+
+console.log(
+  `Is codeysandeep@gmail.com ends with gmail.com? :`,
+  string.endsWith(subString),
+);
+```
+
+### `toUpperCase()`
+
+Converts all characters in a string to uppercase and returns a new string.
+
+### `toLocaleUpperCase()`
+
+Converts all characters in a string to uppercase according to the host environment's locale and returns a new string.
+
+```
+const string = "The Quick Brown Fox Jumps Over The Little Lazy Dog";
+
+console.log(string.toUpperCase());
+console.log(string.toLocaleUpperCase());
+```
+
+### `toLowerCase()`
+
+Converts all characters in a string to lowercase and returns a new string.
+
+### `toLocaleLowerCase()`
+
+Converts all characters in a string to lowercase according to the host environment's locale and returns a new string.
+
+```
+const string = "The Quick Brown Fox Jumps Over The Little Lazy Dog";
+
+console.log(string.toLowerCase());
+console.log(string.toLocaleLowerCase());
+```
+
+### `substr()`
+
+Returns a substring starting from a specified position and containing a specified number of characters.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log("15 Characters from Index 4 :", string.substr(4, 15));
+```
+
+### `substring()`
+
+Returns a substring from a specified start position to a specified end position. The end position is not included in the returned substring.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log("subString from Index 4 to Index 19 :", string.substring(4, 19));
+```
+
+### `slice()`
+
+Returns a substring from a specified start position to a specified end position. The end position is not included in the returned substring. Negative indices can be used to count positions from the end of the string.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log("subString from Index 4 to Index 19 :", string.slice(4, 19));
+console.log("subString from Index 31 :", string.slice(31));
+console.log("Last 19 Characters :", string.slice(-19));
+```
+
+### `repeat()`
+
+Creates and returns a new string by repeating the original string a specified number of times.
+
+```
+const string = "X";
+
+console.log(
+  `16 Digits of Your Card are 4394 ${string.repeat(4)} ${string.repeat(4)} ${string.repeat(4)}`,
+);
+```
+
+### `replace()`
+
+Returns a new string in which the first occurrence of a specified substring is replaced with another substring.
+
+```
+const string = "4392 0000 0000 0000";
+
+console.log(
+  `16 Digits of Your Card are ${string.replace("0000 0000 0000", "XXXX XXXX XXXX")}`,
+);
+```
+
+### `replaceAll()`
+
+Returns a new string in which all occurrences of a specified substring are replaced with another substring.
+
+```
+const string = "4392 0000 0000 0000";
+
+console.log(`16 Digits of Your Card are ${string.replaceAll("0", "X")}`);
+```
+
+### `split()`
+
+Splits a string into an array of substrings using a specified separator and returns the resulting array.
+
+```
+const digits = "0 1 2 3 4 5 6 7 8 9";
+console.log("Digits :", digits.split());
+
+const vowels = "AEIOU";
+console.log("Vowels :", vowels.split(""));
+
+const alphabet = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+console.log("Alphabet :", alphabet.split(" "));
+```
+
+### Reverse a String
+
+Reverses the characters of a string and returns the reversed string.
+
+```
+const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
+
+console.log("Original String :", string);
+console.log("Reversed String :", string.split("").reverse().join(""));
+```
+
+### `trim()`
+
+Removes all leading and trailing whitespace characters from a string and returns a new string.
+
+```
+const string = " JS ";
+
+console.log(`Original String : "${string}"`);
+console.log(`Trimmed String : "${string.trim()}"`);
+```
+
+### `trimStart()`
+
+Removes all leading whitespace characters from the left side of a string and returns a new string.
+
+```
+const string = " JS";
+
+console.log(`Original String : "${string}"`);
+console.log(`Trimmed String : "${string.trimStart()}"`);
+```
+
+### `trimEnd()`
+
+Removes all trailing whitespace characters from the right side of a string and returns a new string.
+
+```
+const string = "JS ";
+
+console.log(`Original String : "${string}"`);
+console.log(`Trimmed String : "${string.trimEnd()}"`);
+```
+
+### `localeCompare()`
+
+Compares two strings and returns:
+
+- `0` if both strings are equal.
+- A positive value if the first string comes after the second string in alphabetical order.
+- A negative value if the first string comes before the second string in alphabetical order.
+
+```
+const character = "A";
+const vowel = "A";
+console.log("How different is A from A? :", character.localeCompare(vowel));
+
+const B = "B";
+const C = "C";
+console.log("How different is B from C? :", B.localeCompare(C));
+
+const E = "E";
+const D = "D";
+console.log("How different is E from D?", E.localeCompare(D));
 ```
