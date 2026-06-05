@@ -2260,3 +2260,449 @@ object.square();
 #### Note
 
 > Never use `this` inside an arrow function method to represent the current object because `this` does not refer to the current object. Instead, it inherits `this` from its surrounding scope. In a browser's global scope, this may be the global `window` object.
+
+### Need of Functions in Objects
+
+```
+const salary = {
+  basic: 189000,
+  allowances() {
+    this.TA = (this.basic * 10) / 100;
+    this.DA = (this.basic * 15) / 100;
+    this.HRA = (this.basic * 10) / 100;
+    this.MA = (this.basic * 20) / 100;
+    this.gross = this.basic + this.TA + this.DA + this.HRA + this.MA;
+    this.tax = (this.gross * 10) / 100;
+    this.income = this.gross - this.tax;
+  },
+  slip() {
+    console.log(`Basic Salary : ${this.basic}`);
+    console.log(`TA           : ${this.TA}`);
+    console.log(`DA           : ${this.DA}`);
+    console.log(`HRA          : ${this.HRA}`);
+    console.log(`MA           : ${this.MA}`);
+    console.log(`Gross Salary : ${this.gross}`);
+    console.log(`Income Tax   : ${this.tax}`);
+    console.log(`Income       : ${this.income}`);
+  },
+};
+
+salary.allowances();
+salary.slip();
+```
+
+### Getters and Setters
+
+Getter and Setter properties are used to overcome the function/method call overhead problem.
+
+#### Function Call Overhead Problem
+
+When the actual execution time of a function is less than the function switching time, it is called the Function Call Overhead Problem.
+
+```
+const employee = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  designation: "Software Engineer",
+  city: "Jhansi",
+
+  set setSalary(salary) {
+    this.salary = salary;
+  },
+
+  get slip() {
+    console.log(`
+        Employee ID   : ${this.ID}
+        Employee Name : ${this.name}
+        Designation   : ${this.designation}
+        City          : ${this.city}
+        Salary        : ${this.salary}
+        `);
+  },
+};
+
+employee.setSalary = 189000;
+employee.slip;
+```
+
+### Object Destructuring
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+const { ID, name, CGPA } = student;
+console.log(`
+    ID   : ${ID}
+    Name : ${name}
+    CGPA : ${CGPA}
+    `);
+```
+
+### Object Constructor
+
+```
+const Student = function (ID, name, CGPA) {
+  this.ID = ID;
+  this.name = name;
+  this.CGPA = CGPA;
+};
+
+const SRGI1714510035 = new Student(1714510035, "Rohit Kushwaha", 6.7);
+const SRGI1714510036 = new Student(1714510036, "Sandeep Ahirwar", 6.9);
+
+console.log("SRGI1714510035 :", SRGI1714510035);
+console.log("SRGI1714510036 :", SRGI1714510036);
+```
+
+### Object Prototype
+
+- Every object in JavaScript has a built-in property called its prototype.
+- A prototype is itself an object.
+- Every prototype has its own prototype, forming a prototype chain.
+- Prototype properties and methods are not direct properties of the object itself.
+- One prototype can be shared by multiple objects.
+- Prototype members are common to all objects that share the same prototype.
+
+#### Need of Object Prototype
+
+- To share common properties and methods among multiple objects.
+- To reduce code duplication.
+- To save memory.
+
+```
+const Student = function (ID, name, CGPA) {
+  this.ID = ID;
+  this.name = name;
+  this.CGPA = CGPA;
+};
+
+Student.prototype.college = "SRGI";
+Student.prototype.display = function () {
+  console.log(`
+    ID      : ${this.ID}
+    Name    : ${this.name}
+    CGPA    : ${this.CGPA}
+    College : ${this.college}
+    `);
+};
+
+const SRGI1714510035 = new Student(1714510035, "Rohit Kushwaha", 6.7);
+SRGI1714510035.display();
+
+const SRGI1714510036 = new Student(1714510036, "Sandeep Ahirwar", 6.9);
+SRGI1714510036.display();
+```
+
+### `Object.keys()`
+
+Returns an array containing all the keys of an object.
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log(Object.keys(student));
+```
+
+### `Object.values()`
+
+Returns an array containing all the values of an object.
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log(Object.values(student));
+```
+
+### `Object.entries()`
+
+Returns an array containing all the key-value pairs of an object.
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log(Object.entries(student));
+```
+
+### `Object.assign()`
+
+Used to copy the properties of one object into another object.
+
+```
+const A = {
+  x: 1,
+  y: 2,
+};
+const B = A; // Shallow Copy
+B.x = 10;
+B.y = 20;
+console.log("A :", A);
+console.log("B :", B);
+
+const C = {
+  x: 1,
+  y: 2,
+};
+const D = {};
+Object.assign(D, C); // Deep Copy
+D.x = 10;
+D.y = 20;
+console.log("C :", C);
+console.log("D :", D);
+```
+
+### `Object.create()`
+
+Used to create a new object and make an existing object the prototype of the newly created object.
+
+```
+const A = {
+  x: 1,
+  y: 2,
+};
+
+const B = Object.create(A);
+
+console.log("B :", B);
+console.log("Prototype of B :", Object.getPrototypeOf(B));
+```
+
+### `Object.isFrozen()`
+
+Checks whether an object is frozen or not. It returns `true` if the object is frozen; otherwise, it returns `false`.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Object :", object);
+console.log("Is Frozen? :", Object.isFrozen(object));
+```
+
+### `Object.freeze()`
+
+Freezes an object and prevents its properties from being added, deleted, or updated.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+Object.freeze(object);
+
+console.log("Object :", object);
+object.college = "SRGI";
+delete object.name;
+object.ID = "17CSECS005";
+console.log("Object :", object);
+```
+
+### `Object.isSealed()`
+
+Checks whether an object is sealed or not. It returns `true` if the object is sealed; otherwise, it returns `false`.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Object :", object);
+console.log("Is Object Sealed? :", Object.isSealed(object));
+```
+
+### `Object.seal()`
+
+Seals an object and prevents its properties from being added or deleted, but existing properties can still be updated.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+Object.seal(object);
+
+console.log("Object :", object);
+object.college = "SRGI";
+delete object.name;
+object.ID = "17CSECS005";
+console.log("Object :", object);
+```
+
+### `Object.getOwnPropertyDescriptor(object, property)`
+
+Returns the descriptor of a specified property of an object.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log(
+  "Description of ID :",
+  Object.getOwnPropertyDescriptor(object, "ID"),
+);
+console.log(
+  "Description of Name :",
+  Object.getOwnPropertyDescriptor(object, "name"),
+);
+console.log(
+  "Description of CGPA :",
+  Object.getOwnPropertyDescriptor(object, "CGPA"),
+);
+```
+
+### `Object.setPrototypeOf(object, prototype)`
+
+Used to set the prototype of an object.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+Object.setPrototypeOf(object, { college: "SRGI" });
+
+console.log("Object :", object);
+console.log(`
+    ID      : ${object.ID}
+    Name    : ${object.name}
+    CGPA    : ${object.CGPA}
+    College : ${object.college}
+    `);
+```
+
+### `Object.getPrototypeOf(object)`
+
+Used to get the prototype of an object.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+Object.setPrototypeOf(object, { college: "SRGI" });
+
+console.log("Object :", object);
+console.log("Prototype of Object :", Object.getPrototypeOf(object));
+```
+
+### `Object.is()`
+
+Used to compare two values and determine whether they are the same value. It returns `true` if the values are equal; otherwise, it returns `false`.
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Is ID = 1714510036? :", Object.is(object.ID, 1714510036));
+console.log(`Is ID = "1714510036"? :`, Object.is(object.ID, "1714510036"));
+```
+
+### `Object.defineProperty(object, property, descriptor)`
+
+Used to define a property on an object with detailed settings (descriptor).
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Object :", object);
+
+Object.defineProperty(object, "college", {
+  value: "SRGI",
+  writable: false,
+  enumerable: true,
+  configurable: true,
+});
+
+console.log("Object :", object);
+object.college = "AKTU";
+console.log("Object :", object);
+
+Object.defineProperty(object, "email", {
+  value: "codeysandeep@gmail.com",
+  writable: true,
+  enumerable: false,
+  configurable: true,
+});
+
+console.log("Object :", object);
+
+Object.defineProperty(object, "course", {
+  value: "B.Tech",
+  writable: true,
+  enumerable: true,
+  configurable: false,
+});
+
+console.log("Object :", object);
+delete object.course;
+console.log("Object :", object);
+```
+
+### `Object.defineProperties(object, { property1: descriptor1, property2: descriptor2 })`
+
+Used to define multiple properties on an object with detailed settings (descriptors).
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Object :", object);
+
+Object.defineProperties(object, {
+  college: {
+    value: "SRGI",
+    writable: true,
+    enumerable: true,
+    configurable: true,
+  },
+  course: {
+    value: "B.Tech",
+    writable: false,
+    enumerable: false,
+    configurable: false,
+  },
+});
+
+console.log("Object :", object);
+```
