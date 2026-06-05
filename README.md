@@ -2068,3 +2068,195 @@ const E = "E";
 const D = "D";
 console.log("How different is E from D?", E.localeCompare(D));
 ```
+
+## Objects in JavaScript
+
+An Object stores information in the form of key-value pairs.
+
+- Keys must be unique.
+- Values may be duplicated.
+- Objects are mutable data types.
+
+#### Syntax
+
+```
+let objectName = {
+  key1: value1,
+  key2: value2,
+  ...
+};
+```
+
+### Object Literal
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log(student);
+```
+
+### Empty Object Literal
+
+```
+const fruit = {};
+fruit.name = "Apple";
+fruit.quantity = 50;
+fruit.price = 120.5;
+console.log(fruit);
+
+const product = {};
+product["name"] = "Laptop";
+product["stock"] = 15;
+product["price"] = 55000.99;
+console.log(product);
+```
+
+### `Object()`
+
+```
+const student = Object();
+student.ID = 1714510036;
+student.name = "Sandeep Ahirwar";
+student.CGPA = 6.9;
+console.log(student);
+
+const fruit = Object();
+fruit["name"] = "Apple";
+fruit["quantity"] = 50;
+fruit["price"] = 120.5;
+console.log(fruit);
+```
+
+### Accessing Object Values using Keys
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+console.log(`ID : ${student.ID}`);
+console.log(`Name : ${student.name}`);
+console.log(`CGPA : ${student.CGPA}`);
+
+const fruit = {
+  name: "Apple",
+  quantity: 50,
+  price: 120.5,
+};
+console.log(`Name : ${fruit["name"]}`);
+console.log(`Quantity : ${fruit["quantity"]}`);
+console.log(`Price : ${fruit["price"]}`);
+```
+
+### Accessing Object Values Using a `for...in` Loop
+
+```
+const object = {
+  ID: 1714510036,
+  NAME: "SANDEEP AHIRWAR",
+  CGPA: 6.9,
+};
+
+for (let key in object) {
+  console.log(`${key} : ${object[key]}`);
+}
+```
+
+### Deleting Object Properties
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+};
+
+console.log("Object Before Deleting Keys :", student);
+delete student.ID;
+delete student.name;
+delete student.CGPA;
+console.log("Object After Deleting Keys :", student);
+
+const fruit = {
+  name: "Apple",
+  quantity: 50,
+  price: 120.5,
+};
+
+console.log("Object Before Deleting Keys :", fruit);
+delete fruit["name"];
+delete fruit["quantity"];
+delete fruit["price"];
+console.log("Object After Deleting Keys :", fruit);
+```
+
+### Nesting of Objects
+
+```
+const student = {
+  ID: 1714510036,
+  name: {
+    firstName: "Sandeep",
+    lastName: "Ahirwar",
+  },
+  CGPA: 6.9,
+};
+
+console.log(student);
+```
+
+### Functions / Methods in Objects
+
+```
+const object = {
+  A: 100,
+  B: 5,
+  addition() {
+    console.log(
+      `In Regular Function, ${object.A} + ${object.B} = ${object.A + object.B}`,
+    );
+  },
+  subtraction() {
+    console.log(
+      `In Regular Function, ${this.A} - ${this.B} = ${this.A - this.B}`,
+    );
+  },
+  multiplication: function () {
+    console.log(
+      `In Anonymous Function, ${object.A} * ${object.B} = ${object.A * object.B}`,
+    );
+  },
+  division: function () {
+    console.log(
+      `In Anonymous Function, ${this.A} / ${this.B} = ${this.A / this.B}`,
+    );
+  },
+  modulus: () =>
+    console.log(
+      `In Fat Arrow Function, ${object.A} % ${object.B} = ${object.A % object.B}`,
+    ),
+  square: () =>
+    // Using this Keyword, We can't access the values of A and B
+    console.log(
+      `In Fat Arrow Function, ${this.A} ** ${this.B} = ${this.A ** this.B}`,
+    ),
+};
+
+object.addition();
+object.subtraction();
+object.multiplication();
+object.division();
+object.modulus();
+object.square();
+```
+
+> In an object, we can use either the object name or `this` to access or define object properties.
+
+#### Note
+
+> Never use `this` inside an arrow function method to represent the current object because `this` does not refer to the current object. Instead, it inherits `this` from its surrounding scope. In a browser's global scope, this may be the global `window` object.
