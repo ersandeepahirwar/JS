@@ -1,0 +1,10 @@
+console.log(new Date(2000, 8, 16, 20, 10, 20, 30));
+console.log(new Date(2000, 8, 16, 20, 10, 20, 30).toLocaleString());
+console.log(new Date(2000, 8, 16, 20, 10, 20).toLocaleString());
+console.log(new Date(2000, 8, 16, 20, 10).toLocaleString());
+console.log(new Date(2000, 8, 16, 20).toLocaleString());
+console.log(new Date(2000, 8, 16).toLocaleString());
+console.log(new Date(2000, 8).toLocaleString());
+console.log(new Date(969062400000).toLocaleString());
+console.log(new Date("2000/09/16").toLocaleString());
+console.log(new Date("2000/09/16 08:10:20 pm").toLocaleString());
