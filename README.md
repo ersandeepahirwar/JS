@@ -2832,3 +2832,159 @@ const set = new Set([0, 1, 2, 3, 4, 5]);
 
 console.log("Entries of Set :", set.entries());
 ```
+
+## Maps in JavaScript
+
+A Map is a collection of items stored as key-value pairs.
+
+- Keys must be unique.
+- Values may be duplicated.
+- If duplicate keys are used in a Map, only the last value assigned to that key is retained.
+
+### `new Map()`
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Map :", map);
+```
+
+### `set()`
+
+Used to insert a key-value pair into a Map. If the key already exists, `set()` updates the value of that key.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Map :", map);
+map.set("college", "SRGI");
+console.log("Map :", map);
+```
+
+### `delete()`
+
+Used to delete a specified key from a Map.
+
+- Removes the key-value pair if the key exists.
+- Does nothing if the key is invalid or does not exist in the Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+  ["college", "SRGI"],
+]);
+
+console.log("Map :", map);
+map.delete("college");
+console.log("Map :", map);
+```
+
+### `clear()`
+
+Used to delete all key-value pairs from a Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Map :", map);
+map.clear();
+console.log("Map :", map);
+```
+
+### `size`
+
+Returns the number of key-value pairs in a Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Size of Map :", map.size);
+```
+
+### `has()`
+
+Returns `true` if the specified key exists in the Map; otherwise, it returns `false`.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Is Map contains ID? :", map.has("ID"));
+```
+
+### `get()`
+
+Returns the value associated with a specified key. It returns `undefined` if no argument is provided or if the key does not exist in the Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("ID :", map.get("ID"));
+```
+
+### `values()`
+
+Returns an iterator containing all the values of a Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Values of Map :", map.values());
+```
+
+### `keys()`
+
+Returns an iterator containing all the keys of a Map.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Keys of Map :", map.keys());
+```
+
+### `entries()`
+
+Returns an iterator containing all key-value pairs of a Map in the form `[key, value]`.
+
+```
+const map = new Map([
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+]);
+
+console.log("Entries of Map :", map.entries());
+```
