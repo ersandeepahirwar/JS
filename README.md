@@ -2988,3 +2988,210 @@ const map = new Map([
 
 console.log("Entries of Map :", map.entries());
 ```
+
+## Date in JavaScript
+
+### `new Date()`
+
+Returns the current date and time.
+
+```
+const date = new Date();
+
+console.log("Date :", date);
+```
+
+### `toString()`
+
+```
+const date = new Date();
+
+console.log("String :", date.toString());
+```
+
+### `toDateString()`
+
+```
+const date = new Date();
+
+console.log("Date String :", date.toDateString());
+```
+
+### `toTimeString()`
+
+```
+const date = new Date();
+
+console.log("Time String :", date.toTimeString());
+```
+
+### `toLocaleString()`
+
+```
+const date = new Date();
+
+console.log("Locale String :", date.toLocaleString());
+```
+
+### `toLocaleDateString()`
+
+```
+const date = new Date();
+
+console.log("Locale Date String :", date.toLocaleDateString());
+```
+
+### `toLocaleTimeString()`
+
+```
+const date = new Date();
+
+console.log("Locale Time String :", date.toLocaleTimeString());
+```
+
+### Custom Date Using `new Date()`
+
+#### Syntax
+
+```
+new Date(year, month, day, hour, minute, second, millisecond);
+```
+
+- We have to specify at least two items to create a custom date.
+- If only a single argument is passed to `Date()`, it is treated as milliseconds.
+
+```
+console.log(new Date(2000, 8, 16, 20, 10, 20, 30));
+console.log(new Date(2000, 8, 16, 20, 10, 20, 30).toLocaleString());
+console.log(new Date(2000, 8, 16, 20, 10, 20).toLocaleString());
+console.log(new Date(2000, 8, 16, 20, 10).toLocaleString());
+console.log(new Date(2000, 8, 16, 20).toLocaleString());
+console.log(new Date(2000, 8, 16).toLocaleString());
+console.log(new Date(2000, 8).toLocaleString());
+console.log(new Date(969062400000).toLocaleString());
+console.log(new Date("2000/09/16").toLocaleString());
+console.log(new Date("2000/09/16 08:10:20 pm").toLocaleString());
+```
+
+### `getFullYear()`
+
+```
+const date = new Date();
+
+console.log("Full Year :", date.getFullYear());
+```
+
+### `getMonth()`
+
+```
+const date = new Date();
+
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+console.log("Month :", months[date.getMonth()]);
+```
+
+### `getDate()`
+
+```
+const date = new Date();
+
+console.log("Date :", date.getDate());
+```
+
+### `getHours()`
+
+```
+const date = new Date();
+
+console.log("Hours :", date.getHours());
+```
+
+### `getMinutes()`
+
+```
+const date = new Date();
+
+console.log("Minutes :", date.getMinutes());
+```
+
+### `getSeconds()`
+
+```
+const date = new Date();
+
+console.log("Seconds :", date.getSeconds());
+```
+
+### `getMilliseconds()`
+
+```
+const date = new Date();
+
+console.log("Milliseconds :", date.getMilliseconds());
+```
+
+### `getUTCDate()`
+
+```
+const date = new Date();
+
+console.log("UTC Date :", date.getUTCDate());
+```
+
+### `getTime()`
+
+Returns the number of milliseconds elapsed since **January 1, 1970, 00:00:00 UTC**.
+
+```
+const date = new Date();
+
+console.log("Time :", date.getTime());
+```
+
+### `getDay()`
+
+Returns the day of the week as a number.
+
+- `0` → Sunday
+- `1` → Monday
+- `2` → Tuesday
+- `3` → Wednesday
+- `4` → Thursday
+- `5` → Friday
+- `6` → Saturday
+
+```
+const date = new Date();
+
+const days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+console.log("Day :", days[date.getDay()]);
+```
+
+### `Date.now()`
+
+Returns the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.
+
+```
+console.log("Current Date and Time :", Date.now());
+```
