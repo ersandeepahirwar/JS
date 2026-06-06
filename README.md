@@ -2706,3 +2706,129 @@ Object.defineProperties(object, {
 
 console.log("Object :", object);
 ```
+
+## Sets in JavaScript
+
+A Set is a collection of unique elements.
+
+- Cannot contain duplicate items.
+- Stores only unique values.
+- Does not support indexing.
+- Elements can be added or removed dynamically.
+
+### `new Set()`
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5, 4, 3, 2, 1, 0]);
+
+console.log("Set :", set);
+```
+
+### `Array.from()`
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+console.log("Set :", set);
+
+const array = Array.from(set);
+console.log("Array :", array);
+```
+
+### `add()`
+
+Used to add an item to a Set. If the item already exists, it does nothing. If no argument is provided, it adds `undefined` to the Set.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+console.log("Set :", set);
+
+set.add();
+console.log("Set :", set);
+
+set.add(null);
+console.log("Set :", set);
+```
+
+### `delete()`
+
+Used to delete a specified item from a Set.
+
+- Removes the item if it exists in the Set.
+- Returns `false` if the item does not exist.
+- If no argument is provided, it attempts to remove `undefined` from the Set. If `undefined` is not present, nothing happens.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5, undefined, null]);
+console.log("Set :", set);
+
+set.delete();
+console.log("Set :", set);
+
+set.delete(null);
+console.log("Set :", set);
+```
+
+### `clear()`
+
+Removes all items from a Set.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+console.log("Set :", set);
+
+set.clear();
+console.log("Set :", set);
+```
+
+### `size`
+
+Returns the number of elements in a Set.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+
+console.log("Set :", set);
+console.log("Size of Set :", set.size);
+```
+
+### `has()`
+
+Returns `true` if the specified item exists in the Set; otherwise, it returns `false`.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+
+console.log("Is Set contains 0? :", set.has(0));
+```
+
+### `values()`
+
+Returns an iterator containing all the elements of a Set.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+
+console.log("Values of Set :", set.values());
+```
+
+### `keys()`
+
+Returns an iterator containing all the elements of a Set.
+
+> In a Set, `keys()` and `values()` return the same iterator because a Set stores only values.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+
+console.log("Keys of Set :", set.keys());
+```
+
+### `entries()`
+
+Returns an iterator containing the elements of a Set as `[value, value]` pairs.
+
+```
+const set = new Set([0, 1, 2, 3, 4, 5]);
+
+console.log("Entries of Set :", set.entries());
+```
