@@ -3195,3 +3195,432 @@ Returns the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.
 ```
 console.log("Current Date and Time :", Date.now());
 ```
+
+## OOPS
+
+* Designed by **Bjarne Stroustrup** ( Founder of C++ ).
+* OOPS stands for **Object-Oriented Programming System**.
+
+OOPS is a computer science term that defines a well-structured series of steps to construct a computer application composed of multiple objects. Each object can handle data and send or receive messages from other objects. Since objects are independent of each other, OOPS is considered more flexible than the procedural programming approach.
+
+**OR**
+
+OOPS is a programming concept that helps us achieve the following approaches in programming.
+
+### OOPS Approaches
+
+1. **Abstraction** – Data Hiding
+2. **Encapsulation** – Binding data and functions into a single unit
+3. **Polymorphism** – Many forms of a single entity
+4. **Inheritance** – Code Reusability
+
+### Class
+
+- A class is required to implement OOPS.
+- A class is a technique by which we can define a new data type as required.
+- A class is a blueprint for objects.
+- A class is a collection of properties and behaviors, where properties are variables of different data types and behaviors are functions.
+- A class is a logical entity only, which means it does not have a physical existence in memory until its instance is created.
+- The instance of a class is called an object.
+- We can create **n** objects of a class.
+- Each object has the same properties and behaviors, but their values may be different.
+
+#### Syntax
+
+```
+class ClassName {
+  constructor() {
+    // initialization code
+  }
+
+  method1() {
+    // code
+  }
+
+  method2() {
+    // code
+  }
+
+  // more methods
+}
+```
+
+### Class without Constructor
+
+```
+class Test {
+  show() {
+    console.log("In show() of Test Class");
+  }
+  display() {
+    console.log("In display() of Test Class");
+  }
+}
+
+const object = new Test();
+
+object.show();
+object.display();
+```
+
+```
+class Addition {
+  calculate(x, y) {
+    this.x = x;
+    this.y = y;
+    this.sum = x + y;
+  }
+  display() {
+    console.log(`${this.x} + ${this.y} = ${this.sum}`);
+  }
+}
+
+const addition = new Addition();
+
+addition.calculate(10, 20);
+addition.display();
+```
+
+```
+class IsMagicalNumber {
+  data(number) {
+    this.number = number;
+  }
+  check() {
+    let tempNumber = this.number;
+    let sumOfDigits = 0;
+    while (tempNumber !== 0) {
+      let digit = tempNumber % 10;
+      sumOfDigits += digit;
+      tempNumber = parseInt(tempNumber / 10);
+    }
+    let tempSumOfDigits = sumOfDigits;
+    let reverse = 0;
+    while (tempSumOfDigits !== 0) {
+      let digit = tempSumOfDigits % 10;
+      reverse = reverse * 10 + digit;
+      tempSumOfDigits = parseInt(tempSumOfDigits / 10);
+    }
+    if (sumOfDigits * reverse === this.number) {
+      console.log(`${this.number} is a Magical Number`);
+    } else {
+      console.log(`${this.number} is not a Magical Number`);
+    }
+  }
+}
+
+const isMagicalNumber = new IsMagicalNumber();
+
+isMagicalNumber.data(1729);
+isMagicalNumber.check();
+```
+
+### OOPS Approaches
+
+#### 1. Abstraction
+
+- Data hiding, i.e., hiding complexity and showing functionality.
+- We can hide members using access specifiers like `public`, `private`, and `protected`.
+- JavaScript does not fully support abstraction.
+
+#### 2. Encapsulation
+
+- Binding data members with member functions/methods.
+- Wrapping up data members with member functions.
+
+#### 3. Polymorphism
+
+- Many forms of a single entity.
+
+#### Method Overloading
+
+- If we define more than one function in a class with the same name but different signatures ( either the number of arguments or their types are different ), it is called method overloading.
+- JavaScript does not support method overloading.
+
+#### Constructor and Destructor
+
+- We can create user-defined constructors in JavaScript.
+- We cannot create user-defined destructors in JavaScript.
+
+#### Method Overriding
+
+- If both parent and child classes have members with the same name, then the child class overrides the parent's member.
+- The child class can inherit only those members from the parent that it does not already have.
+- JavaScript supports method overriding.
+
+#### Operator Overloading
+
+- If we provide a user-defined definition to an existing operator, then this concept is called operator overloading.
+- JavaScript does not support operator overloading.
+
+#### 4. Inheritance
+
+- If we reuse the members of an existing class in a new class, it is called inheritance.
+- JavaScript supports inheritance.
+
+### Constructor
+
+- A special member method of a class that provides memory initialization to a class object.
+- There is no need to call a constructor explicitly; it is called automatically when an object is created using the `new` keyword.
+- A constructor can be parameterized.
+- If we do not provide a definition for a constructor in a class, then the compiler ( JIT ) provides a default constructor.
+- We cannot return a user-defined value from a constructor.
+
+### Class with constructor
+
+```
+class Test {
+  constructor() {
+    console.log("Constructing Test Class");
+  }
+  show() {
+    console.log("In show() of Test Class");
+  }
+  display() {
+    console.log("In display() of Test Class");
+  }
+}
+
+const object = new Test();
+
+object.show();
+object.display();
+```
+
+```
+class Addition {
+  constructor(x = 0, y = 0) {
+    this.x = x;
+    this.y = y;
+    this.sum = x + y;
+  }
+  calculate() {
+    console.log(`${this.x} + ${this.y} = ${this.sum}`);
+  }
+}
+
+const addition = new Addition(10, 20);
+addition.calculate();
+
+const sum = new Addition();
+sum.calculate();
+```
+
+### Inheritance
+
+- Inheritance is an OOPS approach that provides a feature to reuse all members of an existing class in a new class.
+- For example, if a class `B` inherits class `A`, then class `B` can reuse all the members of class `A`.
+- Class `B` is called the **Child Class**, **Derived Class**, or **Subclass**.
+- Class `A` is called the **Parent Class**, **Base Class**, or **Superclass**.
+
+#### Types of Inheritance
+
+1. Single Level Inheritance
+2. Multilevel Inheritance
+3. Hierarchical Inheritance
+
+#### Syntax
+
+```
+class Parent {
+    // properties and methods
+}
+
+class Child extends Parent {
+    // properties and methods
+}
+```
+
+> [!Note]
+> A child class can access only those members of the parent class that the child class does not already have.
+> If both the parent and child classes have members with the same name, the child class member overrides the parent class member.
+
+```
+class Parent {
+  show() {
+    console.log("In show() of Parent Class");
+  }
+  // Overridden Method
+  print() {
+    console.log("In print() of Parent Class");
+  }
+}
+
+class Child extends Parent {
+  display() {
+    console.log("In display() of Child Class");
+  }
+  print() {
+    console.log("In print() of Child Class");
+  }
+}
+
+const object = new Child();
+
+object.show();
+object.display();
+object.print();
+```
+
+### Accessing Overridden Method
+
+```
+class Parent {
+  show() {
+    console.log("In show() of Parent Class");
+  }
+  // Overridden Method
+  print() {
+    console.log("In print() of Parent Class");
+  }
+}
+
+class Child extends Parent {
+  display() {
+    console.log("In display() of Child Class");
+  }
+  print() {
+    super.print();
+    console.log("In print() of Child Class");
+  }
+}
+
+const object = new Child();
+
+object.show();
+object.display();
+object.print();
+```
+
+### Constructor in Parent Class
+
+```
+class Parent {
+  constructor() {
+    console.log("Constructing Parent Class");
+  }
+  show() {
+    console.log("In show() of Parent Class");
+  }
+}
+
+class Child extends Parent {
+  display() {
+    console.log("In display() of Child Class");
+  }
+}
+
+const object = new Child();
+
+object.show();
+object.display();
+```
+
+### Constructor in Child Class
+
+```
+class Parent {
+  show() {
+    console.log("In show() of Parent Class");
+  }
+}
+
+class Child extends Parent {
+  constructor() {
+    super();
+    console.log("Constructing Child Class");
+  }
+  display() {
+    console.log("In display() of Child Class");
+  }
+}
+
+const object = new Child();
+
+object.show();
+object.display();
+```
+
+### Single Inheritance
+
+When a single child class inherits a single parent class, it is called **Single Inheritance**.
+
+```
+class Parent {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.sum = x + y;
+  }
+}
+
+class Child extends Parent {
+  calculate() {
+    console.log(`${this.x} + ${this.y} = ${this.sum}`);
+  }
+}
+
+const object = new Child(10, 20);
+
+object.calculate();
+```
+
+### Multilevel Inheritance
+
+When a child class is inherited by another child class, it is called **Multilevel Inheritance**.
+
+```
+class GrandParent {
+  constructor() {
+    this.array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  }
+}
+
+class Parent extends GrandParent {
+  display() {
+    return this.array;
+  }
+}
+
+class Child extends Parent {
+  reverse() {
+    return this.array.reverse();
+  }
+}
+
+const child = new Child();
+
+console.log("Original Array :", child.display());
+console.log("Reversed Array :", child.reverse());
+```
+
+### Hierarchical Inheritance
+
+When a single parent class is inherited by more than one child class, it is called **Hierarchical Inheritance**.
+
+```
+class Math {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+class Addition extends Math {
+  calculate() {
+    console.log(`${this.x} + ${this.y} = ${this.x + this.y}`);
+  }
+}
+
+class Subtraction extends Math {
+  calculate() {
+    console.log(`${this.x} - ${this.y} = ${this.x - this.y}`);
+  }
+}
+
+const addition = new Addition(10, 20);
+addition.calculate();
+
+const subtraction = new Subtraction(20, 10);
+subtraction.calculate();
+```
