@@ -3624,3 +3624,161 @@ addition.calculate();
 const subtraction = new Subtraction(20, 10);
 subtraction.calculate();
 ```
+
+## DOM and BOM Manipulation
+
+### BOM ( Browser Object Model )
+
+- BOM stands for **Browser Object Model**.
+- It allows JavaScript to interact with the browser itself, outside of the content of the webpage.
+- It provides access to browser features like `window`, `history`, `screen`, `navigator`, and `location`.
+
+### DOM ( Document Object Model )
+
+- DOM stands for **Document Object Model**.
+- DOM manipulation refers to using JavaScript to access, modify, add, or delete elements and content of an HTML document.
+- It allows dynamic updates to the content, structure, and styles of a web page.
+- With the help of DOM, we can perform the following operations:
+
+1. We can change all the HTML elements in a document.
+2. We can change all the HTML attributes in a document.
+3. We can change all the CSS styles in a document.
+4. We can react to existing events in a document.
+5. We can create our own events and react to them.
+6. We can perform time-based events.
+7. We can create and delete HTML elements and attributes in a document.
+
+### DOM Selectors
+
+#### getElementById()
+
+```
+<h1 id="heading" class="heading">HTML</h1>
+<p id="paragraph" class="paragraph">
+    HTML ( HyperText Markup Language ) is the standard markup language used to create and structure web pages.
+</p>
+```
+
+```
+const heading = document.getElementById("heading");
+console.log(heading.innerText);
+```
+
+#### getElementsByClassName()
+
+```
+<ul>
+    <li class="list-item">Simple and easy to learn</li>
+    <li class="list-item">Platform independent</li>
+    <li class="list-item">Tag-based language</li>
+    <li class="list-item">Used to structure web pages</li>
+    <li class="list-item">Supports hyperlinks</li>
+    <li class="list-item">Supports multimedia</li>
+    <li class="list-item">Case insensitive</li>
+    <li class="list-item">Works with CSS and JavaScript</li>
+    <li class="list-item">Open standard and browser supported</li>
+</ul>
+```
+
+```
+const listItem = document.getElementsByClassName("list-item");
+for (let item of listItem) {
+  console.log(item.innerText);
+}
+```
+
+#### getElementsByTagName()
+
+```
+<ul>
+    <li class="list-item">Simple and easy to learn</li>
+    <li class="list-item">Platform independent</li>
+    <li class="list-item">Tag-based language</li>
+    <li class="list-item">Used to structure web pages</li>
+    <li class="list-item">Supports hyperlinks</li>
+    <li class="list-item">Supports multimedia</li>
+    <li class="list-item">Case insensitive</li>
+    <li class="list-item">Works with CSS and JavaScript</li>
+    <li class="list-item">Open standard and browser supported</li>
+</ul>
+```
+
+```
+const li = document.getElementsByTagName("li");
+for (let i of li) {
+  console.log(i.innerText);
+}
+```
+
+#### querySelector()
+
+```
+<h1 id="heading" class="heading">HTML</h1>
+<p id="paragraph" class="paragraph">
+    HTML ( HyperText Markup Language ) is the standard markup language used to create and structure web pages.
+</p>
+
+<ul>
+    <li class="list-item">Simple and easy to learn</li>
+    <li class="list-item">Platform independent</li>
+    <li class="list-item">Tag-based language</li>
+    <li class="list-item">Used to structure web pages</li>
+    <li class="list-item">Supports hyperlinks</li>
+    <li class="list-item">Supports multimedia</li>
+    <li class="list-item">Case insensitive</li>
+    <li class="list-item">Works with CSS and JavaScript</li>
+    <li class="list-item">Open standard and browser supported</li>
+</ul>
+```
+
+```
+const heading = document.querySelector("#heading");
+console.log(heading.innerText);
+
+const paragraph = document.querySelector(".paragraph");
+console.log(paragraph.innerText);
+
+const li = document.querySelector("li");
+console.log(li.innerText);
+```
+
+#### querySelectorAll()
+
+```
+<h1 id="heading" class="heading">HTML</h1>
+<p id="paragraph" class="paragraph">
+    HTML ( HyperText Markup Language ) is the standard markup language used to create and structure web pages.
+</p>
+
+<ul>
+    <li class="list-item">Simple and easy to learn</li>
+    <li class="list-item">Platform independent</li>
+    <li class="list-item">Tag-based language</li>
+    <li class="list-item">Used to structure web pages</li>
+    <li class="list-item">Supports hyperlinks</li>
+    <li class="list-item">Supports multimedia</li>
+    <li class="list-item">Case insensitive</li>
+    <li class="list-item">Works with CSS and JavaScript</li>
+    <li class="list-item">Open standard and browser supported</li>
+</ul>
+```
+
+```
+const heading = document.querySelectorAll("#heading");
+console.log(heading[0].innerText);
+
+const paragraph = document.querySelectorAll(".paragraph");
+console.log(paragraph[0].innerText);
+
+const li = document.querySelectorAll("li");
+for (let i of li) {
+  console.log(i.innerText);
+}
+
+const heading_and_paragraph = document.querySelectorAll([
+  "#heading",
+  "#paragraph",
+]);
+console.log(heading_and_paragraph[0].innerText);
+console.log(heading_and_paragraph[1].innerText);
+```
