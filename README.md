@@ -3782,3 +3782,105 @@ const heading_and_paragraph = document.querySelectorAll([
 console.log(heading_and_paragraph[0].innerText);
 console.log(heading_and_paragraph[1].innerText);
 ```
+
+### Mouse Events
+
+* `onmouseover` – Triggered when the mouse pointer moves over an element.
+* `onmouseenter` – Triggered when the mouse pointer enters an element.
+* `onmousedown` – Triggered when a mouse button is pressed on an element.
+* `onmouseup` – Triggered when a mouse button is released on an element.
+* `onclick` – Triggered when an element is clicked.
+* `ondblclick` – Triggered when an element is double-clicked.
+* `onmousewheel` – Triggered when the mouse wheel is scrolled.
+* `onmousemove` – Triggered when the mouse pointer moves within an element.
+* `onmouseout` – Triggered when the mouse pointer moves out of an element.
+* `onmouseleave` – Triggered when the mouse pointer leaves an element.
+
+### Keyboard Events
+
+* `onkeydown` – Triggered when a key is pressed down.
+* `onkeyup` – Triggered when a pressed key is released.
+* `onkeypress` – Triggered when a key is pressed ( deprecated in modern JavaScript ).
+
+### Form Events
+
+* `onfocus` – Triggered when an element receives focus.
+* `onblur` – Triggered when an element loses focus.
+* `onchange` – Triggered when the value of an element changes.
+* `onsubmit` – Triggered when a form is submitted.
+
+### Window Size
+
+Two properties can be used to determine the size of the browser window.
+
+Both properties return the size in pixels.
+
+* `window.innerHeight` – Returns the inner height of the browser window in pixels.
+* `window.innerWidth` – Returns the inner width of the browser window in pixels.
+
+### `window.open()`
+
+Used to open a new browser window.
+
+```
+window.open("https://www.google.com");
+```
+
+### `window.close()`
+
+Used to close the current window.
+
+### `window.screen`
+
+The `window.screen` object can be written without the `window` prefix.
+
+#### Properties
+
+* `screen.width` – Returns the width of the visitor's screen in pixels.
+* `screen.height` – Returns the height of the visitor's screen in pixels.
+* `screen.availWidth` – Returns the width of the visitor's screen in pixels, excluding interface features such as the taskbar.
+* `screen.availHeight` – Returns the height of the visitor's screen in pixels, excluding interface features such as the taskbar.
+
+### `window.location`
+
+The `window.location` object can be written without the `window` prefix.
+
+* `window.location.href` – Returns the URL of the current page.
+* `window.location.hostname` – Returns the domain name of the web host.
+* `window.location.pathname` – Returns the path and filename of the current page.
+* `window.location.protocol` – Returns the web protocol used ( `http:` or `https:` ).
+
+### `window.history`
+
+The `window.history` object can be written without the `window` prefix.
+
+To protect user privacy, there are limitations on how JavaScript can access this object.
+
+#### Methods
+
+* `history.back()` – Same as clicking the Back button in the browser.
+* `history.forward()` – Same as clicking the Forward button in the browser.
+
+### `window.navigator`
+
+The `window.navigator` object can be written without the `window` prefix.
+
+#### Properties
+
+* `navigator.cookieEnabled`
+* `navigator.appCodeName`
+* `navigator.platform`
+
+### Dialog Boxes
+
+#### `window.alert()`
+
+Used to display an alert message box.
+
+#### `window.prompt()`
+
+Used to display an input dialog box and get input from the user.
+
+#### `window.confirm()`
+
+Used to display a confirmation dialog box with **OK** and **Cancel** buttons.
