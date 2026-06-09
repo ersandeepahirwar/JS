@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="form-group">
+                <!-- <form action="" onsubmit="submitForm(); return false"> -->
+                <form action="" onsubmit="submitForm(event);">
+                    <input type="text" name="name" id="name" placeholder="What is your name?" onfocus="first(event)"
+                        onblur="second(event)" onchange="third(event)">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
