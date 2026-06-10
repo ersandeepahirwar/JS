@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  height: 90%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  gap: 2rem;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+  font-size: 1.6rem;
+  letter-spacing: 0.05em;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.form .input {
+  width: 30rem;
+}
+
+.form .button {
+  width: 10rem;
+  color: #000000;
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  height: calc(100% - 5rem);
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1rem;
+  border-radius: 2rem;
+  overflow: auto;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.main .row {
+  width: 100%;
+  color: #ffffff;
+  display: flex;
+  gap: 2rem;
+}
+
+.main .row .column {
+  width: 50%;
+  background-color: #000000;
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+.main .row .column img {
+  height: 10rem;
+}
+
+.main .row .column a {
+  color: #ffffff;
+}
+
+.main .error {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 2rem;
+}

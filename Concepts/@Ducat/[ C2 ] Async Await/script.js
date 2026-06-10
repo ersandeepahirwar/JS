@@ -30,31 +30,21 @@ const insertData = (key, value) => {
   main.appendChild(customDiv);
 };
 
-const getDataFromAPI = () => {
+const getDataFromAPI = async () => {
   let name = "bharat";
 
   if (input.value !== "") {
     name = input.value;
   }
 
-  const request = new XMLHttpRequest();
-  request.open("GET", "https://restcountries.com/v3.1/name/" + name);
-  request.send();
-
-  request.addEventListener("load", () => {
-    const data = JSON.parse(request.responseText);
+  try {
+    const response = await fetch("https://restcountries.com/v3.1/name/" + name);
+    const data = await response.json();
 
     container.removeChild(main);
     main = document.createElement("div");
     main.classList.add("main");
     container.appendChild(main);
-
-    if (request.status !== 200) {
-      main.innerHTML = `
-        <div class="error">Invalid Country Name!</div>
-        `;
-      return;
-    }
 
     data.forEach((country) => {
       insertData("Official Name", country.name.official);
@@ -77,7 +67,11 @@ const getDataFromAPI = () => {
       );
       insertData("Google Maps", country.maps.googleMaps);
     });
-  });
+  } catch (error) {
+    main.innerHTML = `
+        <div class="error">Invalid Country Name!</div>
+        `;
+  }
 };
 
 getDataFromAPI();
