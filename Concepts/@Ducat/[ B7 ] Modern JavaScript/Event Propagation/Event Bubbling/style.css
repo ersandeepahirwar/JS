@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper,
+.frame,
+.panel,
+.core {
+  width: 75%;
+  height: 75%;
+  border-radius: 25%;
+}
+
+.container,
+.frame,
+.core {
+  background-color: black;
+}
+
+.wrapper,
+.panel {
+  background-color: whitesmoke;
+}
+
+.wrapper,
+.frame,
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

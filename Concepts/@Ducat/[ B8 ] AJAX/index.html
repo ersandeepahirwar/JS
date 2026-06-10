@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="header">
+                <form class="form" onsubmit="getDataFromAPI();return false">
+                    <input class="input" type="text" placeholder="Type a country name..." required>
+                    <button class="button" type="submit">Search</button>
+                </form>
+            </div>
+            <div class="main"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
