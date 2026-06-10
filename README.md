@@ -3884,3 +3884,555 @@ Used to display an input dialog box and get input from the user.
 #### `window.confirm()`
 
 Used to display a confirmation dialog box with **OK** and **Cancel** buttons.
+
+## How JavaScript Works?
+
+### Hoisting in JavaScript
+
+During the execution of a program, JavaScript has two phases:
+
+1. Creation Phase
+2. Execution Phase
+
+**Creation Phase :** This phase contains the declarations of all variables and functions.
+
+**Execution Phase :** This phase contains the program statements that are executed line by line.
+
+so, **Hoisting** is a JavaScript mechanism where variable and function declarations are processed during the Creation Phase before the Execution Phase begins.
+
+#### Code we write
+
+```
+console.log(A);
+var A = 10;
+console.log(A);
+```
+
+```
+var B = 20;
+console.log(B);
+var C = 30;
+console.log(C);
+```
+
+#### Code Sent for Execution
+
+```
+var A;
+console.log(A);
+var A = 10;
+console.log(A);
+```
+
+```
+var B;
+var C;
+var B = 20;
+console.log(B);
+var C = 30;
+console.log(C);
+```
+
+In ES6 ( ECMAScript 2015 ), hoisting issues can be avoided by using `let` and `const` instead of `var`.
+
+### Strict Mode
+
+`"use strict";` enables Strict Mode in JavaScript, which helps catch common coding mistakes and prevents the use of unsafe features.
+
+```
+"use strict";
+
+var A = 10;
+console.log(A);
+```
+
+```
+"use strict";
+var B = 20;
+console.log(B);
+
+delete B; // SyntaxError
+console.log(B);
+```
+
+### Scope Chain and Lexical Scoping
+
+The Scope Chain is used to resolve the value of variables in JavaScript. It is lexically defined, which means we can determine the scope chain by looking at the code.
+
+At the top is the Global Scope ( `window` object in browsers ), followed by Local Scope ( functions ).
+
+**Lexical Scoping** means that an inner function can access variables defined in its outer function and the global scope.
+
+* Inner functions can access variables from outer functions and the global scope.
+* Outer functions cannot access variables defined inside inner functions.
+* The global scope cannot access variables defined inside functions.
+
+```
+const A = 10;
+function outer() {
+  const B = 20;
+  function inner() {
+    const C = 30;
+    console.log(`In inner(), A = ${A}, B = ${B} and C = ${C}`);
+  }
+  inner();
+  console.log(`In outer(), A = ${A} and B = ${B}`);
+}
+outer();
+console.log(`A = ${A}`);
+```
+
+### Closure
+
+A Closure is a function where an inner function retains access to the variables and scope of its outer function, even after the outer function has finished executing.
+
+A closure remembers the environment in which it was created. In technical terms, it is a combination of a function and its lexical environment.
+
+Closures are created automatically whenever a function is defined in JavaScript. They rely on lexical scoping, which means that scope is determined by the position of variables in the source code.
+
+```
+const A = 10;
+function outer() {
+  const B = 20;
+  function inner() {
+    const C = 30;
+    console.log(`In inner(), A = ${A}, B = ${B} and C = ${C}`);
+  }
+  return inner;
+}
+
+const object = outer();
+object();
+```
+
+### Synchronous and Asynchronous Programming in JavaScript
+
+**Synchronous Programming :** One task must wait for the previous task to complete. The code is executed line by line in sequence.
+
+```
+const first = () => {
+  console.log("In first()");
+};
+
+const second = () => {
+  console.log("In second()");
+};
+
+const third = () => {
+  console.log("In third()");
+};
+
+const fourth = () => {
+  console.log("In fourth()");
+};
+
+const fifth = () => {
+  console.log("In fifth()");
+};
+
+first();
+second();
+third();
+fourth();
+fifth();
+```
+
+**Asynchronous Programming :** One task does not have to wait for the previous task to complete. It follows a non-blocking I/O model, allowing other operations to continue while a task is being processed.
+
+```
+const first = () => {
+  setTimeout(() => {
+    console.log("In first()");
+  }, 5000);
+};
+
+const second = () => {
+  setTimeout(() => {
+    console.log("In second()");
+  }, 4000);
+};
+
+const third = () => {
+  setTimeout(() => {
+    console.log("In third()");
+  }, 3000);
+};
+
+const fourth = () => {
+  setTimeout(() => {
+    console.log("In fourth()");
+  }, 2000);
+};
+
+const fifth = () => {
+  setTimeout(() => {
+    console.log("In fifth()");
+  }, 1000);
+};
+
+first();
+second();
+third();
+fourth();
+fifth();
+```
+
+## Modern JavaScript
+
+### Event Propagation
+
+Event Propagation determines the order in which elements receive an event.
+
+1. **Event Bubbling :** The event travels from the target element ( child ) up to its parent elements.
+
+```
+const container = document.querySelector(".container");
+const wrapper = document.querySelector(".wrapper");
+const frame = document.querySelector(".frame");
+const panel = document.querySelector(".panel");
+const core = document.querySelector(".core");
+
+container.addEventListener("click", () => console.log("From Container"));
+wrapper.addEventListener("click", () => console.log("From Wrapper"));
+frame.addEventListener("click", () => console.log("From Frame"));
+panel.addEventListener("click", () => console.log("From Panel"));
+core.addEventListener("click", () => console.log("From Core"));
+```
+
+2. **Event Capturing :** The event travels from the outermost parent to the target element ( child ).
+
+```
+const container = document.querySelector(".container");
+const wrapper = document.querySelector(".wrapper");
+const frame = document.querySelector(".frame");
+const panel = document.querySelector(".panel");
+const core = document.querySelector(".core");
+
+container.addEventListener("click", () => console.log("From Container"), true);
+wrapper.addEventListener("click", () => console.log("From Wrapper"), true);
+frame.addEventListener("click", () => console.log("From Frame"), true);
+panel.addEventListener("click", () => console.log("From Panel"), true);
+core.addEventListener("click", () => console.log("From Core"), true);
+```
+
+### Function Currying
+
+Function Currying is a technique of transforming a function with multiple arguments into a sequence of functions, each taking a single argument.
+
+Instead of taking all arguments at once, a curried function takes the first argument and returns a new function that takes the second argument, which returns another function that takes the third argument, and so on.
+
+```
+function sum(A) {
+  return function (B) {
+    return function (C) {
+      return function (D) {
+        return function (E) {
+          return A + B + C + D + E;
+        };
+      };
+    };
+  };
+}
+
+console.log("10 + 20 + 30 + 40 + 50 =", sum(10)(20)(30)(40)(50));
+```
+
+### Higher-Order Functions and Callback Functions
+
+**Higher-Order Function :** A function that takes another function as an argument or returns a function.
+
+**Callback Function :** A function that is passed as an argument to another function and is executed later.
+
+```
+function higherOrder(callback) {
+  console.log("In Higher Order Function");
+  callback();
+  console.log("Back to Higher Order Function");
+}
+
+function callback() {
+  console.log("In Callback Function");
+}
+
+console.log("In Main Outer Scope");
+higherOrder(callback);
+console.log("Back to Main Outer Scope");
+```
+
+Here, `find()`, `findLast()`, `findIndex()`, `findLastIndex()`, `map()`, and `filter()` are Higher-Order Functions, and `equation` is the Callback Function passed to them.
+
+
+`find()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customFind = (array, callback) => {
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index])) {
+      return array[index];
+    }
+  }
+};
+
+console.log(array.find(equation));
+console.log(customFind(array, equation));
+```
+
+`findLast()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customFindLast = (array, callback) => {
+  for (let index = array.length - 1; index >= 0; index--) {
+    if (callback(array[index])) {
+      return array[index];
+    }
+  }
+};
+
+console.log(array.findLast(equation));
+console.log(customFindLast(array, equation));
+```
+
+`findIndex()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customFindIndex = (array, callback) => {
+  for (let index = 0; index < array.length; index++) {
+    if (callback(array[index])) {
+      return index;
+    }
+  }
+  return -1;
+};
+
+console.log(array.findIndex(equation));
+console.log(customFindIndex(array, equation));
+```
+
+`findLastIndex()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customFindLastIndex = (array, callback) => {
+  for (let index = array.length - 1; index >= 0; index--) {
+    if (callback(array[index])) {
+      return index;
+    }
+  }
+  return -1;
+};
+
+console.log(array.findLastIndex(equation));
+console.log(customFindLastIndex(array, equation));
+```
+
+`map()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customMap = (array, callback) => {
+  const mappedArray = [];
+  for (let element of array) {
+    mappedArray.push(callback(element));
+  }
+  return mappedArray;
+};
+
+console.log(array.map(equation));
+console.log(customMap(array, equation));
+```
+
+`filter()`
+
+```
+const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
+
+const equation = (number) => {
+  return number % 2 === 0;
+};
+
+const customFilter = (array, callback) => {
+  const filteredArray = [];
+  for (let element of array) {
+    if (callback(element)) {
+      filteredArray.push(element);
+    }
+  }
+  return filteredArray;
+};
+
+console.log(array.filter(equation));
+console.log(customFilter(array, equation));
+```
+
+### Event Loop
+
+The Event Loop is a functional concept in JavaScript that enables non-blocking, asynchronous programming. It allows JavaScript to perform tasks such as handling user interactions, making network requests ( API calls ), and processing timers while maintaining a single-threaded environment.
+
+<img src="https://i.ibb.co/1GzmZXtm/Event-Loop.png" alt="Event Loop Overview" width="100%" />
+
+#### 1. Single-Threaded Nature
+
+JavaScript runs on a single thread, which means it can execute only one piece of code at a time. This design helps avoid issues such as race conditions that can occur in multi-threaded environments.
+
+#### 2. Call Stack
+
+The Call Stack is a data structure that keeps track of function calls in your program. When a function is invoked, it is added to the stack, and when it completes, it is removed. The Call Stack follows a Last In, First Out ( LIFO ) structure.
+
+#### 3. Web APIs
+
+JavaScript environments, such as browsers, provide Web APIs ( such as `setTimeout`, `fetch`, and DOM events ) that can handle tasks asynchronously. When you call an asynchronous function, the task is offloaded to the Web API, which executes it and places its callback into a queue when it is ready.
+
+#### 4. Callback Queue
+
+Once an asynchronous operation ( such as a timer or a network request ) is complete, the corresponding callback function is pushed into the Callback Queue ( or Task Queue ). This queue holds all callbacks waiting to be executed after the current Call Stack is cleared.
+
+#### 5. Event Loop
+
+The Event Loop continuously checks the Call Stack and the Callback Queue.
+
+**Step 1:** If the Call Stack is empty, the Event Loop takes the first task from the Callback Queue.
+
+**Step 2:** It pushes that task onto the Call Stack and executes it.
+
+**Step 3:** This process repeats until there are no more tasks in the queue.
+
+#### 6. Microtasks and Macrotasks
+
+JavaScript distinguishes between two types of tasks:
+
+**Macrotasks:** These include tasks such as `setTimeout`, `setInterval`, and I/O operations. They are processed in the order they arrive in the Callback Queue.
+
+**Microtasks:** These are typically related to Promises ( such as `.then()`, `.catch()`, and `async/await` ).
+
+Microtasks have a higher priority than Macrotasks and are processed immediately after the currently executing script, before the next Macrotask is processed.
+
+## JSON and AJAX
+
+**AJAX:** Asynchronous JavaScript and XML
+
+AJAX is a combination of the `XMLHttpRequest` object and the HTML DOM.
+
+**XMLHttpRequest:** An object that helps websites communicate with servers to transfer data.
+
+### How AJAX Works
+
+1. An event occurs, such as a button click or form submission.
+2. A `XMLHttpRequest` object is created by JavaScript.
+3. The `XMLHttpRequest` sends a request to the server.
+4. The server processes the request.
+5. The server sends back a response.
+6. The response is read by JavaScript.
+7. JavaScript takes the appropriate action.
+
+### XMLHttpRequest Object Methods
+
+1. `new XMLHttpRequest()` : Creates a new XMLHttpRequest object.
+
+2. `abort()` : Cancels the current request.
+
+3. `getAllResponseHeaders()` : Returns all response headers.
+
+4. `getResponseHeader()` : Returns a specific response header.
+
+5. `open()` : Initializes a request.
+
+   Parameters:
+
+   * method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`, etc.)
+   * url
+   * async
+   * user (optional)
+   * password (optional)
+
+6. `send()` : Sends a request to the server.
+
+7. `send(json)` : Sends JSON data to the server.
+
+### Response Data
+
+1. XML Data : `responseXML`
+2. JSON/Text Data : `responseText`
+
+## JSON ( JavaScript Object Notation )
+
+JSON is a text format used to store and transport data.
+
+### XML
+
+```
+<employee>
+    <eid>1714510036</eid>
+    <name>Sandeep</name>
+</employee>
+```
+
+### JSON
+
+```
+{
+    "id": 1714510036,
+    "name": "Sandeep"
+}
+```
+
+### JSON Data Types
+
+1. Boolean
+2. Array
+3. Number
+4. String
+5. Object
+6. Null
+
+### Data Types Not Supported in JSON
+
+1. Undefined
+2. Date
+
+### Convert JSON to JavaScript Object
+
+`JSON.parse()` is used to convert JSON data into a JavaScript object.
+
+**Syntax:**
+
+```
+const jsObject = JSON.parse(jsonData);
+```
+
+### Convert JavaScript Object to JSON
+
+`JSON.stringify()` is used to convert a JavaScript object into JSON.
+
+**Syntax:**
+
+```
+const jsonData = JSON.stringify(jsData);
+```
