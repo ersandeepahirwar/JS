@@ -4436,3 +4436,255 @@ const jsObject = JSON.parse(jsonData);
 ```
 const jsonData = JSON.stringify(jsData);
 ```
+
+### Callback Hell
+
+Callback Hell is a phenomenon where a callback is called inside another callback. It is the nesting of multiple callbacks inside a function. The structure of the code looks like a pyramid, which is why Callback Hell is also known as the **"Pyramid of Doom"**.
+
+### Why is Callback Hell Bad?
+
+Callback Hell makes code difficult to read, understand, debug, and maintain. It occurs when multiple asynchronous operations are nested within each other as callbacks.
+
+### Solution: Promise
+
+A **Promise** is a JavaScript object that links producing code with consuming code.
+
+* **Producing Code:** Code that takes some time to execute.
+* **Consuming Code:** Code that waits for the result.
+
+Promises are used to handle asynchronous operations in JavaScript. They help avoid Callback Hell and make asynchronous code easier to read and manage.
+
+### Promise States
+
+1. **Pending** – Initial state, neither fulfilled nor rejected.
+2. **Fulfilled (Resolved)** – Operation completed successfully.
+3. **Rejected** – Operation failed.
+
+#### Producing Code
+
+```
+const firstPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("First Promise is Resolved.");
+    reject("First Promise is Rejected.");
+  }, 2000);
+});
+
+const secondPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Second Promise is Resolved.");
+    reject("Second Promise is Rejected.");
+  }, 4000);
+});
+
+const thirdPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Third Promise is Resolved.");
+    reject("Third Promise is Rejected.");
+  }, 6000);
+});
+```
+
+#### Consuming Code
+
+```
+firstPromise
+  .then((value) => {
+    console.log(value);
+    secondPromise
+      .then((value) => {
+        console.log(value);
+        thirdPromise
+          .then((value) => {
+            console.log(value);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
+
+### Async / Await and Exception Handling
+
+**Async / Await** is a modern way to handle asynchronous operations in JavaScript. It is built on top of Promises and makes asynchronous code easier to read and write.
+
+* The `async` keyword makes a function return a Promise.
+* The `await` keyword pauses the execution of an `async` function until a Promise is resolved.
+
+### Exception Handling
+
+Exception handling in `async/await` is done using `try...catch`.
+
+* `try` contains the code that may throw an error.
+* `catch` handles the error if it occurs.
+
+This makes error handling cleaner and easier compared to Promise chaining with `.then()` and `.catch()`.
+
+```
+const firstPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("First Promise is Resolved.");
+    reject("First Promise is Rejected.");
+  }, 2000);
+});
+
+const secondPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Second Promise is Resolved.");
+    reject("Second Promise is Rejected.");
+  }, 4000);
+});
+
+const thirdPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Third Promise is Resolved.");
+    reject("Third Promise is Rejected.");
+  }, 6000);
+});
+
+async function getPromise() {
+  try {
+    console.log(await firstPromise);
+    console.log(await secondPromise);
+    console.log(await thirdPromise);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+getPromise();
+```
+
+### fetch()
+
+The global `fetch()` method starts the process of fetching a resource from the network and returns a Promise that is fulfilled once the response is available.
+
+The Promise resolves to a `Response` object representing the response to your request.
+
+A `fetch()` Promise only rejects when a network error occurs (such as a connectivity or permission issue). It does **not** reject on HTTP errors such as `404` or `500`.
+
+Instead, you should check the `response.ok` and/or `response.status` properties to determine whether the request was successful.
+
+
+### JavaScript and ECMAScript Timeline
+
+**JavaScript:** 1995
+
+### ECMAScript Versions
+
+* ES1 : 1997
+* ES2 : 1998
+* ES3 : 1999
+* ES5 : 2009
+
+---
+
+* ES6 (ECMAScript 2015)
+* ECMAScript 2016
+* ECMAScript 2017
+* ECMAScript 2018
+* ECMAScript 2019
+* ECMAScript 2020
+* ECMAScript 2021
+* ECMAScript 2022
+* ECMAScript 2023
+* ECMAScript 2024
+* ECMAScript 2025
+
+## ES6 (ECMAScript 2015) Features
+
+* `let`
+* `const`
+* Arrow Functions
+* `Map`
+* `Set`
+* `for...of`
+* Classes
+* Promises
+* Default Parameters
+* `String.includes()`
+* `String.startsWith()`
+* `String.endsWith()`
+* Array and Object Destructuring
+* Rest and Spread Operator (`...`)
+* Template Literals
+* Generators
+* Async/Await
+* `Array.from()`
+* `Array.keys()`, `Array.values()`, `Array.entries()`
+* `Array.find()`
+* `Array.findIndex()`
+* New Math Methods
+* Number Properties
+* New Number Methods
+* New Global Methods
+* Iterables
+* `Object.entries()`
+* JavaScript Modules
+* `"use strict"`
+
+### Rest Operator
+
+The Rest Operator (`...`) allows a function to accept an indefinite number of arguments as an array.
+
+```
+const test = (A, B, C, ...rest) => {
+  console.log(`A = ${A}, B = ${B}, C = ${C} and rest = ${rest}`);
+};
+
+test(0, 1, 2, 3, 4);
+test(0, 1, 2, 3, 4, 5);
+test(0, 1, 2, 3, 4, 5, 6);
+test(0, 1, 2, 3, 4, 5, 6, 7);
+test(0, 1, 2, 3, 4, 5, 6, 7, 8);
+```
+
+### Spread Operator
+
+The Spread Operator (`...`) allows an iterable to be expanded in places where zero or more arguments are expected.
+
+It is commonly used with arrays and objects to copy, merge, or pass their elements as individual values.
+
+The syntax of the Spread Operator is the same as the Rest Operator, but it works in the opposite way. While the Rest Operator collects multiple values into a single array, the Spread Operator expands an array or object into individual values.
+
+```
+const test = (A, B, C, D) => {
+  console.log(`A = ${A}, B = ${B}, C = ${C} and D = ${D}`);
+};
+
+const array = [0, 1, 2, 3];
+test(...array);
+```
+
+### Shallow Copy and Deep Copy
+
+**Shallow Copy:** A copy that creates a new object, but nested objects or arrays are still referenced from the original object. Changes to nested data affect both copies.
+
+**Deep Copy:** A copy that creates a completely independent object, including all nested objects and arrays. Changes to the copied data do not affect the original object.
+
+```
+const A = [0, 1, 2, 3, 4, 5];
+const B = A; // Shallow Copy
+
+console.log("A =", A);
+console.log("B =", B);
+B[6] = 6;
+console.log("A =", A);
+console.log("B =", B);
+
+const C = [0, 1, 2, 3, 4, 5];
+const D = [...C]; // Deep Copy
+
+console.log("C =", C);
+console.log("D =", D);
+D[6] = 6;
+console.log("C =", C);
+console.log("D =", D);
+```
