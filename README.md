@@ -4381,11 +4381,11 @@ AJAX is a combination of the `XMLHttpRequest` object and the HTML DOM.
 1. XML Data : `responseXML`
 2. JSON/Text Data : `responseText`
 
-## JSON ( JavaScript Object Notation )
+### JSON ( JavaScript Object Notation )
 
 JSON is a text format used to store and transport data.
 
-### XML
+#### XML
 
 ```
 <employee>
@@ -4394,7 +4394,7 @@ JSON is a text format used to store and transport data.
 </employee>
 ```
 
-### JSON
+#### JSON
 
 ```
 {
@@ -4403,7 +4403,7 @@ JSON is a text format used to store and transport data.
 }
 ```
 
-### JSON Data Types
+#### JSON Data Types
 
 1. Boolean
 2. Array
@@ -4412,12 +4412,12 @@ JSON is a text format used to store and transport data.
 5. Object
 6. Null
 
-### Data Types Not Supported in JSON
+#### Data Types Not Supported in JSON
 
 1. Undefined
 2. Date
 
-### Convert JSON to JavaScript Object
+#### Convert JSON to JavaScript Object
 
 `JSON.parse()` is used to convert JSON data into a JavaScript object.
 
@@ -4427,7 +4427,7 @@ JSON is a text format used to store and transport data.
 const jsObject = JSON.parse(jsonData);
 ```
 
-### Convert JavaScript Object to JSON
+#### Convert JavaScript Object to JSON
 
 `JSON.stringify()` is used to convert a JavaScript object into JSON.
 
