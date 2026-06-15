@@ -882,7 +882,7 @@ console.log(A, B, C);
 
 ### `if` Statement
 
-* The **`if` statement** is used when the execution of a statement block depends on a **condition**.
+* The `if` statement is used when the execution of a statement block depends on a **condition**.
 
 #### Syntax
 
@@ -902,7 +902,7 @@ if (true) {
 
 ### `if else` Statement
 
-* The **`if else` statement** is used when the execution of **one statement block out of two blocks** depends on a **condition**.
+* The `if else` statement is used when the execution of one statement block out of **two blocks** depends on a **condition**.
 
 #### Syntax
 
@@ -924,7 +924,7 @@ if (number % 2 === 0) {
 
 ### Nested `if else` Statement
 
-* A **nested `if else` statement** is an **`if else` statement** written inside another **`if else` statement**.
+* A nested `if else` statement is an `if else` statement written inside another `if else` statement.
 
 #### Syntax
 
@@ -960,7 +960,7 @@ if (number % 2 === 0) {
 
 ### `if else if` Ladder Statement
 
-* The **`if else if` ladder statement** is used when we have **`n` number of conditions**.
+* The `if else if` ladder statement is used when we have **n number of conditions**.
 
 #### Syntax
 
@@ -998,7 +998,7 @@ if (A >= B && A >= C && A >= D && A >= E) {
 
 ### `switch case` Statement
 
-* The **`switch case` statement** is used to make **menu-based programs**.
+* The `switch case` statement is used to make **menu-based programs**.
 
 #### Syntax
 
