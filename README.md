@@ -1145,19 +1145,13 @@ for (let row = 1; row <= 5; row++) {
 }
 ```
 
- ## Functions in JavaScript
+## Functions in JavaScript
 
 ### `function`
 
-A `function` is a building block of any program by which we can divide a large program into small parts.
-
-or
-
-A `function` is a group of statements.
-
-or
-
-A `function` is a self-contained statement block.
+* A **function** is a building block of any program by which we can divide a large program into small parts.
+* A **function** is a group of statements.
+* A **function** is a self-contained statement block.
 
 #### Syntax
 
@@ -1177,31 +1171,26 @@ test();
 console.log("Back to main outer scope");
 ```
 
-### Space Complexity
+#### Space Complexity
 
-#### Data Space
-Memory required to store variables and constants.
+* **Data Space :** Memory required to store **variables and constants**.
+* **Instruction Space :** Memory required to store **program instructions**.
+* **Environment Space :** Memory required to store **function arguments** and the **return value**.
 
-#### Instruction Space
-Memory required to store program instructions.
+#### Advantages of Functions
 
-#### Environment Space
-Memory required to store arguments and the return value of a function.
+* Functions provide **code reusability**.
+* Functions decrease **instruction space** of a program.
+* Functions decrease **data space** of a program.
+* Functions increase **readability and maintainability**.
 
-### Advantages of Functions
+> * A `function` cannot directly access variables defined inside another `function`. To do so, we use **arguments** and `return` values.
+> * A `function` can access **global variables**, but the global scope cannot directly access variables defined inside a `function`.
 
-- Functions provide the feature of code reusability.
-- Functions decrease the instruction space of a program.
-- Functions decrease the data space of a program.
-- Functions increase code readability and maintainability.
+#### Types of Functions ( Based on Parameters and Return Value )
 
-> [!Note]
-> - A `function` cannot access variables defined inside another `function` directly. To do so, we use the concept of arguments and `return` values.
-> - A `function` can access variables defined in the global scope, but the global scope cannot directly access variables defined inside a `function`.
-
-### Types of Functions ( Based on Parameters and Return Value )
-
-- `function` without `return` value and without parameters
+* `function` without `return` value and without parameters
+  
 ```
   function addition() {
   var A = 10;
@@ -1217,7 +1206,8 @@ function test() {
 test();
 ```
 
-- `function` with `return` value and without parameters
+* `function` with `return` value and without parameters
+
 ```
 function addition() {
   var A = 10;
@@ -1233,7 +1223,8 @@ function test() {
 test();
 ```
 
-- `function` without `return` value and with parameters
+* `function` without `return` value and with parameters
+
 ```
 function addition(x, y) {                              // Parameters or Formal Parameters
   var sum = x + y;
@@ -1249,7 +1240,8 @@ function test() {
 test();
 ```
 
-- `function` with `return` value and with parameters
+* `function` with `return` value and with parameters
+
 ```
 function addition(x, y) {
   return x + y;
@@ -1265,7 +1257,7 @@ function test() {
 test();
 ```
 
-### Default Parameters ( Optional Parameters )
+#### Default Parameters ( Optional Parameters )
 
 ```
 function sum(A = 0, B = 0, C = 0) {
@@ -1278,7 +1270,7 @@ sum(10);
 sum();
 ```
 
-### Function Returning an Array
+#### Function Returning an Array
 
 ```
 function tableOfTwo() {
@@ -1288,7 +1280,7 @@ function tableOfTwo() {
 console.log(tableOfTwo());
 ```
 
-### Regular Function
+#### Regular Function
 
 ```
 function sum(A, B) {
@@ -1298,7 +1290,7 @@ function sum(A, B) {
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-### Anonymous Function
+#### Anonymous Function
 
 ```
 var sum = function (A, B) {
@@ -1308,7 +1300,7 @@ var sum = function (A, B) {
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-### Fat Arrow Function
+#### Fat Arrow Function
 
 ```
 var sum = (A, B) => A + B;
@@ -1316,20 +1308,16 @@ var sum = (A, B) => A + B;
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-### Higher Order Functions and Callback Functions
+## Higher Order Functions and Callback Functions
 
-#### Higher Order Function ( HOF )
+### Higher Order Function ( HOF )
 
-A function is called a Higher Order Function if it takes another function as an argument.
+* A function is called a **Higher Order Function** if it takes another function as an argument.
+* A function is called a **Higher Order Function** if it accepts one or more functions as parameters.
 
-or
+### Callback Function
 
-A function is called a Higher Order Function if it accepts one or more functions as parameters.
-
-#### Callback Function
-
-A function is called a Callback Function if it is passed as an argument to a Higher Order Function.
-
+* A function is called a **Callback Function** if it is passed as an argument to a Higher Order Function.
 
 ```
 function higherOrder(callback) {
