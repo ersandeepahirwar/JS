@@ -159,12 +159,32 @@
   * Low-level System Software
 
 ## ECMAScript
-- ECMAScript is a standardized scripting language specification developed by Ecma International.  
-- ECMAScript defines the rules, syntax, and features of JavaScript and other similar languages such as JScript and ActionScript.  
-- It ensures that JavaScript and related languages behave consistently across different browsers and runtime environments.  
-- JavaScript is an implementation of ECMAScript, and new features in JavaScript are introduced through the ECMAScript specification.
 
-> ECMA stands for European Computer Manufacturers Association.
+### What is ECMAScript?
+
+* ECMAScript is a **standardized scripting language specification**.
+* Developed by **Ecma International**.
+* Defines the **rules, syntax, and features** of JavaScript.
+
+### Purpose of ECMAScript
+
+* Ensures consistent behavior across different browsers and environments.
+* Acts as the standard that JavaScript follows.
+
+### Related Languages
+
+* JavaScript
+* JScript
+* ActionScript
+
+### Relationship with JavaScript
+
+* JavaScript is an **implementation of ECMAScript**.
+* New JavaScript features are added through ECMAScript updates.
+
+### Note
+
+* **ECMA** stands for **European Computer Manufacturers Association**.
 
 ## JavaScript Engine
 A JavaScript engine is a program that executes JavaScript code by converting it into machine code so that it can run on a computer or browser.  
