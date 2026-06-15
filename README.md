@@ -1047,13 +1047,13 @@ switch (dayNumber) {
 }
 ```
 
-## Iteration Statements or Loops
+## Iteration Statements ( Loops )
 
-Iteration statements or loops are used to iterate or repeat a statement block `n` times.
+* Iteration statements or **loops** are used to **iterate** or **repeat** a statement block **`n` times**.
 
 ### `for` Loop
 
-The `for` loop is used when we know the number of iterations.
+* The `for` loop is used when we know the **number of iterations**.
 
 #### Syntax
 
@@ -1071,7 +1071,7 @@ for (var number = 1; number <= 10; number++) {
 
 ### `while` Loop
 
-The `while` loop is used when we do not have a fixed idea of the number of iterations.
+* The `while` loop is used when we do not have a fixed idea of the **number of iterations**.
 
 #### Syntax
 
@@ -1095,7 +1095,7 @@ while (number <= 10) {
 
 ### `do while` Loop
 
-The `do while` loop is used when we have to execute a statement block at least one time whether the condition is false.
+* The `do while` loop is used when we have to execute a statement block **at least one time**, whether the **condition is false**.
 
 #### Syntax
 
@@ -1118,13 +1118,12 @@ do {
 
 ```
 
-> [!Note]
-> - `for` and `while` loops are entry-controlled loops.
-> - `do while` loop is an exit-controlled loop.
+> * `for` and `while` loops are **entry-controlled loops**.
+> * `do while` loop is an **exit-controlled loop**.
 
 ### Nested Loops
 
-Nested loops are loops written inside another loop.
+* **Nested loops** are loops written inside another loop.
 
 #### Syntax
 
