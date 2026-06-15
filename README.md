@@ -22,38 +22,66 @@
 ## Key Features of JavaScript
 
 ### 1. Interpreted Language
-JavaScript is an interpreted language, which means it is executed directly by the browser without the need for prior compilation.  
-However, interpreters are generally slower in nature, so modern web browsers use JIT ( Just-In-Time ) compilers to enhance execution speed.
+
+* Executed directly by the browser.
+* No separate compilation required.
+* Modern browsers use **JIT ( Just-In-Time ) compilation** for better speed.
 
 ### 2. Dynamic Typing
-JavaScript is a dynamically typed programming language, which means there is no need to provide data types during variable declaration.  
-A variable can hold different types of values during the execution of a program.  
-This provides flexibility but may also lead to runtime errors if not handled carefully.
 
-### 3. Event-Driven Approach
-JavaScript follows an event-driven model, where code execution is triggered by user actions such as clicks, keyboard input, or mouse movements.  
-This makes it ideal for creating interactive web applications.
+* No need to specify data types while declaring variables.
+* A variable can store different types of values.
+* Provides flexibility but may cause runtime errors.
+
+### 3. Event-Driven Programming
+
+* Code runs when an event occurs.
+* Examples : mouse clicks, keyboard input, form submission.
+* Helps create interactive web applications.
 
 ### 4. Asynchronous Programming
-JavaScript supports asynchronous programming using callbacks, promises, and async/await.  
-This allows multiple operations to run without blocking the main thread, which improves performance and responsiveness.
 
-### 5. Object-Oriented Programming ( OOPs )
-JavaScript supports object-oriented programming concepts such as objects, classes, inheritance, and encapsulation.
+* Supports **Callbacks, Promises, and Async/Await**.
+* Allows tasks to run without blocking the main program.
+* Improves performance and responsiveness.
+
+### 5. Object-Oriented Programming ( OOP )
+
+* Supports :
+  * Objects
+  * Classes
+  * Inheritance
+  * Encapsulation
+* Helps organize and reuse code.
 
 ### 6. Platform Independent
-JavaScript can run on any platform such as Windows, Linux, Macintosh, Android, etc.  
-This makes it highly portable and widely used.
 
-### 7. Integration with HTML and CSS
-JavaScript works seamlessly with HTML and CSS, allowing developers to manipulate the DOM and dynamically update the content, structure, and styles of web pages.
+* Runs on :
+  * Windows
+  * Linux
+  * macOS
+  * Android
+  * Other platforms
+* Makes JavaScript highly portable.
+
+### 7. Integration with HTML & CSS
+
+* Works smoothly with HTML and CSS.
+* Can modify web page content, structure, and styles dynamically.
+* Uses the **DOM ( Document Object Model )**.
 
 ### 8. Functional Programming Support
-JavaScript supports functional programming concepts such as higher-order functions, closures, and pure functions.  
-This makes it flexible and suitable for different programming styles.
 
-### 9. Rich Ecosystem and Library Support
-Over 3.1 million libraries and packages are registered on NPM ( Node Package Manager ), from where developers can easily install them into their projects and enhance the functionality of their applications.
+* Supports :
+  * Higher-order functions
+  * Closures
+  * Pure functions
+* Allows different programming styles.
+
+### 9. Rich Ecosystem & Libraries
+
+* Has millions of packages available through **npm**.
+* Developers can easily add extra features using libraries and packages.
 
 ## JavaScript Applications
 
