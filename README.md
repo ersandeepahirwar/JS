@@ -417,21 +417,41 @@ const variableName = value;  // Block-level scope and read-only
 
 ## Tokens in JavaScript
 
-Tokens are the smallest entities of a JavaScript program, such as identifiers, constants ( literals ), keywords, operators, and punctuators like `,`, `:`, `;`, `()`, `{}`, `[]`, and space.
+### What are Tokens?
+
+* Tokens are the smallest units of a JavaScript program.
+* Examples : Keywords, Identifiers, Literals, Operators, and Punctuators.
+
+### Example
 
 ```
 var A = 10;
-
-var => Keyword
-A   => Identifier ( Variable )
-=   => Operator
-10  => Constant ( Literal )
-;   => Punctuator
 ```
+
+* `var` → Keyword
+* `A` → Identifier
+* `=` → Operator
+* `10` → Literal ( Constant )
+* `;` → Punctuator
+
+### Note
+
+* Tokens are the basic building blocks of JavaScript programs.
 
 ## Output Instructions in JavaScript
 
-`console.log()` is used as output instruction to display data in console.
+### `console.log()`
+
+* Used to display output in the console.
+* Commonly used for testing and debugging.
+
+### Syntax
+
+```
+console.log(data);
+```
+
+### Example
 
 ```
 var A = 10;
@@ -440,8 +460,12 @@ var sum = A + B;
 
 console.log(A, "+", B, "=", sum);
 console.log(A + " + " + B + " = " + sum);
-console.log(`${A} + ${B} = ${sum}`); // String Template Literal Style
+console.log(`${A} + ${B} = ${sum}`);
 ```
+
+### Note
+
+* `console.log()` prints data to the browser console or terminal.
 
 ## Input Instructions in JavaScript
 
