@@ -1,8 +1,23 @@
-## Introduction to JavaScript
-- JavaScript is a high-level programming language developed by Brendan Eich at Netscape Communications Corporation.
-- JavaScript was introduced in 1995 as a frontend programming language to make web pages interactive.
-- After 2009, JavaScript could also be used as a backend programming language using Node.js.
-- JavaScript is one of the core technologies of web development, along with HTML and CSS.
+# Introduction to JavaScript
+
+## What is JavaScript?
+
+* JavaScript is a **high-level programming language**.
+* It was developed by **Brendan Eich** at **Netscape Communications Corporation**.
+
+## History
+
+* Introduced in **1995**.
+* Initially used as a **frontend language** to make web pages interactive.
+* Since **2009**, JavaScript can also be used for **backend development** with **Node.js**.
+
+## Importance
+
+* JavaScript is one of the **core technologies of web development**.
+* Works together with :
+  * **HTML** → Structure of web pages
+  * **CSS** → Styling of web pages
+  * **JavaScript** → Interactivity and functionality
 
 ## Key Features of JavaScript
 
