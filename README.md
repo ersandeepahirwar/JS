@@ -3038,12 +3038,16 @@ console.log("Object :", object);
 
 ## Sets in JavaScript
 
-A Set is a collection of unique elements.
+### Set
 
-- Cannot contain duplicate items.
-- Stores only unique values.
-- Does not support indexing.
-- Elements can be added or removed dynamically.
+* A **Set** is a collection of **unique elements**.
+
+### Properties
+
+* Cannot contain **duplicate items**.
+* Stores only **unique values**.
+* Does not support **indexing**.
+* Elements can be **added or removed dynamically**.
 
 ### `new Set()`
 
@@ -3065,7 +3069,9 @@ console.log("Array :", array);
 
 ### `add()`
 
-Used to add an item to a Set. If the item already exists, it does nothing. If no argument is provided, it adds `undefined` to the Set.
+* The `add()` method is used to **add an item to a Set**.
+* If the item already exists, it does **nothing**.
+* If no argument is provided, it adds **`undefined`** to the Set.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3080,11 +3086,10 @@ console.log("Set :", set);
 
 ### `delete()`
 
-Used to delete a specified item from a Set.
-
-- Removes the item if it exists in the Set.
-- Returns `false` if the item does not exist.
-- If no argument is provided, it attempts to remove `undefined` from the Set. If `undefined` is not present, nothing happens.
+* The `delete()` method is used to **remove a specified item from a Set**.
+* Removes the item if it exists in the Set.
+* Returns **`false`** if the item does not exist.
+* If no argument is provided, it attempts to remove **`undefined`** from the Set. If `undefined` is not present, nothing happens.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5, undefined, null]);
@@ -3099,7 +3104,7 @@ console.log("Set :", set);
 
 ### `clear()`
 
-Removes all items from a Set.
+* The `clear()` method removes **all items from a Set**.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3111,7 +3116,7 @@ console.log("Set :", set);
 
 ### `size`
 
-Returns the number of elements in a Set.
+* The `size` property returns the **number of elements in a Set**.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3122,7 +3127,8 @@ console.log("Size of Set :", set.size);
 
 ### `has()`
 
-Returns `true` if the specified item exists in the Set; otherwise, it returns `false`.
+* The `has()` method returns **`true`** if the specified item exists in the Set.
+* Otherwise, it returns **`false`**.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3132,7 +3138,7 @@ console.log("Is Set contains 0? :", set.has(0));
 
 ### `values()`
 
-Returns an iterator containing all the elements of a Set.
+* The `values()` method returns an **iterator containing all elements of a Set**.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3142,7 +3148,7 @@ console.log("Values of Set :", set.values());
 
 ### `keys()`
 
-Returns an iterator containing all the elements of a Set.
+* The `keys()` method returns an **iterator containing all elements of a Set**.
 
 > In a Set, `keys()` and `values()` return the same iterator because a Set stores only values.
 
@@ -3154,7 +3160,7 @@ console.log("Keys of Set :", set.keys());
 
 ### `entries()`
 
-Returns an iterator containing the elements of a Set as `[value, value]` pairs.
+* The `entries()` method returns an **iterator containing Set elements as `[value, value]` pairs**.
 
 ```
 const set = new Set([0, 1, 2, 3, 4, 5]);
@@ -3164,11 +3170,15 @@ console.log("Entries of Set :", set.entries());
 
 ## Maps in JavaScript
 
-A Map is a collection of items stored as key-value pairs.
+### Map
 
-- Keys must be unique.
-- Values may be duplicated.
-- If duplicate keys are used in a Map, only the last value assigned to that key is retained.
+* A **Map** is a collection of items stored as **key-value pairs**.
+
+### Properties
+
+* **Keys must be unique**.
+* Values may be **duplicated**.
+* If duplicate keys are used, only the **last assigned value** is retained.
 
 ### `new Map()`
 
@@ -3184,7 +3194,8 @@ console.log("Map :", map);
 
 ### `set()`
 
-Used to insert a key-value pair into a Map. If the key already exists, `set()` updates the value of that key.
+* The `set()` method is used to **insert a key-value pair into a Map**.
+* If the key already exists, it **updates the value** of that key.
 
 ```
 const map = new Map([
@@ -3200,10 +3211,9 @@ console.log("Map :", map);
 
 ### `delete()`
 
-Used to delete a specified key from a Map.
-
-- Removes the key-value pair if the key exists.
-- Does nothing if the key is invalid or does not exist in the Map.
+* The `delete()` method is used to **remove a specified key from a Map**.
+* Removes the **key-value pair** if the key exists.
+* Does nothing if the key is invalid or does not exist in the Map.
 
 ```
 const map = new Map([
@@ -3220,7 +3230,7 @@ console.log("Map :", map);
 
 ### `clear()`
 
-Used to delete all key-value pairs from a Map.
+* The `clear()` method is used to **remove all key-value pairs from a Map**.
 
 ```
 const map = new Map([
@@ -3236,7 +3246,7 @@ console.log("Map :", map);
 
 ### `size`
 
-Returns the number of key-value pairs in a Map.
+* The `size` property returns the **number of key-value pairs in a Map**.
 
 ```
 const map = new Map([
@@ -3250,7 +3260,8 @@ console.log("Size of Map :", map.size);
 
 ### `has()`
 
-Returns `true` if the specified key exists in the Map; otherwise, it returns `false`.
+* The `has()` method returns **`true`** if the specified key exists in the Map.
+* Otherwise, it returns **`false`**.
 
 ```
 const map = new Map([
@@ -3264,7 +3275,8 @@ console.log("Is Map contains ID? :", map.has("ID"));
 
 ### `get()`
 
-Returns the value associated with a specified key. It returns `undefined` if no argument is provided or if the key does not exist in the Map.
+* The `get()` method returns the **value associated with a specified key** in a Map.
+* It returns **`undefined`** if the key does not exist or no argument is provided.
 
 ```
 const map = new Map([
@@ -3278,7 +3290,7 @@ console.log("ID :", map.get("ID"));
 
 ### `values()`
 
-Returns an iterator containing all the values of a Map.
+* The `values()` method returns an **iterator containing all values of a Map**.
 
 ```
 const map = new Map([
@@ -3292,7 +3304,7 @@ console.log("Values of Map :", map.values());
 
 ### `keys()`
 
-Returns an iterator containing all the keys of a Map.
+* The `keys()` method returns an **iterator containing all keys of a Map**.
 
 ```
 const map = new Map([
@@ -3306,7 +3318,7 @@ console.log("Keys of Map :", map.keys());
 
 ### `entries()`
 
-Returns an iterator containing all key-value pairs of a Map in the form `[key, value]`.
+* The `entries()` method returns an **iterator containing all key-value pairs of a Map** in the form **`[key, value]`**.
 
 ```
 const map = new Map([
@@ -3320,9 +3332,16 @@ console.log("Entries of Map :", map.entries());
 
 ## Date in JavaScript
 
+### Date
+
+* The **Date** object is used to work with **dates and times** in JavaScript.
+* It provides methods to get, set, and manipulate date and time values.
+* It stores date and time as the number of **milliseconds since 1 January 1970 (Unix Epoch)**.
+
 ### `new Date()`
 
-Returns the current date and time.
+* The `new Date()` constructor returns the **current date and time**.
+* It creates a **Date object** representing the exact current moment.
 
 ```
 const date = new Date();
@@ -3332,6 +3351,9 @@ console.log("Date :", date);
 
 ### `toString()`
 
+* The `toString()` method converts a **Date object into a string representation**.
+* It returns the date and time in a **readable string format**.
+
 ```
 const date = new Date();
 
@@ -3339,6 +3361,9 @@ console.log("String :", date.toString());
 ```
 
 ### `toDateString()`
+
+* The `toDateString()` method returns only the **date portion** of a Date object in a **human-readable string format**.
+* It does not include time information.
 
 ```
 const date = new Date();
@@ -3348,6 +3373,9 @@ console.log("Date String :", date.toDateString());
 
 ### `toTimeString()`
 
+* The `toTimeString()` method returns only the **time portion** of a Date object in a **human-readable string format**.
+* It does not include the date information.
+
 ```
 const date = new Date();
 
@@ -3355,6 +3383,9 @@ console.log("Time String :", date.toTimeString());
 ```
 
 ### `toLocaleString()`
+
+* The `toLocaleString()` method returns a **string representation of a Date object** based on the **local conventions of the system (locale)**.
+* It includes both **date and time** in a localized format.
 
 ```
 const date = new Date();
@@ -3364,6 +3395,9 @@ console.log("Locale String :", date.toLocaleString());
 
 ### `toLocaleDateString()`
 
+* The `toLocaleDateString()` method returns the **date portion** of a Date object as a **string based on the local (locale) format**.
+* It does not include time information.
+
 ```
 const date = new Date();
 
@@ -3371,6 +3405,9 @@ console.log("Locale Date String :", date.toLocaleDateString());
 ```
 
 ### `toLocaleTimeString()`
+
+* The `toLocaleTimeString()` method returns the **time portion** of a Date object as a **string based on the local (locale) format**.
+* It does not include date information.
 
 ```
 const date = new Date();
@@ -3386,8 +3423,8 @@ console.log("Locale Time String :", date.toLocaleTimeString());
 new Date(year, month, day, hour, minute, second, millisecond);
 ```
 
-- We have to specify at least two items to create a custom date.
-- If only a single argument is passed to `Date()`, it is treated as milliseconds.
+> * We must specify at least **two items** to create a custom date ( year and month minimum ).
+> * If only a single argument is passed to `Date()`, it is treated as **milliseconds since 1 January 1970 ( Unix Epoch )**.
 
 ```
 console.log(new Date(2000, 8, 16, 20, 10, 20, 30));
@@ -3404,6 +3441,8 @@ console.log(new Date("2000/09/16 08:10:20 pm").toLocaleString());
 
 ### `getFullYear()`
 
+* The `getFullYear()` method returns the **four-digit year** of a Date object.
+
 ```
 const date = new Date();
 
@@ -3411,6 +3450,9 @@ console.log("Full Year :", date.getFullYear());
 ```
 
 ### `getMonth()`
+
+* The `getMonth()` method returns the **month ( 0 – 11 )** of a Date object.
+* Months are **zero-based**, where `0 = January` and `11 = December`.
 
 ```
 const date = new Date();
@@ -3434,6 +3476,8 @@ console.log("Month :", months[date.getMonth()]);
 
 ### `getDate()`
 
+* The `getDate()` method returns the **day of the month ( 1 – 31 )** of a Date object.
+
 ```
 const date = new Date();
 
@@ -3441,6 +3485,8 @@ console.log("Date :", date.getDate());
 ```
 
 ### `getHours()`
+
+* The `getHours()` method returns the **hour ( 0 – 23 )** of a Date object.
 
 ```
 const date = new Date();
@@ -3450,6 +3496,8 @@ console.log("Hours :", date.getHours());
 
 ### `getMinutes()`
 
+* The `getMinutes()` method returns the **minutes ( 0 – 59 )** of a Date object.
+
 ```
 const date = new Date();
 
@@ -3457,6 +3505,8 @@ console.log("Minutes :", date.getMinutes());
 ```
 
 ### `getSeconds()`
+
+* The `getSeconds()` method returns the **seconds ( 0 – 59 )** of a Date object.
 
 ```
 const date = new Date();
@@ -3466,6 +3516,8 @@ console.log("Seconds :", date.getSeconds());
 
 ### `getMilliseconds()`
 
+* The `getMilliseconds()` method returns the **milliseconds ( 0 – 999 )** of a Date object.
+
 ```
 const date = new Date();
 
@@ -3473,6 +3525,8 @@ console.log("Milliseconds :", date.getMilliseconds());
 ```
 
 ### `getUTCDate()`
+
+* The `getUTCDate()` method returns the **day of the month ( 1 – 31 )** of a Date object according to **UTC ( Coordinated Universal Time )**.
 
 ```
 const date = new Date();
@@ -3482,7 +3536,7 @@ console.log("UTC Date :", date.getUTCDate());
 
 ### `getTime()`
 
-Returns the number of milliseconds elapsed since **January 1, 1970, 00:00:00 UTC**.
+* The `getTime()` method returns the number of **milliseconds elapsed since 1 January 1970, 00:00:00 UTC ( Unix Epoch )**.
 
 ```
 const date = new Date();
@@ -3492,7 +3546,8 @@ console.log("Time :", date.getTime());
 
 ### `getDay()`
 
-Returns the day of the week as a number.
+* The `getDay()` method returns the **day of the week as a number ( 0 – 6 )**.
+* `0` represents **Sunday**, and `6` represents **Saturday**.
 
 - `0` → Sunday
 - `1` → Monday
@@ -3519,7 +3574,7 @@ console.log("Day :", days[date.getDay()]);
 
 ### `Date.now()`
 
-Returns the number of milliseconds elapsed since January 1, 1970, 00:00:00 UTC.
+* The `Date.now()` method returns the number of **milliseconds elapsed since 1 January 1970, 00:00:00 UTC ( Unix Epoch )**.
 
 ```
 console.log("Current Date and Time :", Date.now());
