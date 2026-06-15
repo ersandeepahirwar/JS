@@ -247,9 +247,33 @@
 | Hermes         | Meta      | React Native          |
 
 ## JavaScript Keywords
-JavaScript keywords are reserved words that have special meaning in the language and cannot be used as identifiers.
+
+### What are JavaScript Keywords?
+
+* Keywords are **reserved words** in JavaScript.
+* They have a predefined meaning.
+* **Cannot be used as variable names, function names, or identifiers.**
+
+### Common JavaScript Keywords
+
+* Variable Declaration : `var`, `let`, `const`
+* Conditional Statements : `if`, `else`, `switch`, `case`, `default`
+* Loops : `for`, `while`, `do`, `break`, `continue`
+* Functions : `function`, `return`
+* Error Handling : `try`, `catch`, `finally`, `throw`
+* Object & Class : `class`, `extends`, `super`, `this`, `new`
+* Modules : `import`, `export`
+* Async Programming : `async`, `await`
+* Boolean Values : `true`, `false`, `null`
+
+### Important Keywords List
 
 `await*`, `break`, `case`, `catch`, `class*`, `const`, `continue`, `debugger`, `default`, `delete`, `do`, `else`, `export*`, `extends*`, `false`, `finally`, `for`, `function`, `if`, `import*`, `in`, `instanceof`, `new`, `null`, `return`, `super*`, `switch`, `this`, `throw`, `true`, `try`, `typeof`, `var`, `void`, `while`, `with`, `yield`, `let*`, `static`, `enum*`, `implements`, `interface`, `package`, `private`, `protected`, `public`
+
+### Note
+
+* Keywords marked with `*` are mainly related to modern JavaScript features or reserved for specific uses.
+* Using keywords as identifiers will cause a syntax error.
 
 ## JavaScript Identifier
 An identifier in JavaScript is the name used to identify programming entities such as variables, functions, objects, and classes.
