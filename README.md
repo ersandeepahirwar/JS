@@ -470,36 +470,36 @@ console.log(`${A} + ${B} = ${sum}`);
 ## Input Instructions in JavaScript
 
 ### `prompt()`
-`prompt()` is used to take input from the user through the keyboard.  
-It returns the input value in string format.
+
+* Used to take input from the user.
+* Returns the input as a **string**.
 
 ```
 const number = prompt("What is your favourite number?");
-console.log(number, typeof number);
 ```
 
 ### `Number()`
-`Number()` converts the input value ( argument ) into a number type.
+
+* Converts input into a **number**.
 
 ```
 const number = Number(prompt("What is your favourite number?"));
-console.log(number, typeof number);
 ```
 
 ### `parseInt()`
-`parseInt()` converts the input value ( argument ) into an integer number type.
+
+* Converts input into an **integer**.
 
 ```
 const number = parseInt(prompt("What is your favourite number?"));
-console.log(number, typeof number);
 ```
 
 ### `parseFloat()`
-`parseFloat()` converts the input value ( argument ) into a floating-point number type.
+
+* Converts input into a **floating-point number**.
 
 ```
 const number = parseFloat(prompt("What is your favourite number?"));
-console.log(number, typeof number);
 ```
 
 ## Operators in JavaScript
