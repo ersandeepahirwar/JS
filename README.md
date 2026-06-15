@@ -86,42 +86,77 @@
 ## JavaScript Applications
 
 ### 1. Web Development
-JavaScript is the most popular programming language in the web development sector because it is primarily used for frontend web development to create interactive and dynamic user interfaces.  
-It enhances user experience by enabling real-time updates without reloading the page.
+
+* Used to create interactive and dynamic websites.
+* Enables real-time updates without page reloads.
+* Improves user experience.
 
 ### 2. SPA ( Single Page Application ) Development
-JavaScript is the most important programming language for SPA ( Single Page Application ) development.  
-Developers can use JavaScript libraries and frameworks such as React, Vue, Next.js, and Angular to build modern web applications.
+
+* Main language for SPA development.
+* Popular frameworks / libraries :
+  * React
+  * Vue.js
+  * Next.js
+  * Angular
 
 ### 3. Server-Side Development
-JavaScript was originally designed as a frontend programming language, but nowadays it can also be used as a backend programming language using technologies such as Node.js, Express.js, NestJS, Deno, and Bun.  
-Using these frameworks and libraries, developers can build backend APIs, controllers, and RESTful APIs.
 
-### 4. Hybrid Mobile Application Development
-JavaScript can be used to develop hybrid mobile applications for both iOS and Android platforms, as well as wearable devices, using frameworks such as React Native and Ionic.  
-Using these frameworks, developers can build hybrid mobile applications with a single codebase, so there is no need to develop applications separately for different platforms.
+* Used for backend development.
+* Popular technologies :
+  * Node.js
+  * Express.js
+  * NestJS
+  * Deno
+  * Bun
+* Used to build APIs and RESTful services.
+
+### 4. Hybrid Mobile App Development
+
+* Develop apps for Android and iOS using one codebase.
+* Popular frameworks :
+  * React Native
+  * Ionic
 
 ### 5. Desktop Applications
-With the help of the Electron.js framework, developers can build hybrid desktop applications using JavaScript, HTML, and CSS with a single codebase.  
-The famous code editor VS Code is also built using Electron.js.
+
+* Build desktop apps using :
+  * Electron
+* Example : Visual Studio Code
 
 ### 6. Game Development
-JavaScript can be used in the game development sector using libraries such as Phaser and Babylon.js.  
-Developers can create both 2D and 3D online games using JavaScript.
 
-### 7. Data Visualization and Analytics
-JavaScript is gaining popularity day by day in the data visualization and analytics sector.  
-Using libraries such as Chart.js and D3.js, developers can create line charts, pie charts, bar charts, and many other types of visualizations.
+* Used for 2D and 3D games.
+* Popular libraries :
+  * Phaser
+  * Babylon.js
 
-### 8. IoT ( Internet of Things ) Sector
-JavaScript can be used to control IoT devices using libraries such as Johnny-Five and IoT.js.
+### 7. Data Visualization & Analytics
 
-### 9. Artificial Intelligence and Machine Learning
-We can use JavaScript to train AI models using the TensorFlow.js library.  
-With the help of this library, developers can train AI models in a client-side architecture.
+* Creates charts and visual reports.
+* Popular libraries :
+  * Chart.js
+  * D3.js
 
-> [!Note]
-> JavaScript is not generally used in system software development, such as device driver development and operating system development.
+### 8. IoT ( Internet of Things )
+
+* Used to control smart devices.
+* Popular libraries :
+  * Johnny-Five
+  * IoT.js
+
+### 9. AI & Machine Learning
+
+* Can train AI models in the browser.
+* Popular library :
+  * TensorFlow.js
+
+### Note
+
+* JavaScript is **not commonly used** for :
+  * Operating System Development
+  * Device Driver Development
+  * Low-level System Software
 
 ## ECMAScript
 - ECMAScript is a standardized scripting language specification developed by Ecma International.  
