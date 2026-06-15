@@ -1970,14 +1970,19 @@ console.log("CGPA :", CGPA);
 
 ### String
 
-A String is a collection of characters, a sequence of characters, or an array of characters.
+* A **String** is a collection of characters, a sequence of characters, or an array of characters.
 
-- Strings are immutable data types.
-- String indexing starts from `0`.
+### Properties
+
+* Strings are **immutable data types**.
+* String indexing starts from **`0`**.
 
 ### String Constant
 
-A String Constant is a sequence of characters enclosed within single quotes (`' '`), double quotes (`" "`), or backticks (`` ` ` ``).
+* A **String Constant** is a sequence of characters enclosed within :
+  * single quotes (`' '`)
+  * double quotes (`" "`)
+  * backticks (`` ` ` ``)
 
 ```
 const A = 'Apple';
@@ -2045,7 +2050,7 @@ for (let character of string) {
 
 ### `charAt()`
 
-Returns the character at a specified index in a string.
+* The `charAt()` method returns the **character at a specified index** in a string.
 
 ```
 const string = "JS";
@@ -2059,7 +2064,8 @@ console.log("Character at Last Index :", string.charAt(-1)); // blank
 
 ### `at()`
 
-Returns the character at a specified index in a string. It also supports negative indexing, where `-1` refers to the last character of the string.
+* The `at()` method returns the **character at a specified index** in a string.
+* It also supports **negative indexing**, where `-1` refers to the last character of the string.
 
 ```
 const string = "JS";
@@ -2070,7 +2076,8 @@ console.log("Character at 2nd Last Index :", string.at(-2));
 
 ### `charCodeAt()`
 
-Returns the Unicode value of the character at a specified index. If no index is provided, it returns the Unicode value of the first character in the string.
+* The `charCodeAt()` method returns the **Unicode value** of the character at a specified index.
+* If no index is provided, it returns the Unicode value of the **first character** in the string.
 
 ```
 const string = "JS";
@@ -2082,7 +2089,7 @@ for (let index in string) {
 
 ### `fromCharCode()`
 
-Converts one or more Unicode values into their corresponding characters.
+* The `fromCharCode()` method converts **one or more Unicode values** into their corresponding **characters**.
 
 ```
 for (let index = 65; index <= 90; index++) {
@@ -2092,7 +2099,8 @@ for (let index = 65; index <= 90; index++) {
 
 ### `indexOf()`
 
-Returns the index of the first occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+* The `indexOf()` method returns the **index of the first occurrence** of a specified substring in a string.
+* If the substring is not found, it returns **`-1`**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2102,7 +2110,8 @@ console.log(`First Index of T :`, string.indexOf("T"));
 
 ### `lastIndexOf()`
 
-Returns the index of the last occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+* The `lastIndexOf()` method returns the **index of the last occurrence** of a specified substring in a string.
+* If the substring is not found, it returns **`-1`**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2112,7 +2121,8 @@ console.log(`Last Index of T :`, string.lastIndexOf("T"));
 
 ### `search()`
 
-Returns the index of the first occurrence of a specified substring in a string. If the substring is not found, it returns `-1`.
+* The `search()` method returns the **index of the first occurrence** of a specified substring in a string.
+* If the substring is not found, it returns **`-1`**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2122,7 +2132,8 @@ console.log(`First Index of T :`, string.search("T"));
 
 ### `includes()`
 
-Checks whether a specified substring exists in a string. It returns `true` if the substring is found; otherwise, it returns `false`.
+* The `includes()` method checks whether a specified substring exists in a string.
+* It returns **`true`** if the substring is found; otherwise, it returns **`false`**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2142,7 +2153,7 @@ console.log("Copied String :", language);
 
 ### `concat()`
 
-Concatenates one or more strings into a single string.
+* The `concat()` method concatenates one or more strings into a single string.
 
 ```
 const C = "C";
@@ -2162,7 +2173,8 @@ console.log("String after Concatenation :", pet);
 
 ### `startsWith()`
 
-Checks whether a string starts with a specified substring. It returns `true` if the string starts with the substring; otherwise, it returns `false`.
+* The `startsWith()` method checks whether a string starts with a specified substring.
+* It returns **`true`** if the string starts with the substring; otherwise, it returns **`false`**.
 
 ```
 const string = "www.google.com";
@@ -2176,7 +2188,8 @@ console.log(
 
 ### `endsWith()`
 
-Checks whether a string ends with a specified substring. It returns `true` if the string ends with the substring; otherwise, it returns `false`.
+* The `endsWith()` method checks whether a string ends with a specified substring.
+* It returns **`true`** if the string ends with the substring; otherwise, it returns **`false`**.
 
 ```
 const string = "codeysandeep@gmail.com";
@@ -2190,11 +2203,13 @@ console.log(
 
 ### `toUpperCase()`
 
-Converts all characters in a string to uppercase and returns a new string.
+* The `toUpperCase()` method converts all characters in a string to **uppercase**.
+* It returns a **new string**.
 
 ### `toLocaleUpperCase()`
 
-Converts all characters in a string to uppercase according to the host environment's locale and returns a new string.
+* The `toLocaleUpperCase()` method converts all characters in a string to **uppercase according to the host environment's locale**.
+* It returns a **new string**.
 
 ```
 const string = "The Quick Brown Fox Jumps Over The Little Lazy Dog";
@@ -2205,11 +2220,13 @@ console.log(string.toLocaleUpperCase());
 
 ### `toLowerCase()`
 
-Converts all characters in a string to lowercase and returns a new string.
+* The `toLowerCase()` method converts all characters in a string to **lowercase**.
+* It returns a **new string**.
 
 ### `toLocaleLowerCase()`
 
-Converts all characters in a string to lowercase according to the host environment's locale and returns a new string.
+* The `toLocaleLowerCase()` method converts all characters in a string to **lowercase according to the host environment's locale**.
+* It returns a **new string**.
 
 ```
 const string = "The Quick Brown Fox Jumps Over The Little Lazy Dog";
@@ -2220,7 +2237,8 @@ console.log(string.toLocaleLowerCase());
 
 ### `substr()`
 
-Returns a substring starting from a specified position and containing a specified number of characters.
+* The `substr()` method returns a **substring starting from a specified position** and of a specified length.
+* It returns a **new string**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2230,7 +2248,9 @@ console.log("15 Characters from Index 4 :", string.substr(4, 15));
 
 ### `substring()`
 
-Returns a substring from a specified start position to a specified end position. The end position is not included in the returned substring.
+* The `substring()` method returns a **substring from a specified start position to a specified end position**.
+* The **end position is not included** in the result.
+* It returns a **new string**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2240,7 +2260,10 @@ console.log("subString from Index 4 to Index 19 :", string.substring(4, 19));
 
 ### `slice()`
 
-Returns a substring from a specified start position to a specified end position. The end position is not included in the returned substring. Negative indices can be used to count positions from the end of the string.
+* The `slice()` method returns a **substring from a specified start position to a specified end position**.
+* The **end position is not included** in the result.
+* It returns a **new string**.
+* It supports **negative indices** to count positions from the end of the string.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2252,7 +2275,7 @@ console.log("Last 19 Characters :", string.slice(-19));
 
 ### `repeat()`
 
-Creates and returns a new string by repeating the original string a specified number of times.
+* The `repeat()` method creates and returns a **new string** by repeating the original string a specified number of times.
 
 ```
 const string = "X";
@@ -2264,7 +2287,7 @@ console.log(
 
 ### `replace()`
 
-Returns a new string in which the first occurrence of a specified substring is replaced with another substring.
+* The `replace()` method returns a **new string** in which the **first occurrence** of a specified substring is replaced with another substring.
 
 ```
 const string = "4392 0000 0000 0000";
@@ -2276,7 +2299,7 @@ console.log(
 
 ### `replaceAll()`
 
-Returns a new string in which all occurrences of a specified substring are replaced with another substring.
+* The `replaceAll()` method returns a **new string** in which **all occurrences** of a specified substring are replaced with another substring.
 
 ```
 const string = "4392 0000 0000 0000";
@@ -2286,7 +2309,8 @@ console.log(`16 Digits of Your Card are ${string.replaceAll("0", "X")}`);
 
 ### `split()`
 
-Splits a string into an array of substrings using a specified separator and returns the resulting array.
+* The `split()` method splits a string into an **array of substrings** using a specified separator.
+* It returns the resulting **array**.
 
 ```
 const digits = "0 1 2 3 4 5 6 7 8 9";
@@ -2301,7 +2325,7 @@ console.log("Alphabet :", alphabet.split(" "));
 
 ### Reverse a String
 
-Reverses the characters of a string and returns the reversed string.
+* Reverses the **characters of a string** and returns the **reversed string**.
 
 ```
 const string = "THE QUICK BROWN FOX JUMPS OVER THE LITTLE LAZY DOG";
@@ -2312,7 +2336,8 @@ console.log("Reversed String :", string.split("").reverse().join(""));
 
 ### `trim()`
 
-Removes all leading and trailing whitespace characters from a string and returns a new string.
+* The `trim()` method removes all **leading and trailing whitespace characters** from a string.
+* It returns a **new string**.
 
 ```
 const string = " JS ";
@@ -2323,7 +2348,8 @@ console.log(`Trimmed String : "${string.trim()}"`);
 
 ### `trimStart()`
 
-Removes all leading whitespace characters from the left side of a string and returns a new string.
+* The `trimStart()` method removes all **leading whitespace characters** from the **left side** of a string.
+* It returns a **new string**.
 
 ```
 const string = " JS";
@@ -2334,7 +2360,8 @@ console.log(`Trimmed String : "${string.trimStart()}"`);
 
 ### `trimEnd()`
 
-Removes all trailing whitespace characters from the right side of a string and returns a new string.
+* The `trimEnd()` method removes all **trailing whitespace characters** from the **right side** of a string.
+* It returns a **new string**.
 
 ```
 const string = "JS ";
@@ -2345,11 +2372,11 @@ console.log(`Trimmed String : "${string.trimEnd()}"`);
 
 ### `localeCompare()`
 
-Compares two strings and returns:
-
-- `0` if both strings are equal.
-- A positive value if the first string comes after the second string in alphabetical order.
-- A negative value if the first string comes before the second string in alphabetical order.
+* The `localeCompare()` method compares two strings **based on alphabetical order**.
+* It returns :
+  * **`0`** → if both strings are equal
+  * **Positive value** → if the first string comes **after** the second string
+  * **Negative value** → if the first string comes **before** the second string
 
 ```
 const character = "A";
