@@ -858,31 +858,31 @@ console.log(A, B, C);
 
 ### 1. Conditional Statements or Selection Statements
 
-- `if` Statement
-- `if else` Statement
-- Nested `if else` Statement
-- `if else if` Ladder Statement
-- `switch case` Statement
+* `if` Statement
+* `if else` Statement
+* Nested `if else` Statement
+* `if else if` Ladder Statement
+* `switch case` Statement
 
 ### 2. Iteration Statements or Loops
 
-- `for` Loop
-- `for in` Loop
-- `for of` Loop
-- `while` Loop
-- `do while` Loop
-- Nested Loops
+* `for` Loop
+* `for in` Loop
+* `for of` Loop
+* `while` Loop
+* `do while` Loop
+* Nested Loops
 
 ### 3. Jump Statements
 
-- `break` Statement
-- `continue` Statement
+* `break` Statement
+* `continue` Statement
 
 ## Conditional Statements or Selection Statements
 
 ### `if` Statement
 
-The `if` statement is used when the execution of a statement block depends on a condition.
+* The **`if` statement** is used when the execution of a statement block depends on a **condition**.
 
 #### Syntax
 
@@ -897,12 +897,12 @@ if (true) {
   console.log("JavaScript is a High-Level Programming Language");
 }
 ```
-> [!Note]
-> `{}` are optional if there is only one statement in the statement block.
+
+> **`{}`** are optional if there is only **one statement** in the statement block.
 
 ### `if else` Statement
 
-The `if else` statement is used when the execution of one statement block out of two blocks depends on a condition.
+* The **`if else` statement** is used when the execution of **one statement block out of two blocks** depends on a **condition**.
 
 #### Syntax
 
@@ -924,7 +924,7 @@ if (number % 2 === 0) {
 
 ### Nested `if else` Statement
 
-A nested `if else` statement is an `if else` statement written inside another `if else` statement.
+* A **nested `if else` statement** is an **`if else` statement** written inside another **`if else` statement**.
 
 #### Syntax
 
@@ -960,7 +960,7 @@ if (number % 2 === 0) {
 
 ### `if else if` Ladder Statement
 
-The `if else if` ladder statement is used when we have `n` number of conditions.
+* The **`if else if` ladder statement** is used when we have **`n` number of conditions**.
 
 #### Syntax
 
@@ -998,7 +998,7 @@ if (A >= B && A >= C && A >= D && A >= E) {
 
 ### `switch case` Statement
 
-The `switch case` statement is used to make menu-based programs.
+* The **`switch case` statement** is used to make **menu-based programs**.
 
 #### Syntax
 
