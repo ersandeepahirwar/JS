@@ -276,14 +276,47 @@
 * Using keywords as identifiers will cause a syntax error.
 
 ## JavaScript Identifier
-An identifier in JavaScript is the name used to identify programming entities such as variables, functions, objects, and classes.
+
+### What is an Identifier?
+
+* An identifier is a name used to identify programming entities.
+* Identifiers are used for :
+  * Variables
+  * Functions
+  * Objects
+  * Classes
 
 ### Rules for Identifiers
-- We cannot use JavaScript keywords as identifiers.
-- We cannot use a digit as the first character of an identifier.
-- Digits can be used after the first character ( postfix ).
-- Special characters are not allowed, except the underscore ( _ ).
-- We cannot use the same identifier name more than once within the same statement block.
+
+* JavaScript keywords cannot be used as identifiers.
+* An identifier cannot start with a digit (`0-9`).
+* Digits can be used after the first character.
+* Only letters, digits, and underscore (`_`) are allowed.
+* Special characters such as `@`, `#`, `$`, `%`, etc. are not allowed.
+* Identifier names must be unique within the same scope / block.
+
+### Valid Identifiers
+
+```
+name
+userName
+age1
+_student
+```
+
+### Invalid Identifiers
+
+```
+1name      // Starts with a digit
+for        // Keyword
+user-name  // Contains special character (-)
+@name      // Contains special character
+```
+
+### Note
+
+* JavaScript identifiers are case-sensitive.
+* `name`, `Name`, and `NAME` are treated as different identifiers.
 
 ## JavaScript Data Types
 
