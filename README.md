@@ -1427,19 +1427,17 @@ console.log(`5! = ${factorial(5)}`);
 
 ## Arrays in JavaScript
 
-An Array is a collection of heterogeneous ( different types of ) items arranged in contiguous order.
+* An **Array** is a collection of **heterogeneous ( different types of ) items** arranged in contiguous order.
 
 ### Features of Arrays
 
-- An array can contain duplicate items.
-- An array can contain values of different data types.
-- Arrays are mutable data types, i.e., they support updation such as insertion, deletion, and modification of elements.
+* An array can contain **duplicate items**.
+* An array can contain values of **different data types**.
+* Arrays are **mutable data types**, i.e., they support updation such as **insertion, deletion, and modification** of elements.
 
-> [!Note]
->
-> - Array indexing always starts from `0`.
-> - The index represents the offset ( distance ) of an element from the base element.
-> - The first element is stored at index `0`, the second at index `1`, and so on.
+> * Array indexing always starts from `0`.
+> * The index represents the **offset ( distance )** of an element from the base element.
+> * The first element is stored at index `0`, the second at index `1`, and so on.
 
 #### Syntax
 
@@ -1451,7 +1449,6 @@ var array = [item1, item2, ..., itemN];
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(numbers);
 ```
-
 
 ### Create an Array using Array Literal Style
 
@@ -1611,7 +1608,9 @@ console.log(array.toString());
 
 ### `join()`
 
-Converts an array into a string, and you can specify a separator. By default, the `join()` method uses `,` as a separator.
+* The `join()` method converts an **array into a string**.
+* You can specify a **separator**.
+* By default, it uses `,` as the separator.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1619,9 +1618,10 @@ const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 console.log(array.join(" "));
 ```
 
-### `push()`
+## `push()`
 
-Inserts one or more elements at the end of an array and returns the updated length of the array.
+* The `push()` method inserts **one or more elements at the end of an array**.
+* It returns the **updated length of the array**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5];
@@ -1637,7 +1637,8 @@ console.log("Array after inserting new elements : ", array);
 
 ### `pop()`
 
-Deletes an element from the end of an array and returns the deleted element.
+* The `pop()` method deletes an **element from the end of an array**.
+* It returns the **deleted element**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1653,7 +1654,8 @@ console.log("Array after deleting existing elements : ", array);
 
 ### `unshift()`
 
-Inserts one or more elements at the beginning of an array and returns the updated length of the array.
+* The `unshift()` method inserts **one or more elements at the beginning of an array**.
+* It returns the **updated length of the array**.
 
 ```
 const array = [4, 5, 6, 7, 8, 9];
@@ -1669,7 +1671,8 @@ console.log("Array after inserting new elements : ", array);
 
 ### `shift()`
 
-Deletes an element from the beginning of an array and returns the deleted element.
+* The `shift()` method deletes an **element from the beginning of an array**.
+* It returns the **deleted element**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1685,7 +1688,8 @@ console.log("Array after deleting existing elements : ", array);
 
 ### `splice()`
 
-Used to insert or delete elements at any specific position in an array and returns an array of deleted elements.
+* The `splice()` method is used to **insert or delete elements at any specific position** in an array.
+* It returns an **array of deleted elements**.
 
 #### Syntax
 
@@ -1706,7 +1710,8 @@ console.log("Array after inserting new elements : ", array);
 
 ### `delete`
 
-Deletes an element from an array and leaves an empty slot at that position.
+* The `delete` operator removes an **element from an array**.
+* It **leaves an empty slot** at that position.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1722,7 +1727,9 @@ console.log("Array after deleting existing elements : ", array);
 
 ### `slice()`
 
-Returns a copy of a portion of an array. For both `start` and `end`, a negative index can be used to indicate an offset from the end of the array. For example, `-2` refers to the second-to-last element of the array.
+* The `slice()` method returns a **copy of a portion of an array**.
+* It does not modify the original array.
+* Negative index can be used, where `-1` refers to the last element and `-2` refers to the second last element.
 
 #### Syntax
 
@@ -1741,7 +1748,9 @@ console.log("Sliced Array for Last 10 Array Elements : ", array.slice(-10));
 
 ### `concat()`
 
-Combines two or more arrays. This method returns a new array without modifying any existing arrays.
+* The `concat()` method is used to **combine two or more arrays**.
+* It returns a **new array**.
+* It does **not modify the original arrays**.
 
 ```
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1754,7 +1763,8 @@ console.log("Symbols : ", symbols);
 
 ### `entries()`
 
-Generates an iterator that contains the key ( index ) and value of each array element.
+* The `entries()` method generates an **iterator** for an array.
+* It contains the **key (index)** and **value** of each element.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1771,7 +1781,8 @@ for (let [index, value] of array.entries()) {
 
 ### `includes()`
 
-Returns `true` if the array contains the specified element; otherwise, it returns `false`.
+* The `includes()` method checks whether an array contains a specified element.
+* It returns **`true`** if the element is found, otherwise **`false`**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1781,7 +1792,8 @@ console.log("Is 5 an element of array? :", array.includes(5));
 
 ### `indexOf()`
 
-Returns the lowest index of the specified element in the array. If the element is not found, it returns `-1`.
+* The `indexOf()` method returns the **first (lowest) index** of the specified element in an array.
+* If the element is not found, it returns **`-1`**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
@@ -1791,7 +1803,8 @@ console.log("Index of 5 :", array.indexOf(5));
 
 ### `lastIndexOf()`
 
-Returns the last index of the specified element in the array. If the element is not found, it returns `-1`.
+* The `lastIndexOf()` method returns the **last index** of the specified element in an array.
+* If the element is not found, it returns **`-1`**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5];
@@ -1801,6 +1814,9 @@ console.log("Index of Last 5 : ", array.lastIndexOf(5));
 
 ### `reverse()`
 
+* The `reverse()` method is used to **reverse the order of elements** in an array.
+* It **modifies the original array**.
+
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -1809,7 +1825,8 @@ console.log("Reverse of Array :", array.reverse());
 
 ### `find()`
 
-Returns the first element in the array that passes the specified test. If no element passes the test, it returns `undefined`.
+* The `find()` method returns the **first element** in the array that passes a specified test.
+* If no element passes the test, it returns **`undefined`**.
 
 ```
 const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
@@ -1822,7 +1839,8 @@ console.log(
 
 ### `findLast()`
 
-Returns the last element in the array that passes the specified test. If no element passes the test, it returns `undefined`.
+* The `findLast()` method returns the **last element** in the array that passes a specified test.
+* If no element passes the test, it returns **`undefined`**.
 
 ```
 const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
@@ -1835,7 +1853,8 @@ console.log(
 
 ### `findIndex()`
 
-Returns the index of the first element in the array that passes the specified test. If no element passes the test, it returns `-1`.
+* The `findIndex()` method returns the **index of the first element** in the array that passes a specified test.
+* If no element passes the test, it returns **`-1`**.
 
 ```
 const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
@@ -1846,9 +1865,10 @@ console.log(
 );
 ```
 
-### `findLastIndex()`
+## `findLastIndex()`
 
-Returns the index of the last element in the array that passes the specified test. If no element passes the test, it returns `-1`.
+* The `findLastIndex()` method returns the **index of the last element** in the array that passes a specified test.
+* If no element passes the test, it returns **`-1`**.
 
 ```
 const array = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50];
@@ -1861,7 +1881,8 @@ console.log(
 
 ### `map()`
 
-Returns a new array containing the results of applying a function to all elements of the array.
+* The `map()` method returns a **new array** containing the results of applying a function to each element of the array.
+* It does **not modify the original array**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1871,7 +1892,8 @@ console.log(array.map((element, index, array) => element % 2 === 0));
 
 ### `filter()`
 
-Returns a new array containing the elements that pass the specified test.
+* The `filter()` method returns a **new array** containing elements that pass a specified test.
+* It does **not modify the original array**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1881,7 +1903,8 @@ console.log(array.filter((element, index, array) => element % 2 === 0));
 
 ### `forEach()`
 
-Calls a callback function for each element of the array and does not return anything.
+* The `forEach()` method calls a **callback function for each element** of an array.
+* It does **not return anything**.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1893,7 +1916,9 @@ array.forEach((element, index, array) => {
 
 ### `reduce()`
 
-Calls the specified callback function for all elements of an array. The return value of the callback function is accumulated as a single result and is passed as an argument to the next call of the callback function.
+* The `reduce()` method calls a **callback function for all elements** of an array.
+* The return value of the callback is **accumulated into a single result**.
+* This result is passed to the next callback call.
 
 ```
 const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -1907,6 +1932,10 @@ console.log(
 ```
 
 ### `sort()`
+
+* The `sort()` method is used to **sort the elements of an array**.
+* By default, it sorts elements as **strings in ascending order**.
+* It **modifies the original array**.
 
 ```
 const vowels = ["A", "I", "U", "E", "O"];
@@ -1925,7 +1954,7 @@ console.log("Numbers Array after Sorting in Descending Order :", numbers);
 
 ### Array Destructuring
 
-Array destructuring is the process of unpacking array elements into individual variables.
+* Array destructuring is the process of **unpacking array elements into individual variables**.
 
 ```
 const student = [1714510036, "Sandeep Ahirwar", "B.Tech", 6.9];
