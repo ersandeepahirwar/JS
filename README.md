@@ -2394,11 +2394,15 @@ console.log("How different is E from D?", E.localeCompare(D));
 
 ## Objects in JavaScript
 
-An Object stores information in the form of key-value pairs.
+### Object
 
-- Keys must be unique.
-- Values may be duplicated.
-- Objects are mutable data types.
+* An **Object** stores information in the form of **key-value pairs**.
+
+### Properties
+
+* **Keys must be unique**.
+* Values may be **duplicated**.
+* Objects are **mutable data types**.
 
 #### Syntax
 
@@ -2578,11 +2582,8 @@ object.modulus();
 object.square();
 ```
 
-> In an object, we can use either the object name or `this` to access or define object properties.
-
-#### Note
-
-> Never use `this` inside an arrow function method to represent the current object because `this` does not refer to the current object. Instead, it inherits `this` from its surrounding scope. In a browser's global scope, this may be the global `window` object.
+> * In an object, we can use either the **object name** or `this` to access or define object properties.
+> * Never use `this` inside an **arrow function method** to represent the current object because `this` does not refer to the current object. Instead, it inherits `this` from its surrounding scope. In a browser's global scope, this may be the global `window` object.
 
 ### Need of Functions in Objects
 
@@ -2616,11 +2617,11 @@ salary.slip();
 
 ### Getters and Setters
 
-Getter and Setter properties are used to overcome the function/method call overhead problem.
+* **Getter and Setter properties** are used to overcome the **function / method call overhead problem**.
 
 #### Function Call Overhead Problem
 
-When the actual execution time of a function is less than the function switching time, it is called the Function Call Overhead Problem.
+* When the actual execution time of a function is less than the **function switching time**, it is called the **Function Call Overhead Problem**.
 
 ```
 const employee = {
@@ -2683,18 +2684,18 @@ console.log("SRGI1714510036 :", SRGI1714510036);
 
 ### Object Prototype
 
-- Every object in JavaScript has a built-in property called its prototype.
-- A prototype is itself an object.
-- Every prototype has its own prototype, forming a prototype chain.
-- Prototype properties and methods are not direct properties of the object itself.
-- One prototype can be shared by multiple objects.
-- Prototype members are common to all objects that share the same prototype.
+* Every object in JavaScript has a built-in property called its **prototype**.
+* A **prototype** is itself an object.
+* Every prototype has its own prototype, forming a **prototype chain**.
+* Prototype properties and methods are **not direct properties** of the object itself.
+* One prototype can be **shared by multiple objects**.
+* Prototype members are **common to all objects** that share the same prototype.
 
 #### Need of Object Prototype
 
-- To share common properties and methods among multiple objects.
-- To reduce code duplication.
-- To save memory.
+* To share **common properties and methods** among multiple objects.
+* To reduce **code duplication**.
+* To save **memory**.
 
 ```
 const Student = function (ID, name, CGPA) {
@@ -2722,7 +2723,7 @@ SRGI1714510036.display();
 
 ### `Object.keys()`
 
-Returns an array containing all the keys of an object.
+* The `Object.keys()` method returns an **array containing all the keys of an object**.
 
 ```
 const student = {
@@ -2736,7 +2737,7 @@ console.log(Object.keys(student));
 
 ### `Object.values()`
 
-Returns an array containing all the values of an object.
+* The `Object.values()` method returns an **array containing all the values of an object**.
 
 ```
 const student = {
@@ -2750,7 +2751,7 @@ console.log(Object.values(student));
 
 ### `Object.entries()`
 
-Returns an array containing all the key-value pairs of an object.
+* The `Object.entries()` method returns an **array of all key-value pairs** of an object.
 
 ```
 const student = {
@@ -2764,7 +2765,7 @@ console.log(Object.entries(student));
 
 ### `Object.assign()`
 
-Used to copy the properties of one object into another object.
+* The `Object.assign()` method is used to **copy properties from one object into another object**.
 
 ```
 const A = {
@@ -2791,7 +2792,7 @@ console.log("D :", D);
 
 ### `Object.create()`
 
-Used to create a new object and make an existing object the prototype of the newly created object.
+* The `Object.create()` method is used to **create a new object** and set an existing object as its **prototype**.
 
 ```
 const A = {
@@ -2807,7 +2808,8 @@ console.log("Prototype of B :", Object.getPrototypeOf(B));
 
 ### `Object.isFrozen()`
 
-Checks whether an object is frozen or not. It returns `true` if the object is frozen; otherwise, it returns `false`.
+* The `Object.isFrozen()` method checks whether an object is **frozen or not**.
+* It returns **`true`** if the object is frozen; otherwise, it returns **`false`**.
 
 ```
 const object = {
@@ -2822,7 +2824,8 @@ console.log("Is Frozen? :", Object.isFrozen(object));
 
 ### `Object.freeze()`
 
-Freezes an object and prevents its properties from being added, deleted, or updated.
+* The `Object.freeze()` method **freezes an object**.
+* It prevents **adding, deleting, or updating properties** of the object.
 
 ```
 const object = {
@@ -2842,7 +2845,8 @@ console.log("Object :", object);
 
 ### `Object.isSealed()`
 
-Checks whether an object is sealed or not. It returns `true` if the object is sealed; otherwise, it returns `false`.
+* The `Object.isSealed()` method checks whether an object is **sealed or not**.
+* It returns **`true`** if the object is sealed; otherwise, it returns **`false`**.
 
 ```
 const object = {
@@ -2857,7 +2861,8 @@ console.log("Is Object Sealed? :", Object.isSealed(object));
 
 ### `Object.seal()`
 
-Seals an object and prevents its properties from being added or deleted, but existing properties can still be updated.
+* The `Object.seal()` method **seals an object**.
+* It prevents **adding or deleting properties**, but existing properties can still be **updated**.
 
 ```
 const object = {
@@ -2877,7 +2882,7 @@ console.log("Object :", object);
 
 ### `Object.getOwnPropertyDescriptor(object, property)`
 
-Returns the descriptor of a specified property of an object.
+* The `Object.getOwnPropertyDescriptor()` method returns the **descriptor of a specified property** of an object.
 
 ```
 const object = {
@@ -2902,7 +2907,7 @@ console.log(
 
 ### `Object.setPrototypeOf(object, prototype)`
 
-Used to set the prototype of an object.
+* The `Object.setPrototypeOf()` method is used to **set the prototype of an object**.
 
 ```
 const object = {
@@ -2924,7 +2929,7 @@ console.log(`
 
 ### `Object.getPrototypeOf(object)`
 
-Used to get the prototype of an object.
+* The `Object.getPrototypeOf()` method is used to **get the prototype of an object**.
 
 ```
 const object = {
@@ -2941,7 +2946,8 @@ console.log("Prototype of Object :", Object.getPrototypeOf(object));
 
 ### `Object.is()`
 
-Used to compare two values and determine whether they are the same value. It returns `true` if the values are equal; otherwise, it returns `false`.
+* The `Object.is()` method is used to **compare two values** and check whether they are the **same value**.
+* It returns **`true`** if the values are equal; otherwise, it returns **`false`**.
 
 ```
 const object = {
@@ -2956,7 +2962,7 @@ console.log(`Is ID = "1714510036"? :`, Object.is(object.ID, "1714510036"));
 
 ### `Object.defineProperty(object, property, descriptor)`
 
-Used to define a property on an object with detailed settings (descriptor).
+* The `Object.defineProperty()` method is used to **define a property on an object** with detailed settings ( descriptor ).
 
 ```
 const object = {
@@ -3001,7 +3007,7 @@ console.log("Object :", object);
 
 ### `Object.defineProperties(object, { property1: descriptor1, property2: descriptor2 })`
 
-Used to define multiple properties on an object with detailed settings (descriptors).
+* The `Object.defineProperties()` method is used to **define multiple properties on an object** with detailed settings ( descriptors ).
 
 ```
 const object = {
