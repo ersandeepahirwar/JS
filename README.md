@@ -3585,11 +3585,17 @@ console.log("Current Date and Time :", Date.now());
 * Designed by **Bjarne Stroustrup** ( Founder of C++ ).
 * OOPS stands for **Object-Oriented Programming System**.
 
-OOPS is a computer science term that defines a well-structured series of steps to construct a computer application composed of multiple objects. Each object can handle data and send or receive messages from other objects. Since objects are independent of each other, OOPS is considered more flexible than the procedural programming approach.
+### Definition
+
+* OOPS is a computer science concept that defines a **structured approach to building applications using objects**.
+* Each object can :
+  * Handle its own data
+  * Send and receive messages from other objects
+* Since objects are **independent**, OOPS is more **flexible** than procedural programming.
 
 **OR**
 
-OOPS is a programming concept that helps us achieve the following approaches in programming.
+* OOPS is a programming concept that helps achieve **object-oriented programming approaches**.
 
 ### OOPS Approaches
 
@@ -3600,14 +3606,16 @@ OOPS is a programming concept that helps us achieve the following approaches in 
 
 ### Class
 
-- A class is required to implement OOPS.
-- A class is a technique by which we can define a new data type as required.
-- A class is a blueprint for objects.
-- A class is a collection of properties and behaviors, where properties are variables of different data types and behaviors are functions.
-- A class is a logical entity only, which means it does not have a physical existence in memory until its instance is created.
-- The instance of a class is called an object.
-- We can create **n** objects of a class.
-- Each object has the same properties and behaviors, but their values may be different.
+* A **class** is required to implement OOPS.
+* A class is a technique by which we can define a **new data type** as required.
+* A class is a **blueprint for objects**.
+* A class is a collection of **properties and behaviors**, where :
+  * Properties are variables of different data types
+  * Behaviors are functions ( methods )
+* A class is a **logical entity only**, meaning it does not exist in memory until an instance is created.
+* The instance of a class is called an **object**.
+* We can create **n number of objects** from a class.
+* Each object has the same properties and behaviors, but their **values may be different**.
 
 #### Syntax
 
@@ -3703,52 +3711,52 @@ isMagicalNumber.check();
 
 #### 1. Abstraction
 
-- Data hiding, i.e., hiding complexity and showing functionality.
-- We can hide members using access specifiers like `public`, `private`, and `protected`.
-- JavaScript does not fully support abstraction.
+* **Data hiding**, i.e., hiding complexity and showing functionality.
+* We can hide members using access specifiers like `public`, `private`, and `protected`.
+* JavaScript does not fully support abstraction.
 
 #### 2. Encapsulation
 
-- Binding data members with member functions/methods.
-- Wrapping up data members with member functions.
+* Binding **data members with member functions / methods**.
+* Wrapping up data members with member functions.
 
 #### 3. Polymorphism
 
-- Many forms of a single entity.
+* Means **many forms of a single entity**.
 
 #### Method Overloading
 
-- If we define more than one function in a class with the same name but different signatures ( either the number of arguments or their types are different ), it is called method overloading.
-- JavaScript does not support method overloading.
+* If we define more than one function in a class with the same name but different signatures ( number / type of arguments ), it is called method overloading.
+* JavaScript does not support method overloading.
 
 #### Constructor and Destructor
 
-- We can create user-defined constructors in JavaScript.
-- We cannot create user-defined destructors in JavaScript.
+* We can create **user-defined constructors** in JavaScript.
+* We cannot create **user-defined destructors** in JavaScript.
 
 #### Method Overriding
 
-- If both parent and child classes have members with the same name, then the child class overrides the parent's member.
-- The child class can inherit only those members from the parent that it does not already have.
-- JavaScript supports method overriding.
+* If both parent and child classes have members with the same name, the **child class overrides the parent’s member**.
+* The child class inherits only those members that it does not already define.
+* JavaScript supports method overriding.
 
 #### Operator Overloading
 
-- If we provide a user-defined definition to an existing operator, then this concept is called operator overloading.
-- JavaScript does not support operator overloading.
+* Providing a **user-defined definition to an existing operator** is called operator overloading.
+* JavaScript does not support operator overloading.
 
 #### 4. Inheritance
 
-- If we reuse the members of an existing class in a new class, it is called inheritance.
-- JavaScript supports inheritance.
+* Reusing members of an existing class in a new class is called **inheritance**.
+* JavaScript supports inheritance.
 
 ### Constructor
 
-- A special member method of a class that provides memory initialization to a class object.
-- There is no need to call a constructor explicitly; it is called automatically when an object is created using the `new` keyword.
-- A constructor can be parameterized.
-- If we do not provide a definition for a constructor in a class, then the compiler ( JIT ) provides a default constructor.
-- We cannot return a user-defined value from a constructor.
+* A **constructor** is a special member method of a class that provides **memory initialization** for a class object.
+* It is called **automatically** when an object is created using the `new` keyword ( no need to call it explicitly ).
+* A constructor can be **parameterized**.
+* If no constructor is defined in a class, the **compiler ( JIT )** provides a **default constructor**.
+* A constructor cannot return a **user-defined value**.
 
 ### Class with constructor
 
@@ -3792,10 +3800,10 @@ sum.calculate();
 
 ### Inheritance
 
-- Inheritance is an OOPS approach that provides a feature to reuse all members of an existing class in a new class.
-- For example, if a class `B` inherits class `A`, then class `B` can reuse all the members of class `A`.
-- Class `B` is called the **Child Class**, **Derived Class**, or **Subclass**.
-- Class `A` is called the **Parent Class**, **Base Class**, or **Superclass**.
+* Inheritance is an OOPS approach that provides a feature to reuse all members of an existing class in a new class.
+* For example, if a class `B` inherits class `A`, then class `B` can reuse all the members of class `A`.
+* Class `B` is called the **Child Class**, **Derived Class**, or **Subclass**.
+* Class `A` is called the **Parent Class**, **Base Class**, or **Superclass**.
 
 #### Types of Inheritance
 
@@ -3815,9 +3823,8 @@ class Child extends Parent {
 }
 ```
 
-> [!Note]
-> A child class can access only those members of the parent class that the child class does not already have.
-> If both the parent and child classes have members with the same name, the child class member overrides the parent class member.
+> * A **child class** can access only those members of the **parent class** that it does not already have.
+> * If both the **parent and child classes** have members with the same name, the **child class member overrides the parent class member**.
 
 ```
 class Parent {
@@ -3927,7 +3934,7 @@ object.display();
 
 ### Single Inheritance
 
-When a single child class inherits a single parent class, it is called **Single Inheritance**.
+* When a **single child class inherits a single parent class**, it is called **Single Inheritance**.
 
 ```
 class Parent {
@@ -3951,7 +3958,7 @@ object.calculate();
 
 ### Multilevel Inheritance
 
-When a child class is inherited by another child class, it is called **Multilevel Inheritance**.
+* When a **child class is inherited by another child class**, it is called **Multilevel Inheritance**.
 
 ```
 class GrandParent {
@@ -3980,7 +3987,7 @@ console.log("Reversed Array :", child.reverse());
 
 ### Hierarchical Inheritance
 
-When a single parent class is inherited by more than one child class, it is called **Hierarchical Inheritance**.
+* When a **single parent class is inherited by more than one child class**, it is called **Hierarchical Inheritance**.
 
 ```
 class Math {
@@ -4013,24 +4020,30 @@ subtraction.calculate();
 
 ### BOM ( Browser Object Model )
 
-- BOM stands for **Browser Object Model**.
-- It allows JavaScript to interact with the browser itself, outside of the content of the webpage.
-- It provides access to browser features like `window`, `history`, `screen`, `navigator`, and `location`.
+* BOM stands for **Browser Object Model**.
+* It allows JavaScript to interact with the **browser itself**, outside of the webpage content.
+* It provides access to browser features like :
+  * `window`
+  * `history`
+  * `screen`
+  * `navigator`
+  * `location`
 
 ### DOM ( Document Object Model )
 
-- DOM stands for **Document Object Model**.
-- DOM manipulation refers to using JavaScript to access, modify, add, or delete elements and content of an HTML document.
-- It allows dynamic updates to the content, structure, and styles of a web page.
-- With the help of DOM, we can perform the following operations:
+* DOM stands for **Document Object Model**.
+* DOM manipulation refers to using JavaScript to **access, modify, add, or delete** elements and content of an HTML document.
+* It allows **dynamic updates** to the content, structure, and styles of a web page.
 
-1. We can change all the HTML elements in a document.
-2. We can change all the HTML attributes in a document.
-3. We can change all the CSS styles in a document.
-4. We can react to existing events in a document.
-5. We can create our own events and react to them.
-6. We can perform time-based events.
-7. We can create and delete HTML elements and attributes in a document.
+### With DOM, we can :
+
+1. Change all HTML elements in a document
+2. Change all HTML attributes in a document
+3. Change all CSS styles in a document
+4. React to existing events in a document
+5. Create custom events and react to them
+6. Perform time-based events
+7. Create and delete HTML elements and attributes in a document
 
 ### DOM Selectors
 
@@ -4195,16 +4208,15 @@ console.log(heading_and_paragraph[1].innerText);
 
 ### Window Size
 
-Two properties can be used to determine the size of the browser window.
-
-Both properties return the size in pixels.
+* Two properties can be used to determine the size of the browser window.
+* Both properties return the size in **pixels**.
 
 * `window.innerHeight` – Returns the inner height of the browser window in pixels.
 * `window.innerWidth` – Returns the inner width of the browser window in pixels.
 
 ### `window.open()`
 
-Used to open a new browser window.
+* The `window.open()` method is used to **open a new browser window or tab**.
 
 ```
 window.open("https://www.google.com");
@@ -4212,11 +4224,11 @@ window.open("https://www.google.com");
 
 ### `window.close()`
 
-Used to close the current window.
+* The `window.close()` method is used to **close the current browser window**.
 
 ### `window.screen`
 
-The `window.screen` object can be written without the `window` prefix.
+* The `window.screen` object can be accessed **with or without the `window` prefix**.
 
 #### Properties
 
@@ -4227,27 +4239,28 @@ The `window.screen` object can be written without the `window` prefix.
 
 ### `window.location`
 
-The `window.location` object can be written without the `window` prefix.
+* The `window.location` object can be used **with or without the `window` prefix**.
 
-* `window.location.href` – Returns the URL of the current page.
-* `window.location.hostname` – Returns the domain name of the web host.
-* `window.location.pathname` – Returns the path and filename of the current page.
-* `window.location.protocol` – Returns the web protocol used ( `http:` or `https:` ).
+#### Properties
+
+* `window.location.href` – Returns the **URL of the current page**.
+* `window.location.hostname` – Returns the **domain name of the web host**.
+* `window.location.pathname` – Returns the **path and filename** of the current page.
+* `window.location.protocol` – Returns the **web protocol used** ( `http:` or `https:` ).
 
 ### `window.history`
 
-The `window.history` object can be written without the `window` prefix.
-
-To protect user privacy, there are limitations on how JavaScript can access this object.
+* The `window.history` object can be used **with or without the `window` prefix**.
+* For **privacy reasons**, JavaScript has limited access to the history object.
 
 #### Methods
 
-* `history.back()` – Same as clicking the Back button in the browser.
-* `history.forward()` – Same as clicking the Forward button in the browser.
+* `history.back()` – Same as clicking the **Back button** in the browser.
+* `history.forward()` – Same as clicking the **Forward button** in the browser.
 
 ### `window.navigator`
 
-The `window.navigator` object can be written without the `window` prefix.
+* The `window.navigator` object can be written without the `window` prefix.
 
 #### Properties
 
@@ -4255,19 +4268,19 @@ The `window.navigator` object can be written without the `window` prefix.
 * `navigator.appCodeName`
 * `navigator.platform`
 
-### Dialog Boxes
+## Dialog Boxes
 
-#### `window.alert()`
+### `window.alert()`
 
-Used to display an alert message box.
+* Used to display an **alert message box**.
 
-#### `window.prompt()`
+### `window.prompt()`
 
-Used to display an input dialog box and get input from the user.
+* Used to display an **input dialog box** and get input from the user.
 
-#### `window.confirm()`
+### `window.confirm()`
 
-Used to display a confirmation dialog box with **OK** and **Cancel** buttons.
+* Used to display a **confirmation dialog box** with **OK** and **Cancel** buttons.
 
 ## How JavaScript Works?
 
