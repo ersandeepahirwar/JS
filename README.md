@@ -187,40 +187,64 @@
 * **ECMA** stands for **European Computer Manufacturers Association**.
 
 ## JavaScript Engine
-A JavaScript engine is a program that executes JavaScript code by converting it into machine code so that it can run on a computer or browser.  
-It reads, interprets, compiles, and optimizes JavaScript code to improve performance.
+
+### What is a JavaScript Engine?
+
+* A JavaScript engine is a program that executes JavaScript code.
+* It converts JavaScript into **machine code**.
+* It reads, interprets, compiles, and optimizes code for better performance.
 
 ### Popular JavaScript Engines
 
 #### 1. V8
 
-- Developed by Google
-- JIT-based engine
-- Used by Google Chrome, new version of Microsoft Edge, Node.js, Brave, etc.
+* Developed by **Google**
+* JIT ( Just-In-Time ) based engine
+* Used in :
+  * Google Chrome
+  * Microsoft Edge
+  * Node.js
+  * Brave
 
 #### 2. Chakra
 
-- Developed by Microsoft
-- Interpreter-based JavaScript engine
-- Used by Microsoft Internet Explorer and legacy Microsoft Edge
+* Developed by **Microsoft**
+* Interpreter-based engine
+* Used in :
+  * Internet Explorer
+  * Legacy versions of Microsoft Edge
 
 #### 3. JavaScriptCore
 
-- Developed by Apple
-- JIT-based JavaScript engine
-- Used by Safari browser
+* Developed by **Apple**
+* JIT-based engine
+* Used in :
+  * Safari
 
 #### 4. SpiderMonkey
 
-- Developed by Mozilla
-- First JavaScript engine ever created
-- Used by Firefox ( and earlier versions of Netscape Navigator )
+* Developed by **Mozilla**
+* First JavaScript engine ever created
+* Used in :
+  * Firefox
+  * Earlier versions of Netscape Navigator
 
-#### 5. Hermes
+### 5. Hermes
 
-- Developed by Meta ( Facebook )
-- Used primarily in React Native environment
-- Designed to improve startup time and reduce memory usage on mobile applications
+* Developed by **Meta**
+* Mainly used with :
+  * React Native
+* Optimized for :
+  * Faster app startup
+  * Lower memory usage
+
+| Engine         | Developer | Used In               |
+| -------------- | --------- | --------------------- |
+| V8             | Google    | Chrome, Edge, Node.js |
+| Chakra         | Microsoft | IE, Legacy Edge       |
+| JavaScriptCore | Apple     | Safari                |
+| SpiderMonkey   | Mozilla   | Firefox               |
+| Hermes         | Meta      | React Native          |
 
 ## JavaScript Keywords
 JavaScript keywords are reserved words that have special meaning in the language and cannot be used as identifiers.
