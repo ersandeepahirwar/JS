@@ -388,30 +388,32 @@ user-name  // Contains special character (-)
 
 ### 1. Variable
 
-- A variable is used when data is not fixed.  
-- Variables are names of memory locations in RAM that contain information, or they can be described as placeholders for data in memory.  
-- In simple terms, variables are data containers.
+#### What is a Variable?
 
-#### Syntax :
+* A variable is used when data is not fixed.
+* It is a named memory location used to store data.
+* Variables act as containers or placeholders for values.
+
+#### Syntax
 
 ```
-var variableName = value;    // function-level scope  
-let variableName = value;    // block-level scope  
-const variableName = value;  // block-level scope and read-only
+var variableName = value;    // Function-level scope
+let variableName = value;    // Block-level scope
+const variableName = value;  // Block-level scope and read-only
 ```
 
-### 2. Constant / Literals
+### 2. Constants / Literals
 
-Constants ( literals ) are used when data is fixed and does not change.
+#### What are Constants ( Literals )?
 
-#### Boolean
-`true`, `false`
+* Constants ( literals ) are fixed values.
+* Their values do not change during program execution.
 
-#### Number
-`10`, `+20`, `-25`, `15.36`, `+25.25`, `-65.25`
+#### Types of Literals
 
-#### String
-`'a'`, `"apple"`, `` `a for apple` ``
+* Boolean Literals : `true`, `false`
+* Number Literals : `10`, `+20`, `-25`, `15.36`, `+25.25`, `-65.25`
+* String Literals : `'a'`, `"apple"`, `` `a for apple` ``
 
 ## Tokens in JavaScript
 
