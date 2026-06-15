@@ -320,41 +320,69 @@ user-name  // Contains special character (-)
 
 ## JavaScript Data Types
 
-#### 1. Number: 
-Any whole or fractional number, such as `10`, `25.36`, `-25.35`, `-50`, `+25.36`.
+### What are Data Types?
+
+* Data types define the type of value stored in a variable.
+* JavaScript supports different data types to store different kinds of data.
+
+### Data Types
+
+#### 1. Number
+
+* Represents whole and decimal numbers.
+* Examples : `10`, `25.36`, `-50`, `-25.35`
 
 #### 2. String
-A collection of characters, such as `'a'`, `"apple"`, `` `a for apple` ``.
+
+* Represents a collection of characters.
+* Examples : `'a'`, `"apple"`, `` `a for apple` ``
 
 #### 3. Boolean
-Represents logical values `true` or `false`.
+
+* Represents logical values.
+* Values : `true`, `false`
 
 #### 4. Undefined
-Represents a variable that has been declared but not assigned a value.
+
+* A variable that is declared but not assigned a value.
 
 #### 5. Null
-Represents the intentional absence of a value.
+
+* Represents the intentional absence of a value.
 
 #### 6. BigInt
-Used to represent very large integers.
+
+* Used to store very large integers.
 
 #### 7. Symbol
-Represents unique and immutable values
+
+* Represents unique and immutable values.
 
 #### 8. Object
-A collection of key–value pairs.
+
+* A collection of key-value pairs.
 
 #### 9. Array
-An ordered collection of values.
+
+* An ordered collection of values.
 
 #### 10. Function
-A reusable block of code
+
+* A reusable block of code.
 
 #### 11. Set
-A collection of unique values.
+
+* A collection of unique values.
 
 #### 12. Map
-A collection of key–value pairs where keys can be of any type.
+
+* A collection of key-value pairs where keys can be of any data type.
+
+### Note
+
+* JavaScript has **7 primitive data types** :
+  `Number`, `String`, `Boolean`, `Undefined`, `Null`, `BigInt`, `Symbol`
+* `Object`, `Array`, `Function`, `Set`, and `Map` are **reference ( non-primitive ) types**.
 
 ## Data Representation
 
