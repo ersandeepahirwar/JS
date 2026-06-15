@@ -1171,13 +1171,13 @@ test();
 console.log("Back to main outer scope");
 ```
 
-#### Space Complexity
+### Space Complexity
 
 * **Data Space :** Memory required to store **variables and constants**.
 * **Instruction Space :** Memory required to store **program instructions**.
 * **Environment Space :** Memory required to store **function arguments** and the **return value**.
 
-#### Advantages of Functions
+### Advantages of Functions
 
 * Functions provide **code reusability**.
 * Functions decrease **instruction space** of a program.
@@ -1187,7 +1187,7 @@ console.log("Back to main outer scope");
 > * A `function` cannot directly access variables defined inside another `function`. To do so, we use **arguments** and `return` values.
 > * A `function` can access **global variables**, but the global scope cannot directly access variables defined inside a `function`.
 
-#### Types of Functions ( Based on Parameters and Return Value )
+### Types of Functions ( Based on Parameters and Return Value )
 
 * `function` without `return` value and without parameters
   
@@ -1257,7 +1257,7 @@ function test() {
 test();
 ```
 
-#### Default Parameters ( Optional Parameters )
+### Default Parameters ( Optional Parameters )
 
 ```
 function sum(A = 0, B = 0, C = 0) {
@@ -1270,7 +1270,7 @@ sum(10);
 sum();
 ```
 
-#### Function Returning an Array
+### Function Returning an Array
 
 ```
 function tableOfTwo() {
@@ -1280,7 +1280,7 @@ function tableOfTwo() {
 console.log(tableOfTwo());
 ```
 
-#### Regular Function
+### Regular Function
 
 ```
 function sum(A, B) {
@@ -1290,7 +1290,7 @@ function sum(A, B) {
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-#### Anonymous Function
+### Anonymous Function
 
 ```
 var sum = function (A, B) {
@@ -1300,7 +1300,7 @@ var sum = function (A, B) {
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-#### Fat Arrow Function
+### Fat Arrow Function
 
 ```
 var sum = (A, B) => A + B;
@@ -1308,14 +1308,14 @@ var sum = (A, B) => A + B;
 console.log(`Sum of 10 and 20 is ${sum(10, 20)}`);
 ```
 
-## Higher Order Functions and Callback Functions
+### Higher Order Functions and Callback Functions
 
-### Higher Order Function ( HOF )
+#### Higher Order Function ( HOF )
 
 * A function is called a **Higher Order Function** if it takes another function as an argument.
 * A function is called a **Higher Order Function** if it accepts one or more functions as parameters.
 
-### Callback Function
+#### Callback Function
 
 * A function is called a **Callback Function** if it is passed as an argument to a Higher Order Function.
 
@@ -1336,6 +1336,30 @@ console.log("Back to Main Outer Scope");
 ```
 
 ### Storage Class
+
+#### What is Storage Class?
+
+* A **storage class** defines the **scope, lifetime, and memory location** of a variable.
+
+#### Types of Storage in JavaScript
+
+* JavaScript does **not use traditional storage classes** like C/C++.
+* Instead, it uses **scope-based storage** :
+
+#### 1. Global Scope
+
+* Variables declared outside any function.
+* Can be accessed from anywhere in the program.
+
+#### 2. Function Scope
+
+* Variables declared inside a function using `var`.
+* Accessible only inside that function.
+
+#### 3. Block Scope
+
+* Variables declared using `let` and `const`.
+* Accessible only inside the `{ }` block.
 
 | Keyword       | Type                    | Life                    | Scope           |
 | ------------- | ----------------------- | ----------------------- | --------------  |
@@ -1369,11 +1393,8 @@ main();
 
 ### Recursion
 
-Recursion is a process in which a function calls itself.
-
-or
-
-A function is said to be recursive when it calls itself.
+* **Recursion** is a process in which a function calls itself.
+* A function is said to be **recursive** when it calls itself.
 
 #### Syntax
 
@@ -1392,7 +1413,9 @@ const factorial = (number) =>
 console.log(`5! = ${factorial(5)}`);
 ```
 
-### Self-Invoked Function or Immediately Invoked Function Expression ( IIFE )
+### Self-Invoked Function ( IIFE )
+
+* A **Self-Invoked Function** or **Immediately Invoked Function Expression ( IIFE )** is a function that is executed immediately after it is defined.
 
 ```
 (() => {
