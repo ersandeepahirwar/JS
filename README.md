@@ -504,31 +504,48 @@ const number = parseFloat(prompt("What is your favourite number?"));
 
 ## Operators in JavaScript
 
-Operators are special symbols used to perform predefined operations on operands ( variables, constants, or values ).
+### What are Operators?
+
+* Operators are special symbols used to perform operations on operands ( variables, constants, or values ).
+
+### Examples
+
+```
+10 + 20    // + is an operator
+A = 10     // = is an operator
+A > B      // > is an operator
+```
 
 ### Types of Operators ( Based on Operands )
 
 #### 1. Unary Operator
-Requires only one operand
+
+* Requires **one operand**.
+
 #### 2. Binary Operator
-Requires two operands
+
+* Requires **two operands**.
+
 #### 3. Ternary Operator
-Requires three operands
 
-## Types of Operators in JavaScript
+* Requires **three operands**.
 
-- Arithmetic Operators
-- Assignment Operator
-- Composite / Compound / Shorthand Operators
-- Relational / Comparison Operators
-- Logical Operators
-- Bitwise Operators
-- Conditional / Ternary Operator
-- Increment Operators
-- Decrement Operators
-- Miscellaneous Operators
+### Types of Operators in JavaScript
 
-### 1. Arithmetic Operators
+* Arithmetic Operators
+* Assignment Operators
+* Composite / Compound / Shorthand Operators
+* Relational / Comparison Operators
+* Logical Operators
+* Bitwise Operators
+* Conditional / Ternary Operator
+* Increment Operators
+* Decrement Operators
+* Miscellaneous Operators
+
+#### 1. Arithmetic Operators
+
+* Arithmetic operators are used to perform mathematical calculations on operands.
 
 ```
 +  →  Addition
@@ -564,9 +581,9 @@ console.log(
 );
 ```
 
-### 2. Assignment Operator
+#### 2. Assignment Operator
 
-Assignment operator is used to assign the value of the RHS ( Right-Hand Side ) operand to the LHS ( Left-Hand Side ) operand.
+* Assignment operator is used to assign the value of the **RHS ( Right-Hand Side )** operand to the **LHS ( Left-Hand Side )** operand.
 
 ```
 sum = A + B; // Valid
@@ -585,9 +602,9 @@ var sum = A + B;
 console.log(`${A} + ${B} = ${sum}`);
 ```
 
-### 3. Composite / Compound / Shorthand Operators
+#### 3. Composite / Compound / Shorthand Operators
 
-Composite / Compound / Shorthand operators are formed by combining assignment operator with other operators.
+* Composite / Compound / Shorthand operators are formed by combining **assignment operator (`=`)** with other operators.
 
 ```
 A = A + B    →   A += B
@@ -630,9 +647,10 @@ K **= L;
 console.log(K);
 ```
 
-### 4. Relational Operators
+#### 4. Relational Operators
 
-Relational operators are used to compare two operands.
+* Relational operators are used to compare two operands.
+* They return a Boolean value : `true` or `false`.
 
 ```
 <     →  Less than
@@ -656,9 +674,10 @@ console.log(10 === 5);
 console.log(10 !== 5);
 ```
 
-### 5. Logical Operators
+#### 5. Logical Operators
 
-Logical operators are used to make compound conditions.
+* Logical operators are used to combine multiple conditions and create compound conditions.
+* They return a Boolean value : `true` or `false`.
 
 | Operator    | Symbol | Operation                                      | Category | Associativity |
 | ----------- | ------ | ---------------------------------------------- | -------- | ------------- |
@@ -684,9 +703,13 @@ console.log(0 || false);   // false
 console.log(!10);          // false
 console.log(!0);           // true
 ```
+
 > Falsy values in JavaScript are `0`, `false`, `undefined`, `null`, and `""` ( empty string ); all remaining values are treated as truthy values.
 
-### 6. Bitwise Operators
+#### 6. Bitwise Operators
+
+* Bitwise operators perform operations on the binary ( bit ) representation of numbers.
+* They work at the bit level.
 
 | Operator             | Symbol | Category | Associativity |
 | -------------------- | ------ | -------- | ------------- |
@@ -769,9 +792,10 @@ var O = ~M;
 console.log(N, O);
 ```
 
-### 7. Conditional ( Ternary ) Operator
+#### 7. Conditional ( Ternary ) Operator
 
-The conditional ( ternary ) operator is used when we have to execute one statement out of two statements according to a condition.
+* The conditional ( ternary ) operator is used to choose **one statement out of two** based on a condition.
+* It is a shorthand form of the `if...else` statement.
 
 #### Syntax
 
@@ -790,9 +814,9 @@ console.log(
 );
 ```
 
-### 8. Increment Operator
+#### 8. Increment Operator
 
-The increment operator (`++`) is used to increase the value of a variable by `1`.
+* The increment operator (`++`) is used to increase the value of a variable by `1`.
 
 ```
 Pre-Increment       Post-Increment
@@ -810,9 +834,9 @@ var C = ++A;
 console.log(A, B, C);
 ```
 
-### 9. Decrement Operator
+#### 9. Decrement Operator
 
-The decrement operator (`--`) is used to decrease the value of a variable by `1`.
+* The decrement operator (`--`) is used to decrease the value of a variable by `1`.
 
 ```
 Pre-Decrement       Post-Decrement
