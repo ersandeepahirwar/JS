@@ -5360,3 +5360,81 @@ console.log(`Base-10 Logarithm of ${number} :`, Math.log10(number));
 | `Math.cbrt()`  | Returns cube root            |
 | `Math.log2()`  | Returns base-2 logarithm     |
 | `Math.log10()` | Returns base-10 logarithm    |
+
+### New Number Properties ( ES6 )
+
+ES6 added the following properties to the **Number** object :
+
+#### `Number.EPSILON`
+
+* Represents the smallest difference between **1** and the next representable number greater than 1.
+* Useful for comparing floating-point numbers accurately.
+
+```
+console.log("EPSILON :", Number.EPSILON);
+```
+
+#### `Number.MIN_SAFE_INTEGER`
+
+* The minimum safe integer that JavaScript can represent accurately.
+* Value : `-9007199254740991` (`-(2^53 - 1)`)
+
+```
+console.log("MIN SAFE INTEGER :", Number.MIN_SAFE_INTEGER);
+console.log("MIN SAFE INTEGER - 1 :", Number.MIN_SAFE_INTEGER - 1);
+console.log("MIN SAFE INTEGER - 2 :", Number.MIN_SAFE_INTEGER - 2);
+console.log("MIN SAFE INTEGER - 3 :", Number.MIN_SAFE_INTEGER - 3);
+console.log("MIN SAFE INTEGER - 4 :", Number.MIN_SAFE_INTEGER - 4);
+console.log("MIN SAFE INTEGER - 5 :", Number.MIN_SAFE_INTEGER - 5);
+```
+
+#### `Number.MAX_SAFE_INTEGER`
+
+* The maximum safe integer that JavaScript can represent accurately.
+* Value : `9007199254740991` (`2^53 - 1`)
+
+```
+console.log("MAX SAFE INTEGER :", Number.MAX_SAFE_INTEGER);
+console.log("MAX SAFE INTEGER + 1 :", Number.MAX_SAFE_INTEGER + 1);
+console.log("MAX SAFE INTEGER + 2 :", Number.MAX_SAFE_INTEGER + 2);
+console.log("MAX SAFE INTEGER + 3 :", Number.MAX_SAFE_INTEGER + 3);
+console.log("MAX SAFE INTEGER + 4 :", Number.MAX_SAFE_INTEGER + 4);
+console.log("MAX SAFE INTEGER + 5 :", Number.MAX_SAFE_INTEGER + 5);
+```
+
+### New Number Methods ( ES6 )
+
+ES6 added the following methods to the **Number** object :
+
+#### `Number.isInteger()`
+
+* Checks whether a value is an **integer**.
+* Returns :
+  * `true` → if the value is an integer
+  * `false` → otherwise
+
+```
+console.log(`Is 10 an Integer? :`, Number.isInteger(10));
+console.log(`Is 10.5 an Integer? :`, Number.isInteger(10.5));
+console.log(`Is "10" an Integer? :`, Number.isInteger("10"));
+```
+
+#### `Number.isSafeInteger()`
+
+* Checks whether a value is a **safe integer**.
+* A safe integer is an integer between :
+  * `Number.MIN_SAFE_INTEGER`
+  * `Number.MAX_SAFE_INTEGER`
+* Returns :
+  * `true` → if the value is a safe integer
+  * `false` → otherwise
+
+```
+const number = 9007199254740991;
+
+console.log(`Is ${number} a Safe Integer? :`, Number.isSafeInteger(number));
+console.log(
+  `Is ${number + 1} a Safe Integer? :`,
+  Number.isSafeInteger(number + 1),
+);
+```
