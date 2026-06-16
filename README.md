@@ -4544,9 +4544,10 @@ core.addEventListener("click", () => console.log("From Core"), true);
 
 ### Function Currying
 
-Function Currying is a technique of transforming a function with multiple arguments into a sequence of functions, each taking a single argument.
-
-Instead of taking all arguments at once, a curried function takes the first argument and returns a new function that takes the second argument, which returns another function that takes the third argument, and so on.
+* **Function Currying** is a technique of converting a function with **multiple arguments** into a **sequence of functions**, each taking **one argument**.
+* Instead of taking all arguments at once, a curried function takes **one argument at a time**.
+* Each function returns another function until all arguments are provided.
+* Helps create reusable and specialized functions.
 
 ```
 function sum(A) {
@@ -4564,11 +4565,23 @@ function sum(A) {
 console.log("10 + 20 + 30 + 40 + 50 =", sum(10)(20)(30)(40)(50));
 ```
 
-### Higher-Order Functions and Callback Functions
+### Higher-Order Functions & Callback Functions
 
-**Higher-Order Function :** A function that takes another function as an argument or returns a function.
+#### Higher-Order Function
 
-**Callback Function :** A function that is passed as an argument to another function and is executed later.
+* A **Higher-Order Function ( HOF )** is a function that :
+  * Takes another function as an argument, or
+  * Returns a function.
+
+#### Callback Function
+
+* A **Callback Function** is a function passed as an argument to another function.
+* It is executed later by the function that receives it.
+
+#### Relationship
+
+* The function that receives the callback is a **Higher-Order Function**.
+* The function passed as an argument is a **Callback Function**.
 
 ```
 function higherOrder(callback) {
@@ -4586,10 +4599,10 @@ higherOrder(callback);
 console.log("Back to Main Outer Scope");
 ```
 
-Here, `find()`, `findLast()`, `findIndex()`, `findLastIndex()`, `map()`, and `filter()` are Higher-Order Functions, and `equation` is the Callback Function passed to them.
+> Here, `find()`, `findLast()`, `findIndex()`, `findLastIndex()`, `map()`, and `filter()` are Higher-Order Functions, and `equation` is the Callback Function passed to them.
 
 
-`find()`
+#### `find()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
@@ -4610,7 +4623,7 @@ console.log(array.find(equation));
 console.log(customFind(array, equation));
 ```
 
-`findLast()`
+#### `findLast()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
@@ -4631,7 +4644,7 @@ console.log(array.findLast(equation));
 console.log(customFindLast(array, equation));
 ```
 
-`findIndex()`
+#### `findIndex()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
@@ -4653,7 +4666,7 @@ console.log(array.findIndex(equation));
 console.log(customFindIndex(array, equation));
 ```
 
-`findLastIndex()`
+#### `findLastIndex()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
@@ -4675,7 +4688,7 @@ console.log(array.findLastIndex(equation));
 console.log(customFindLastIndex(array, equation));
 ```
 
-`map()`
+#### `map()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
@@ -4696,7 +4709,7 @@ console.log(array.map(equation));
 console.log(customMap(array, equation));
 ```
 
-`filter()`
+#### `filter()`
 
 ```
 const array = [3, 6, 9, 12, 15, 18, 21, 24, 27, 30];
