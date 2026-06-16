@@ -4389,13 +4389,13 @@ outer();
 console.log(`A = ${A}`);
 ```
 
-### Closure
+### Closures in JavaScript
 
-A Closure is a function where an inner function retains access to the variables and scope of its outer function, even after the outer function has finished executing.
-
-A closure remembers the environment in which it was created. In technical terms, it is a combination of a function and its lexical environment.
-
-Closures are created automatically whenever a function is defined in JavaScript. They rely on lexical scoping, which means that scope is determined by the position of variables in the source code.
+* A **closure** is a function where an **inner function retains access to variables of its outer function**, even after the outer function has finished executing.
+* A closure **remembers its lexical environment** ( the scope in which it was created ).
+* Technically, a closure = **function + lexical environment**.
+* Closures are created automatically when functions are defined in JavaScript.
+* They work based on **lexical scoping** ( scope is determined by code position, not runtime execution ).
 
 ```
 const A = 10;
