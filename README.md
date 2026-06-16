@@ -4286,7 +4286,7 @@ window.open("https://www.google.com");
 
 ### Hoisting in JavaScript
 
-During the execution of a program, JavaScript has two phases:
+During the execution of a program, JavaScript has two phases :
 
 1. Creation Phase
 2. Execution Phase
@@ -4330,7 +4330,7 @@ var C = 30;
 console.log(C);
 ```
 
-In ES6 ( ECMAScript 2015 ), hoisting issues can be avoided by using `let` and `const` instead of `var`.
+> In ES6 ( ECMAScript 2015 ), hoisting issues can be avoided by using `let` and `const` instead of `var`.
 
 ### Strict Mode
 
