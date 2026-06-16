@@ -5239,3 +5239,43 @@ D[6] = 6;
 console.log("C =", C);
 console.log("D =", D);
 ```
+
+### Generators
+
+#### What is a Generator?
+
+* A **Generator** is a special type of function introduced in **ES6 ( ECMAScript 2015 )**.
+* It can be **paused and resumed** during execution.
+* It can **yield multiple values** over time.
+* A Generator function returns an **iterable Generator object**.
+
+#### Key Features
+
+* Execution can be paused using `yield`.
+* Execution resumes from where it was paused.
+* Produces values one at a time instead of all at once.
+* Useful for handling sequences of data efficiently.
+
+#### Components
+
+1. **Generator Function** – Defined using `function*`.
+2. **Generator Object** – Returned when the Generator function is called.
+
+#### Benefits
+
+* Efficient memory usage.
+* Lazy value generation ( generate values only when needed ).
+* Better control over iteration and asynchronous workflows.
+
+```
+function* generator() {
+  for (let number = 0; number < 10; number += 2) {
+    console.log(number);
+    yield number + 1;
+  }
+}
+
+for (let element of generator()) {
+  console.log(element);
+}
+```
