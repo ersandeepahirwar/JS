@@ -4734,45 +4734,70 @@ console.log(customFilter(array, equation));
 
 ### Event Loop
 
-The Event Loop is a functional concept in JavaScript that enables non-blocking, asynchronous programming. It allows JavaScript to perform tasks such as handling user interactions, making network requests ( API calls ), and processing timers while maintaining a single-threaded environment.
+* The **Event Loop** enables **non-blocking, asynchronous programming** in JavaScript.
+* It allows JavaScript to handle tasks like **user interactions, API calls, and timers** while remaining **single-threaded**.
 
-<img src="https://i.ibb.co/1GzmZXtm/Event-Loop.png" alt="Event Loop Overview" width="100%" />
+<img src="https://i.ibb.co/zT5gNFwg/Event-Loop-Diagram.png" alt="Event Loop Overview" width="100%" />
 
 #### 1. Single-Threaded Nature
 
-JavaScript runs on a single thread, which means it can execute only one piece of code at a time. This design helps avoid issues such as race conditions that can occur in multi-threaded environments.
+* JavaScript runs on a **single thread**.
+* It can execute **one task at a time**.
+* Helps avoid issues such as race conditions.
 
 #### 2. Call Stack
 
-The Call Stack is a data structure that keeps track of function calls in your program. When a function is invoked, it is added to the stack, and when it completes, it is removed. The Call Stack follows a Last In, First Out ( LIFO ) structure.
+* Stores and manages **function calls**.
+* Follows the **LIFO ( Last In, First Out )** principle.
+* Functions are pushed onto the stack when called and removed when completed.
 
 #### 3. Web APIs
 
-JavaScript environments, such as browsers, provide Web APIs ( such as `setTimeout`, `fetch`, and DOM events ) that can handle tasks asynchronously. When you call an asynchronous function, the task is offloaded to the Web API, which executes it and places its callback into a queue when it is ready.
+* Browser-provided features such as :
+  * `setTimeout()`
+  * `fetch()`
+  * DOM Events
+* Handle asynchronous tasks outside the Call Stack.
 
-#### 4. Callback Queue
+#### 4. Callback Queue ( Task Queue )
 
-Once an asynchronous operation ( such as a timer or a network request ) is complete, the corresponding callback function is pushed into the Callback Queue ( or Task Queue ). This queue holds all callbacks waiting to be executed after the current Call Stack is cleared.
+* Stores callbacks of completed asynchronous operations.
+* Callbacks wait here until the Call Stack becomes empty.
 
 #### 5. Event Loop
 
-The Event Loop continuously checks the Call Stack and the Callback Queue.
+* Continuously monitors the **Call Stack** and **Callback Queue**.
+* If the Call Stack is empty :
+  1. Takes the first task from the queue.
+  2. Pushes it to the Call Stack.
+  3. Executes it.
+* Repeats this process continuously.
 
-**Step 1:** If the Call Stack is empty, the Event Loop takes the first task from the Callback Queue.
+#### 6. Microtasks vs Macrotasks
 
-**Step 2:** It pushes that task onto the Call Stack and executes it.
+#### Microtasks
 
-**Step 3:** This process repeats until there are no more tasks in the queue.
+* Higher priority tasks.
+* Examples :
+  * Promise `.then()`
+  * Promise `.catch()`
+  * `async/await`
+* Executed immediately after the current code finishes.
 
-#### 6. Microtasks and Macrotasks
+#### Macrotasks
 
-JavaScript distinguishes between two types of tasks:
+* Lower priority tasks.
+* Examples :
+  * `setTimeout()`
+  * `setInterval()`
+  * I/O operations
+* Executed after all pending Microtasks are completed.
 
-**Macrotasks:** These include tasks such as `setTimeout`, `setInterval`, and I/O operations. They are processed in the order they arrive in the Callback Queue.
+#### Priority Order
 
-**Microtasks:** These are typically related to Promises ( such as `.then()`, `.catch()`, and `async/await` ).
-
-Microtasks have a higher priority than Macrotasks and are processed immediately after the currently executing script, before the next Macrotask is processed.
+1. Current Synchronous Code
+2. Microtasks Queue
+3. Macrotasks Queue
 
 ## JSON and AJAX
 
