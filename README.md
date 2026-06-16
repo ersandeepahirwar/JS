@@ -5192,11 +5192,33 @@ const array = [0, 1, 2, 3];
 test(...array);
 ```
 
-### Shallow Copy and Deep Copy
+### Shallow Copy & Deep Copy
 
-**Shallow Copy:** A copy that creates a new object, but nested objects or arrays are still referenced from the original object. Changes to nested data affect both copies.
+#### Shallow Copy
 
-**Deep Copy:** A copy that creates a completely independent object, including all nested objects and arrays. Changes to the copied data do not affect the original object.
+* Creates a **new object or array**.
+* **Nested objects / arrays are still referenced** from the original.
+* Changes to nested data affect **both the original and the copy**.
+
+#### Deep Copy
+
+* Creates a **completely independent copy**.
+* Copies **all nested objects and arrays** as well.
+* Changes to the copied data **do not affect the original**.
+
+#### Difference
+
+| Shallow Copy                              | Deep Copy                               |
+| ----------------------------------------- | --------------------------------------- |
+| Copies only the first level               | Copies all levels                       |
+| Nested objects share references           | Nested objects are copied independently |
+| Changes to nested data affect both copies | Changes affect only the copied object   |
+| Faster and less memory-intensive          | Slower and uses more memory             |
+
+#### Remember
+
+* **Shallow Copy → Shared nested references**
+* **Deep Copy → Completely independent copy**
 
 ```
 const A = [0, 1, 2, 3, 4, 5];
