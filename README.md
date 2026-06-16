@@ -4908,26 +4908,33 @@ const jsonData = JSON.stringify(jsData);
 
 ### Callback Hell
 
-Callback Hell is a phenomenon where a callback is called inside another callback. It is the nesting of multiple callbacks inside a function. The structure of the code looks like a pyramid, which is why Callback Hell is also known as the **"Pyramid of Doom"**.
+* Occurs when **callbacks are nested inside other callbacks**.
+* Creates a pyramid-like code structure.
+* Also known as the **"Pyramid of Doom"**.
 
-### Why is Callback Hell Bad?
+#### Why is Callback Hell Bad?
 
-Callback Hell makes code difficult to read, understand, debug, and maintain. It occurs when multiple asynchronous operations are nested within each other as callbacks.
+* Makes code :
+  * Difficult to read
+  * Difficult to understand
+  * Difficult to debug
+  * Difficult to maintain
+* Common in complex asynchronous operations.
 
-### Solution: Promise
+#### Solution : Promise
 
-A **Promise** is a JavaScript object that links producing code with consuming code.
+* A **Promise** is a JavaScript object used to handle asynchronous operations.
+* Connects :
+  * **Producing Code** → Takes time to execute.
+  * **Consuming Code** → Waits for the result.
+* Helps avoid Callback Hell.
+* Makes asynchronous code cleaner and easier to manage.
 
-* **Producing Code:** Code that takes some time to execute.
-* **Consuming Code:** Code that waits for the result.
+#### Promise States
 
-Promises are used to handle asynchronous operations in JavaScript. They help avoid Callback Hell and make asynchronous code easier to read and manage.
-
-### Promise States
-
-1. **Pending** – Initial state, neither fulfilled nor rejected.
-2. **Fulfilled (Resolved)** – Operation completed successfully.
-3. **Rejected** – Operation failed.
+1. **Pending** → Initial state; operation is in progress.
+2. **Fulfilled ( Resolved )** → Operation completed successfully.
+3. **Rejected** → Operation failed.
 
 #### Producing Code
 
@@ -4980,21 +4987,37 @@ firstPromise
   });
 ```
 
-### Async / Await and Exception Handling
+### Async / Await
 
-**Async / Await** is a modern way to handle asynchronous operations in JavaScript. It is built on top of Promises and makes asynchronous code easier to read and write.
+* **Async / Await** is a modern way to handle asynchronous operations in JavaScript.
+* Built on top of **Promises**.
+* Makes asynchronous code easier to read and write.
 
-* The `async` keyword makes a function return a Promise.
+#### `async`
+
+* The `async` keyword makes a function return a **Promise**.
+
+#### `await`
+
 * The `await` keyword pauses the execution of an `async` function until a Promise is resolved.
+* Can only be used inside an `async` function.
 
 ### Exception Handling
 
-Exception handling in `async/await` is done using `try...catch`.
+* Errors in `async/await` are handled using **`try...catch`**.
 
-* `try` contains the code that may throw an error.
-* `catch` handles the error if it occurs.
+#### `try`
 
-This makes error handling cleaner and easier compared to Promise chaining with `.then()` and `.catch()`.
+* Contains code that may throw an error.
+
+#### `catch`
+
+* Handles the error if it occurs.
+
+#### Benefits
+
+* Cleaner and more readable code.
+* Easier error handling compared to Promise chaining with `.then()` and `.catch()`.
 
 ```
 const firstPromise = new Promise((resolve, reject) => {
