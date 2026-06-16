@@ -5470,3 +5470,42 @@ console.log(`Is 100 not a Number? :`, isNaN(100));
 console.log(`Is "Hundred" not a Number? :`, isNaN("Hundred"));
 console.log(`Is NaN not a Number? :`, isNaN(NaN));
 ```
+
+### ECMAScript 2016 ( ES7 )
+
+#### JavaScript Exponentiation Operator (`**`)
+
+* Used to calculate the **power of a number**.
+* Alternative to `Math.pow()`.
+
+```
+const number = 2;
+
+console.log(`${number} ** 3 =`, number ** 3);
+```
+
+#### Exponentiation Assignment Operator (`**=`)
+
+* Raises a variable to a power and assigns the result back to the variable.
+
+```
+let number = 2;
+
+number **= 3;
+
+console.log(number);
+```
+
+#### `Array.prototype.includes()`
+
+* Checks whether an array contains a specified element.
+* Returns:
+
+  * `true` → if the element exists
+  * `false` → otherwise
+
+```
+const fruits = ["Apple", "Banana", "Mango"];
+
+console.log(fruits.includes("Mango"));
+```
