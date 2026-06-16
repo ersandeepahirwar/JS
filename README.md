@@ -5438,3 +5438,35 @@ console.log(
   Number.isSafeInteger(number + 1),
 );
 ```
+
+### New Global Methods ( ES6 )
+
+ES6 added the following global number methods :
+
+#### `isFinite()`
+
+* Checks whether a value is a **finite number**.
+* Returns :
+  * `true` → if the value is a finite number
+  * `false` → for `Infinity`, `-Infinity`, or `NaN`
+
+```
+console.log(`Is 100 a Finite Number? :`, isFinite(100));
+console.log(`Is -100 a Finite Number? :`, isFinite(-100));
+console.log(`Is Infinity a Finite Number? :`, isFinite(Infinity));
+console.log(`Is -Infinity a Finite Number? :`, isFinite(-Infinity));
+console.log(`Is NaN a Finite Number? :`, isFinite(NaN));
+```
+
+#### `isNaN()`
+
+* Checks whether a value is **NaN ( Not-a-Number )**.
+* Returns :
+  * `true` → if the value is `NaN`
+  * `false` → otherwise
+
+```
+console.log(`Is 100 not a Number? :`, isNaN(100));
+console.log(`Is "Hundred" not a Number? :`, isNaN("Hundred"));
+console.log(`Is NaN not a Number? :`, isNaN(NaN));
+```
