@@ -5508,3 +5508,49 @@ const fruits = ["Apple", "Banana", "Mango"];
 
 console.log(fruits.includes("Mango"));
 ```
+
+### ECMAScript 2017 ( ES8 )
+
+* **String Padding**
+
+  * `String.prototype.padStart()`
+  * `String.prototype.padEnd()`
+
+* **Object Methods**
+
+  * `Object.entries()`
+  * `Object.values()`
+  * `Object.keys()`
+
+* **Async Functions**
+
+  * `async`
+  * `await`
+
+### String Padding
+
+ES2017 introduced two string padding methods :
+
+#### `padStart()`
+
+* Adds characters to the **beginning** of a string until it reaches the specified length.
+
+#### `padEnd()`
+
+* Adds characters to the **end** of a string until it reaches the specified length.
+
+```
+const string = "INDIA";
+
+console.log(
+  string.padStart(6, " ").padStart(11, "-").padEnd(12, " ").padEnd(17, "-"),
+);
+```
+
+```
+for (let iteration = 0; iteration < 10; iteration++) {
+  console.log(
+    Number(Math.random().toString().substr(2, 6)).toString().padEnd(6, "1"),
+  );
+}
+```
