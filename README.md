@@ -5054,16 +5054,29 @@ async function getPromise() {
 getPromise();
 ```
 
-### fetch()
+### `fetch()`
 
-The global `fetch()` method starts the process of fetching a resource from the network and returns a Promise that is fulfilled once the response is available.
+* `fetch()` is a global JavaScript method used to **request resources from a network**.
+* It returns a **Promise**.
+* The Promise resolves to a **`Response` object** when the response is received.
 
-The Promise resolves to a `Response` object representing the response to your request.
+#### Key Points
 
-A `fetch()` Promise only rejects when a network error occurs (such as a connectivity or permission issue). It does **not** reject on HTTP errors such as `404` or `500`.
+* Used for making **HTTP requests** ( API calls ).
+* Based on **Promises**, so it works well with `.then()` and `async/await`.
+* The Promise **rejects only on network errors** ( e.g., no internet, connection failure, permission issues ).
+* HTTP errors like **404** or **500** do **not** reject the Promise.
 
-Instead, you should check the `response.ok` and/or `response.status` properties to determine whether the request was successful.
+#### Checking Request Success
 
+* Use :
+  * `response.ok` → `true` if the request was successful.
+  * `response.status` → Returns the HTTP status code.
+
+#### Common Response Properties
+
+* `response.ok` → Success status ( `true`/`false` )
+* `response.status` → HTTP status code ( 200, 404, 500, etc. )
 
 ### JavaScript and ECMAScript Timeline
 
