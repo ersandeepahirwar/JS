@@ -4414,7 +4414,12 @@ object();
 
 ### Synchronous and Asynchronous Programming in JavaScript
 
-**Synchronous Programming :** One task must wait for the previous task to complete. The code is executed line by line in sequence.
+#### Synchronous Programming
+
+* **Synchronous Programming** executes code **line by line in sequence**.
+* Each task must **wait for the previous task to complete** before starting.
+* Tasks are executed **one at a time**.
+* The next statement runs only after the current statement finishes execution.
 
 ```
 const first = () => {
@@ -4444,7 +4449,13 @@ fourth();
 fifth();
 ```
 
-**Asynchronous Programming :** One task does not have to wait for the previous task to complete. It follows a non-blocking I/O model, allowing other operations to continue while a task is being processed.
+### Asynchronous Programming
+
+* **Asynchronous Programming** allows tasks to run **without waiting for previous tasks to complete**.
+* It follows a **non-blocking I/O model**.
+* Other operations can continue while a task is being processed.
+* Improves application responsiveness and efficiency.
+* Commonly used for tasks like **API requests, file operations, and timers**.
 
 ```
 const first = () => {
