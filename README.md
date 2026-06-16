@@ -5082,7 +5082,7 @@ getPromise();
 
 **JavaScript:** 1995
 
-### ECMAScript Versions
+## ECMAScript Versions
 
 * ES1 : 1997
 * ES2 : 1998
@@ -5091,7 +5091,7 @@ getPromise();
 
 ---
 
-* ES6 (ECMAScript 2015)
+* ES6 ( ECMAScript 2015 )
 * ECMAScript 2016
 * ECMAScript 2017
 * ECMAScript 2018
@@ -5103,7 +5103,7 @@ getPromise();
 * ECMAScript 2024
 * ECMAScript 2025
 
-## ES6 (ECMAScript 2015) Features
+## ES6 ( ECMAScript 2015 ) Features
 
 * `let`
 * `const`
