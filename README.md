@@ -5135,9 +5135,17 @@ getPromise();
 * JavaScript Modules
 * `"use strict"`
 
-### Rest Operator
+### Rest Operator (`...`)
 
-The Rest Operator (`...`) allows a function to accept an indefinite number of arguments as an array.
+* The **Rest Operator (`...`)** allows a function to accept **any number of arguments**.
+* It collects multiple arguments into a **single array**.
+* Commonly used when the number of arguments is unknown.
+
+#### Key Points
+
+* Represented by `...`.
+* Must be the **last parameter** in a function.
+* Returns the remaining arguments as an **array**.
 
 ```
 const test = (A, B, C, ...rest) => {
@@ -5151,13 +5159,29 @@ test(0, 1, 2, 3, 4, 5, 6, 7);
 test(0, 1, 2, 3, 4, 5, 6, 7, 8);
 ```
 
-### Spread Operator
+### Spread Operator (`...`)
 
-The Spread Operator (`...`) allows an iterable to be expanded in places where zero or more arguments are expected.
+* The **Spread Operator (`...`)** expands an iterable ( array, object, string, etc. ) into **individual values**.
+* Commonly used to **copy, merge, or pass elements**.
 
-It is commonly used with arrays and objects to copy, merge, or pass their elements as individual values.
+#### Key Points
 
-The syntax of the Spread Operator is the same as the Rest Operator, but it works in the opposite way. While the Rest Operator collects multiple values into a single array, the Spread Operator expands an array or object into individual values.
+* Represented by `...`.
+* Works with arrays, objects, and other iterables.
+* Expands values instead of collecting them.
+
+#### Difference Between Rest and Spread
+
+| Rest Operator                          | Spread Operator                                  |
+| -------------------------------------- | ------------------------------------------------ |
+| Collects multiple values into an array | Expands an array / object into individual values |
+| Used in function parameters            | Used in function calls, arrays, and objects      |
+| `function fn(...args) {}`              | `fn(...arr)`                                     |
+
+#### Remember
+
+* **Rest = Collects**
+* **Spread = Expands**
 
 ```
 const test = (A, B, C, D) => {
