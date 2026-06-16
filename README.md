@@ -5279,3 +5279,84 @@ for (let element of generator()) {
   console.log(element);
 }
 ```
+
+### New Math Methods ( ES6 )
+
+ES6 introduced several new methods to the **Math** object :
+
+#### `Math.trunc()`
+
+* Removes the decimal part of a number.
+* Returns only the integer part.
+
+```
+const number = 3.14;
+
+console.log("Original Number :", number);
+console.log(`Truncated Number of ${number} :`, Math.trunc(number));
+```
+
+#### `Math.sign()`
+
+* Returns the sign of a number.
+* `1` for positive numbers.
+* `-1` for negative numbers.
+* `0` for zero.
+
+```
+const numbers = [0, 1, -1];
+
+for (const number of numbers) {
+  const type =
+    Math.sign(number) === 1
+      ? "Positive"
+      : Math.sign(number) === -1
+        ? "Negative"
+        : "Zero";
+  console.log("Number :", number);
+  console.log(`Type of ${number} :`, type);
+}
+```
+
+#### `Math.cbrt()`
+
+* Returns the **cube root** of a number.
+
+```
+const number = 27;
+
+console.log("Number :", number);
+console.log(`Cube Root of ${number} :`, Math.cbrt(number));
+```
+
+#### `Math.log2()`
+
+* Returns the **base-2 logarithm** of a number.
+
+```
+const number = 8;
+
+console.log("Number :", number);
+console.log(`Base-2 Logarithm of ${number} :`, Math.log2(number));
+```
+
+#### `Math.log10()`
+
+* Returns the **base-10 logarithm** of a number.
+
+```
+const number = 1000;
+
+console.log("Number :", number);
+console.log(`Base-10 Logarithm of ${number} :`, Math.log10(number));
+```
+
+#### Summary
+
+| Method         | Description                  |
+| -------------- | ---------------------------- |
+| `Math.trunc()` | Removes decimal part         |
+| `Math.sign()`  | Returns the sign of a number |
+| `Math.cbrt()`  | Returns cube root            |
+| `Math.log2()`  | Returns base-2 logarithm     |
+| `Math.log10()` | Returns base-10 logarithm    |
