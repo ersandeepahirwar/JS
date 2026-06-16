@@ -4801,54 +4801,58 @@ console.log(customFilter(array, equation));
 
 ## JSON and AJAX
 
-**AJAX:** Asynchronous JavaScript and XML
+### AJAX
 
-AJAX is a combination of the `XMLHttpRequest` object and the HTML DOM.
+* **AJAX** stands for **Asynchronous JavaScript and XML**.
+* Used to communicate with a server **without reloading the webpage**.
+* Combines :
+  * `XMLHttpRequest`
+  * HTML DOM
 
-**XMLHttpRequest:** An object that helps websites communicate with servers to transfer data.
+#### XMLHttpRequest ( XHR )
 
-### How AJAX Works
+* An object used to **send and receive data from a server**.
 
-1. An event occurs, such as a button click or form submission.
-2. A `XMLHttpRequest` object is created by JavaScript.
-3. The `XMLHttpRequest` sends a request to the server.
-4. The server processes the request.
-5. The server sends back a response.
-6. The response is read by JavaScript.
-7. JavaScript takes the appropriate action.
+#### How AJAX Works
 
-### XMLHttpRequest Object Methods
+1. User triggers an event ( click, submit, etc. ).
+2. JavaScript creates an `XMLHttpRequest` object.
+3. Request is sent to the server.
+4. Server processes the request.
+5. Server returns a response.
+6. JavaScript reads the response.
+7. Page is updated accordingly.
 
-1. `new XMLHttpRequest()` : Creates a new XMLHttpRequest object.
+#### Important XMLHttpRequest Methods
 
-2. `abort()` : Cancels the current request.
+| Method                    | Purpose                            |
+| ------------------------- | ---------------------------------- |
+| `new XMLHttpRequest()`    | Creates an XHR object              |
+| `abort()`                 | Cancels the request                |
+| `getAllResponseHeaders()` | Returns all response headers       |
+| `getResponseHeader()`     | Returns a specific response header |
+| `open()`                  | Initializes a request              |
+| `send()`                  | Sends a request                    |
+| `send(json)`              | Sends JSON data                    |
 
-3. `getAllResponseHeaders()` : Returns all response headers.
+#### `open()` Parameters
 
-4. `getResponseHeader()` : Returns a specific response header.
+* `method` → `GET`, `POST`, `PUT`, `PATCH`, `DELETE`, etc.
+* `url` → Request URL
+* `async` → Asynchronous ( `true` / `false` )
+* `user` *( optional )*
+* `password` *( optional )*
 
-5. `open()` : Initializes a request.
+#### Response Data
 
-   Parameters:
-
-   * method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`, etc.)
-   * url
-   * async
-   * user (optional)
-   * password (optional)
-
-6. `send()` : Sends a request to the server.
-
-7. `send(json)` : Sends JSON data to the server.
-
-### Response Data
-
-1. XML Data : `responseXML`
-2. JSON/Text Data : `responseText`
+* **XML Data** → `responseXML`
+* **JSON / Text Data** → `responseText`
 
 ### JSON ( JavaScript Object Notation )
 
-JSON is a text format used to store and transport data.
+* **JSON ( JavaScript Object Notation )** is a lightweight **text format** used to **store and transfer data**.
+* It is commonly used for **data exchange between a client and a server**.
+* JSON is easy for humans to read and write and easy for machines to parse and generate.
 
 #### XML
 
@@ -4863,7 +4867,7 @@ JSON is a text format used to store and transport data.
 
 ```
 {
-    "id": 1714510036,
+    "eid": 1714510036,
     "name": "Sandeep"
 }
 ```
@@ -4886,7 +4890,7 @@ JSON is a text format used to store and transport data.
 
 `JSON.parse()` is used to convert JSON data into a JavaScript object.
 
-**Syntax:**
+#### Syntax
 
 ```
 const jsObject = JSON.parse(jsonData);
@@ -4896,7 +4900,7 @@ const jsObject = JSON.parse(jsonData);
 
 `JSON.stringify()` is used to convert a JavaScript object into JSON.
 
-**Syntax:**
+#### Syntax
 
 ```
 const jsonData = JSON.stringify(jsData);
