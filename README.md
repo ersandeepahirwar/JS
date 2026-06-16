@@ -5499,8 +5499,7 @@ console.log(number);
 #### `Array.prototype.includes()`
 
 * Checks whether an array contains a specified element.
-* Returns:
-
+* Returns :
   * `true` → if the element exists
   * `false` → otherwise
 
