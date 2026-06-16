@@ -4352,17 +4352,27 @@ delete B; // SyntaxError
 console.log(B);
 ```
 
-### Scope Chain and Lexical Scoping
+### Scope Chain & Lexical Scoping
 
-The Scope Chain is used to resolve the value of variables in JavaScript. It is lexically defined, which means we can determine the scope chain by looking at the code.
+#### Scope Chain
 
-At the top is the Global Scope ( `window` object in browsers ), followed by Local Scope ( functions ).
+* Used to **resolve variable values** in JavaScript.
+* Determined **lexically ( by code structure )**.
+* Scope order :
+  * **Global Scope** ( `window` in browsers )
+  * **Local Scope** ( functions )
 
-**Lexical Scoping** means that an inner function can access variables defined in its outer function and the global scope.
+#### Lexical Scoping
 
-* Inner functions can access variables from outer functions and the global scope.
-* Outer functions cannot access variables defined inside inner functions.
-* The global scope cannot access variables defined inside functions.
+* Inner functions can access variables from :
+  * Their **outer function**
+  * The **global scope**
+
+#### Rules
+
+* Inner function → can access outer + global variables
+* Outer function → cannot access inner function variables
+* Global scope → cannot access function-level variables
 
 ```
 const A = 10;
