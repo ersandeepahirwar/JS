@@ -4499,9 +4499,13 @@ fifth();
 
 ### Event Propagation
 
-Event Propagation determines the order in which elements receive an event.
+* **Event Propagation** determines the order in which elements receive and handle an event.
 
-1. **Event Bubbling :** The event travels from the target element ( child ) up to its parent elements.
+#### Event Bubbling
+
+* The event starts from the **target element ( child )**.
+* It then travels **upward through its parent elements**.
+* Flow : **Child → Parent → Grandparent → ... → Document**.
 
 ```
 const container = document.querySelector(".container");
@@ -4517,7 +4521,12 @@ panel.addEventListener("click", () => console.log("From Panel"));
 core.addEventListener("click", () => console.log("From Core"));
 ```
 
-2. **Event Capturing :** The event travels from the outermost parent to the target element ( child ).
+#### Event Capturing
+
+* **Event Capturing** is a phase of event propagation.
+* The event travels from the **outermost parent** down to the **target element ( child )**.
+* Flow : **Document → Grandparent → Parent → Child**.
+* Also known as the **capturing phase**.
 
 ```
 const container = document.querySelector(".container");
