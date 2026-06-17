@@ -5554,3 +5554,285 @@ for (let iteration = 0; iteration < 10; iteration++) {
   );
 }
 ```
+
+### ECMAScript 2018 ( ES9 )
+
+* **Asynchronous Iteration**
+
+  * `for await...of`
+
+* **Promise Finalization**
+
+  * `Promise.prototype.finally()`
+
+* **Object Rest / Spread Properties**
+
+  * Rest Properties (`...rest`)
+  * Spread Properties (`...obj`)
+
+* **New Regular Expression Features**
+
+  * Named Capture Groups
+  * Lookbehind Assertions
+  * Unicode Property Escapes (`\p{...}`)
+  * DotAll Flag (`s`)
+
+* **Shared Memory and Atomics**
+
+  * `SharedArrayBuffer`
+  * `Atomics` API
+
+### Asynchronous Iteration
+
+* **Asynchronous Iteration** allows iteration over data that becomes available asynchronously.
+* Uses **Async Iterators** and **`for await...of`** loops.
+* Useful for handling streams, API responses, and other asynchronous data sources.
+
+```
+async function* generator(number) {
+  setTimeout(() => {
+    console.log(1 + number);
+  }, 1000);
+  yield 1;
+  setTimeout(() => {
+    console.log(2 + number);
+  }, 2000);
+  yield 2;
+  setTimeout(() => {
+    console.log(3 + number);
+  }, 3000);
+  yield 3;
+  setTimeout(() => {
+    console.log(4 + number);
+  }, 4000);
+  yield 4;
+  setTimeout(() => {
+    console.log(5 + number);
+  }, 5000);
+  yield 5;
+}
+
+async function generate() {
+  for await (const element of generator(5)) {
+    console.log(element);
+  }
+}
+
+generate();
+```
+
+### Promise Finalization
+
+#### `finally()`
+
+* ES2018 introduced **`Promise.prototype.finally()`**.
+* Executes a callback **after a Promise is settled** ( fulfilled or rejected ).
+* Runs regardless of whether the Promise succeeds or fails.
+
+```
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Promise is resolved.");
+    reject("Promise is rejected.");
+  }, 2000);
+});
+
+promise
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("Finally");
+  });
+```
+
+### Object Rest / Spread Properties
+
+#### Object Rest Properties
+
+* Used to collect the remaining properties of an object into a new object.
+* Works similarly to the Rest Operator in function parameters.
+
+#### Syntax
+
+```
+const { property1, property2, ...rest } = object;
+```
+
+```
+ID : 1714510036
+Name : Sandeep Ahirwar
+
+Education : {
+  college: "SR Group of Institutions Jhansi",
+  course: "B.Tech",
+  branch: "Computer Science and Engineering"
+}
+```
+
+#### Object Spread Properties
+
+* Used to copy or merge objects.
+* Expands an object's properties into another object.
+
+#### Syntax
+
+```
+const newObject = { ...object };
+```
+
+```
+const object = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  college: "SR Group of Institutions Jhansi",
+  course: "B.Tech",
+  branch: "Computer Science and Engineering",
+};
+
+const student = { ...object };
+
+console.log("Student :", student);
+```
+
+#### Remember
+
+* **Rest → Collects properties**
+* **Spread → Expands properties**
+
+### New Regular Expression Features
+
+#### 1. Named Capture Groups
+
+* Assign names to regex capture groups.
+* Access matches using `groups.name`.
+
+#### Syntax
+
+```
+(?<name>...)
+```
+
+```
+const result = "2026-06-17".match(
+  /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/,
+);
+
+console.log(`Year : ${result.groups.year}`);
+console.log(`Month : ${result.groups.month}`);
+console.log(`Day : ${result.groups.day}`);
+```
+
+#### 2. Lookbehind Assertions
+
+* Match a pattern based on what comes before it.
+
+#### Positive Lookbehind
+
+```
+(?<=...)
+```
+
+```
+const text = "$100";
+
+console.log(text.match(/(?<=\$)\d+/)[0]);
+```
+
+> Matches if preceded by a specified pattern.
+
+#### Negative Lookbehind
+
+```
+(?<!...)
+```
+
+```
+const text = "$100 500";
+
+console.log(text.match(/(?<!\$)\d+/)[0]);
+```
+
+> Matches if not preceded by a specified pattern.
+
+#### 3. Unicode Property Escapes
+
+* Match Unicode characters by category.
+* Requires the `u` flag.
+
+#### Common Properties
+
+* `\p{L}` → Letter
+* `\p{N}` → Number
+* `\p{P}` → Punctuation
+* `\p{S}` → Symbol
+* `\p{Z}` → Space Separator
+
+```
+const text = "Hello नमस्ते";
+
+console.log(text.match(/\p{L}+/gu));
+```
+
+#### 4. DotAll Flag (`s`)
+
+* Makes `.` match newline characters (`\n`).
+* Useful for matching multi-line text.
+
+#### Syntax
+
+```
+/pattern/s
+```
+
+```
+const text = "Hello\nWorld";
+
+console.log(/Hello.World/s.test(text));
+```
+
+#### Summary
+
+| Feature                  | Syntax           | Purpose                          |
+| ------------------------ | ---------------- | -------------------------------- |
+| Named Capture Groups     | `(?<name>...)`   | Name regex groups                |
+| Positive Lookbehind      | `(?<=...)`       | Match if preceded by pattern     |
+| Negative Lookbehind      | `(?<!...)`       | Match if not preceded by pattern |
+| Unicode Property Escapes | `\p{L}`, `\p{N}` | Match Unicode categories         |
+| DotAll Flag              | `/pattern/s`     | Makes `.` match newlines         |
+
+### JavaScript Threads
+
+#### Web Workers
+
+* JavaScript can create background threads using the **Web Worker API**.
+* Worker threads execute code **separately from the main thread**.
+* They allow the main program to continue running without being blocked.
+* Useful for CPU-intensive tasks and improving performance.
+
+#### Benefits
+
+* Background execution of tasks.
+* Prevents UI freezing.
+* Enables simultaneous execution of different parts of a program.
+
+#### Shared Memory
+
+* **Shared Memory** allows multiple threads to access and modify the **same data in memory**.
+* Eliminates the need to repeatedly pass data between threads.
+* Threads can share a common memory area.
+
+#### SharedArrayBuffer
+
+* A **SharedArrayBuffer** is an object used to create shared memory between threads.
+* Multiple threads can read and write data from the same buffer.
+* Similar to `ArrayBuffer`, but the memory can be shared across threads.
+
+#### Benefits
+
+* Faster communication between threads.
+* Efficient data sharing.
+* Reduces data copying overhead.
