@@ -5656,7 +5656,7 @@ promise
 * Used to collect the remaining properties of an object into a new object.
 * Works similarly to the Rest Operator in function parameters.
 
-#### Syntax
+**Syntax**
 
 ```
 const { property1, property2, ...rest } = object;
@@ -5678,7 +5678,7 @@ Education : {
 * Used to copy or merge objects.
 * Expands an object's properties into another object.
 
-#### Syntax
+**Syntax**
 
 ```
 const newObject = { ...object };
@@ -5698,7 +5698,7 @@ const student = { ...object };
 console.log("Student :", student);
 ```
 
-#### Remember
+**Remember**
 
 * **Rest → Collects properties**
 * **Spread → Expands properties**
@@ -5710,7 +5710,7 @@ console.log("Student :", student);
 * Assign names to regex capture groups.
 * Access matches using `groups.name`.
 
-#### Syntax
+**Syntax**
 
 ```
 (?<name>...)
@@ -5730,7 +5730,7 @@ console.log(`Day : ${result.groups.day}`);
 
 * Match a pattern based on what comes before it.
 
-#### Positive Lookbehind
+**Positive Lookbehind**
 
 ```
 (?<=...)
@@ -5744,7 +5744,7 @@ console.log(text.match(/(?<=\$)\d+/)[0]);
 
 > Matches if preceded by a specified pattern.
 
-#### Negative Lookbehind
+**Negative Lookbehind**
 
 ```
 (?<!...)
@@ -5763,7 +5763,7 @@ console.log(text.match(/(?<!\$)\d+/)[0]);
 * Match Unicode characters by category.
 * Requires the `u` flag.
 
-#### Common Properties
+**Common Properties**
 
 * `\p{L}` → Letter
 * `\p{N}` → Number
@@ -5782,7 +5782,7 @@ console.log(text.match(/\p{L}+/gu));
 * Makes `.` match newline characters (`\n`).
 * Useful for matching multi-line text.
 
-#### Syntax
+**Syntax**
 
 ```
 /pattern/s
@@ -5794,7 +5794,7 @@ const text = "Hello\nWorld";
 console.log(/Hello.World/s.test(text));
 ```
 
-#### Summary
+**Summary**
 
 | Feature                  | Syntax           | Purpose                          |
 | ------------------------ | ---------------- | -------------------------------- |
@@ -5813,7 +5813,7 @@ console.log(/Hello.World/s.test(text));
 * They allow the main program to continue running without being blocked.
 * Useful for CPU-intensive tasks and improving performance.
 
-#### Benefits
+**Benefits**
 
 * Background execution of tasks.
 * Prevents UI freezing.
@@ -5831,8 +5831,86 @@ console.log(/Hello.World/s.test(text));
 * Multiple threads can read and write data from the same buffer.
 * Similar to `ArrayBuffer`, but the memory can be shared across threads.
 
-#### Benefits
+**Benefits**
 
 * Faster communication between threads.
 * Efficient data sharing.
 * Reduces data copying overhead.
+
+### ECMAScript 2019 ( ES10 )
+
+* **Well-Formed `JSON.stringify()`**
+  * Better handling of Unicode characters.
+
+* **Revised `Function.prototype.toString()`**
+
+  * Returns the exact source code of a function.
+
+* **Revised `Array.sort()`**
+
+  * Sorting is now stable.
+
+* **`Array.prototype.flat()`**
+
+  * Flattens nested arrays.
+
+* **`Array.prototype.flatMap()`**
+
+  * Maps and flattens an array in one step.
+
+* **`Object.fromEntries()`**
+
+  * Converts key-value pairs into an object.
+
+* **`String.prototype.trimStart()`**
+
+  * Removes whitespace from the beginning of a string.
+
+* **`String.prototype.trimEnd()`**
+
+  * Removes whitespace from the end of a string.
+
+* **`Symbol.prototype.description`**
+
+  * Returns the description of a Symbol.
+
+### Well-Formed `JSON.stringify()`
+
+* ES2019 improved the `JSON.stringify()` method.
+* Before ES2019, some Unicode characters ( **UTF-8 code points `U+D800` to `U+DFFF`** ) could produce **invalid JSON output**.
+* After ES2019, these characters are **safely escaped** by `JSON.stringify()`.
+* The resulting JSON can be **correctly restored** using `JSON.parse()`.
+
+```
+const string = "\uD800";
+
+console.log(JSON.stringify(string));
+```
+
+### Revised `Function.prototype.toString()`
+
+* ES2019 revised the `Function.prototype.toString()` method.
+* The `toString()` method returns a **string representing the source code of a function**.
+* From ES2019, it must return the function **exactly as written in the source code**.
+* **Comments, spaces, and syntax details** are preserved.
+* Before ES2019, different browsers could return **different representations** of the same function.
+
+```
+function test() {
+  // In Test()
+  console.log("In test()");
+
+  // In test() Function
+  console.log("In test() Function");
+}
+
+console.log(test.toString());
+```
+
+### Stable `Array.sort()`
+
+* ES2019 revised the `Array.sort()` method.
+* Before ES2019, browsers could use **unstable sorting algorithms** ( such as QuickSort ).
+* The order of elements with equal sort values was **not guaranteed**.
+* Starting with ES2019, `Array.sort()` must use a **stable sorting algorithm**.
+* Elements with the same sort order **retain their original relative positions** after sorting.
