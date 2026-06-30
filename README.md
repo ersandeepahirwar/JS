@@ -6081,3 +6081,119 @@ console.log(`
     City         : ${student.address?.city ?? "N/A"}
     `);
 ```
+
+### Promise.allSettled()
+
+```
+const first = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("1st Promise is resolved.");
+    reject("1st Promise is rejected due to an error.");
+  }, 1000);
+});
+
+const second = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("2nd Promise is resolved.");
+    reject("2nd Promise is rejected due to an error.");
+  }, 2000);
+});
+
+const third = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("3rd Promise is resolved.");
+    reject("3rd Promise is rejected due to an error.");
+  }, 3000);
+});
+
+Promise.allSettled([first, second, third]).then((response) => {
+  console.log(response);
+});
+```
+
+### Numeric Separators (`_`)
+
+```
+console.log(1_00_000);
+```
+
+### Private Class Methods
+
+```
+class Test {
+  #show() {
+    console.log("In show() of Test class");
+  }
+  display() {
+    this.#show();
+    console.log("In display() of Test class");
+  }
+}
+
+const object = new Test();
+// object.show();
+object.display();
+```
+
+### Getters and Setters
+
+```
+class Student {
+  constructor(ID, name, CGPA) {
+    this.ID = ID;
+    this.name = name;
+    this.CGPA = CGPA;
+  }
+  set #setCollege(college) {
+    this.college = college;
+  }
+  get #display() {
+    console.log(`
+        ID      : ${this.ID}
+        Name    : ${this.name}
+        CGPA    : ${this.CGPA}
+        College : ${this.college}
+        `);
+  }
+  enrollment(college) {
+    this.#setCollege = college;
+    this.#display;
+  }
+}
+
+const sandeep = new Student(1714510036, "Sandeep Ahirwar", 6.9);
+sandeep.enrollment("SRGI");
+```
+
+### Promise.any()
+
+```
+const first = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("1st Promise is resolved.");
+    reject("1st Promise is rejected due to an error.");
+  }, 1000);
+});
+
+const second = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("2nd Promise is resolved.");
+    reject("2nd Promise is rejected due to an error.");
+  }, 2000);
+});
+
+const third = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    // resolve("3rd Promise is resolved.");
+    reject("3rd Promise is rejected due to an error.");
+  }, 3000);
+});
+
+Promise.any([first, second, third])
+  .then((response) => {
+    console.log(response);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+```
