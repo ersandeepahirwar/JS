@@ -5914,3 +5914,170 @@ console.log(test.toString());
 * The order of elements with equal sort values was **not guaranteed**.
 * Starting with ES2019, `Array.sort()` must use a **stable sorting algorithm**.
 * Elements with the same sort order **retain their original relative positions** after sorting.
+
+### flat()
+
+```
+const A = [
+  [10, 20],
+  [30, 40],
+  [50, 60],
+  [70, 80],
+  [90, 100],
+];
+
+console.log("Original Array :", A);
+console.log("Array after use of flat() :", A.flat(1));
+console.log(
+  "Array after use of flat() and map() :",
+  A.flat(1).map((number) => Math.pow(number, 2)),
+);
+
+const B = [
+  [
+    [10, 20],
+    [30, 40],
+    [50, 60],
+    [70, 80],
+    [90, 100],
+  ],
+];
+
+console.log("Original Array :", B);
+console.log("Array after use of flat() :", B.flat(2));
+console.log(
+  "Array after use of flat() and map() :",
+  B.flat(2).map((number) => Math.pow(number, 2)),
+);
+
+const C = [
+  [
+    [
+      [
+        [
+          [
+            [10, 20],
+            [30, 40],
+            [50, 60],
+            [70, 80],
+            [90, 100],
+          ],
+        ],
+      ],
+    ],
+  ],
+];
+
+console.log("Original Array :", C);
+console.log("Array after use of flat() :", C.flat(Infinity));
+console.log(
+  "Array after use of flat() and map() :",
+  C.flat(Infinity).map((number) => Math.pow(number, 2)),
+);
+```
+
+### flatMap()
+
+```
+const array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log("Original Array :", array);
+console.log(
+  "Array after using map() :",
+  array.map((element, index) => [index, element]),
+);
+console.log(
+  "Array after using flatMap() :",
+  array.flatMap((element, index) => [index, element]),
+);
+```
+
+### Object.fromEntries()
+
+```
+const array = [
+  ["ID", 1714510036],
+  ["name", "Sandeep Ahirwar"],
+  ["CGPA", 6.9],
+];
+
+console.log("Original Array :", array);
+console.log(
+  "Array after using Object.fromEntries() :",
+  Object.fromEntries(array),
+);
+```
+
+### BigInt
+
+```
+let number = 50n;
+
+let factorial = 1n;
+while (number > 0n) {
+  factorial *= number;
+  number--;
+}
+
+console.log(factorial);
+```
+
+### Nullish Coalescing Operator (`??`)
+
+The **Nullish Coalescing (`??`)** operator returns the right-hand value only if the left-hand value is `null` or `undefined`.
+
+#### Syntax
+
+```
+leftValue ?? rightValue
+```
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+  fees: 0,
+  isPresent: true,
+};
+
+console.log(`
+    ID           : ${student.ID ?? "N/A"}
+    Name         : ${student.name ?? "N/A"}
+    CGPA         : ${student.CGPA ?? "N/A"}
+    College Fees : ${student.fees ?? "N/A"}
+    Is Present?  : ${student.isPresent ?? "N/A"}
+    Address      : ${student.address ?? "N/A"}
+    `);
+```
+
+### Optional Chaining (`?.`)
+
+The **Optional Chaining (`?.`)** operator safely accesses nested object properties, array elements, or methods. If the value before `?.` is `null` or `undefined`, it returns `undefined` instead of throwing an error.
+
+#### Syntax
+
+```
+object?.property
+object?.[index]
+object?.method?.()
+```
+
+```
+const student = {
+  ID: 1714510036,
+  name: "Sandeep Ahirwar",
+  CGPA: 6.9,
+  fees: 0,
+  isPresent: true,
+};
+
+console.log(`
+    ID           : ${student.ID ?? "N/A"}
+    Name         : ${student.name ?? "N/A"}
+    CGPA         : ${student.CGPA ?? "N/A"}
+    College Fees : ${student.fees ?? "N/A"}
+    Is Present?  : ${student.isPresent ?? "N/A"}
+    Address      : ${student.address ?? "N/A"}
+    City         : ${student.address?.city ?? "N/A"}
+    `);
+```
